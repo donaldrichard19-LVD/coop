@@ -65,6 +65,53 @@ body {
   }
 }
 
+/* Landing pages (desktop + mobile web) commit to a single dark identity per
+   the design handoff — locked colors/type, not the adaptive light/dark
+   token set the rest of the app uses. Scoped overrides of the existing
+   custom properties let landing markup keep reading bg-bg-primary etc. */
+.landing-dark {
+  --surface-elevated: #1a1a1c;
+  --text-primary: #f5f2ea;
+  --text-secondary: rgba(245, 242, 234, 0.62);
+  --text-tertiary: rgba(245, 242, 234, 0.4);
+  --tint-primary: #19a877;
+  --tint-cta: #f5f2ea;
+  --text-inverse: #111112;
+  --separator-subtle: rgba(245, 242, 234, 0.12);
+  --separator-strong: rgba(245, 242, 234, 0.35);
+  --warning: #e8a33d;
+  font-family: 'Archivo', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes coopPop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes coopPing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+@keyframes coopDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 .shimmer-text {
   background-image: linear-gradient(
     90deg,

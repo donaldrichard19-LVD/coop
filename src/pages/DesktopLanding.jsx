@@ -1,66 +1,74 @@
 import { BrandMark } from '../components/Header'
-import DealCard from '../domain/DealCard'
-import { deals } from '../data/deals'
+import LandingDealDemo from '../components/LandingDealDemo'
 
-const previewDeal = deals.find((d) => d.id === 'd-bluebottle')
-
+// Desktop never gets a signup CTA — per the design handoff there isn't one
+// here at all, only the "pull this up on your phone" note. That's what
+// keeps the signup flow (WaitlistStep) mobile-only; see App.jsx's Gate.
 export default function DesktopLanding() {
   return (
-    <div className="min-h-svh bg-bg-primary">
-      <nav className="max-w-[1100px] mx-auto px-6 pt-6 flex items-center gap-2">
-        <BrandMark size={26} />
-        <span className="text-headline text-text-primary">coop</span>
+    <div data-theme="dark" className="landing-dark min-h-svh bg-bg-primary px-14 pt-10 pb-[72px]">
+      <nav className="flex items-center gap-3 mb-24">
+        <BrandMark size={28} />
+        <span className="text-[26px] font-extrabold tracking-[-0.03em] text-text-primary">coop</span>
       </nav>
 
-      <div className="max-w-[1100px] mx-auto px-6 pt-14 pb-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="grid grid-cols-1 min-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,0.78fr)] gap-24 items-start max-w-[1560px]">
         <div>
-          <p className="text-footnote font-semibold text-tint-primary tracking-wide mb-2">text it. save it.</p>
-          <h1 className="text-largeTitle text-text-primary max-w-[14ch]" style={{ textWrap: 'balance' }}>
-            your deal-finding friend, right in your texts.
+          <p className="text-[17px] font-bold text-tint-primary tracking-[-0.01em] mb-[26px]">text it. save it.</p>
+          <h1
+            className="text-[68px] font-extrabold tracking-[-0.035em] leading-[1.06] text-text-primary mb-[30px]"
+            style={{ textWrap: 'balance' }}
+          >
+            your deal-finding
+            <br />
+            friend, right
+            <br />
+            in your texts.
           </h1>
-          <p className="text-body text-text-secondary mt-4 max-w-[46ch]">
-            Connect your bank once. Coop watches the places you actually go &mdash; coffee shops,
-            lunch spots, the pizza place you always order from &mdash; and texts you the second one
-            of them&rsquo;s got a deal. No new app. No hunting for codes.
+          <p
+            className="text-[22px] leading-[1.55] text-text-secondary max-w-[620px] mb-[34px]"
+            style={{ textWrap: 'pretty' }}
+          >
+            send coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
+            learn where you actually eat, then text you when one of them has a deal. no bank to connect. no new
+            app.
           </p>
 
-          <div className="mt-7 inline-flex items-center gap-3 bg-surface-elevated border border-separator-strong rounded-large px-5 py-4 max-w-[42ch]">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-tint-primary shrink-0">
-              <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="1.6" />
-              <circle cx="12" cy="18" r="0.9" fill="currentColor" />
+          <div className="flex items-center gap-4 bg-surface-elevated rounded-[22px] px-[26px] py-[22px] max-w-[620px] mb-12">
+            <svg viewBox="0 0 24 24" width="22" height="22" className="shrink-0" fill="none" stroke="#19A877" strokeWidth="1.7">
+              <rect x="6" y="2" width="12" height="20" rx="3" />
+              <line x1="10.5" y1="18.5" x2="13.5" y2="18.5" />
             </svg>
-            <p className="text-subheadline text-text-primary">
-              coop's a texting thing &mdash; pull this up on your phone to get started.
+            <p className="text-[19px] leading-[1.45] font-medium text-[rgba(245,242,234,.8)]">
+              coop&rsquo;s a texting thing &mdash; pull this up on your phone to get started.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <ValueProp n="01" title="built from where you actually go">
-              No browsing. No clipping coupons. Just deals from places you&rsquo;ve actually been.
-            </ValueProp>
-            <ValueProp n="02" title="shows up as a text">
-              Deals land right in your messages &mdash; no new app, nothing to open.
-            </ValueProp>
-            <ValueProp n="03" title="real merchants, real relationship">
-              Every deal shows how many times you&rsquo;ve been there.
-            </ValueProp>
+          <div className="grid grid-cols-1 min-[560px]:grid-cols-3 gap-10 max-w-[780px]">
+            <Step n="01" title="send a screenshot">
+              your last order from a local spot or a delivery app. that&rsquo;s the whole setup.
+            </Step>
+            <Step n="02" title="we watch your spots">
+              coop keeps an eye on the places you already order from. no browsing, no clipping.
+            </Step>
+            <Step n="03" title="deals land as a text">
+              &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
+            </Step>
           </div>
         </div>
 
-        <div className="max-w-[340px] mx-auto w-full">
-          <DealCard deal={previewDeal} />
-        </div>
+        <LandingDealDemo />
       </div>
     </div>
   )
 }
 
-function ValueProp({ n, title, children }) {
+function Step({ n, title, children }) {
   return (
     <div>
-      <div className="text-caption font-semibold text-tint-primary mb-1.5">{n}</div>
-      <h3 className="text-subheadline font-semibold text-text-primary mb-1">{title}</h3>
-      <p className="text-footnote text-text-secondary">{children}</p>
+      <div className="text-[15px] font-bold font-mono text-tint-primary mb-3.5">{n}</div>
+      <div className="text-[20px] leading-[1.3] font-bold text-text-primary mb-2.5">{title}</div>
+      <div className="text-[16px] leading-[1.5] text-text-secondary">{children}</div>
     </div>
   )
 }
