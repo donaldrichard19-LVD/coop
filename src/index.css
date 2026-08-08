@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #f2f2f7;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ffffff;
+  --surface-primary: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-bubble: #e5e5ea;
+  --separator-subtle: rgba(60, 60, 67, 0.29);
+  --separator-strong: #c6c6c8;
+  --text-primary: #000000;
+  --text-secondary: rgba(60, 60, 67, 0.6);
+  --text-tertiary: rgba(60, 60, 67, 0.3);
+  --text-inverse: #ffffff;
+  --tint-cta: #000000;
+  --tint-primary: #0e7c57;
+  --fill: rgba(118, 118, 128, 0.12);
+  --fill-strong: rgba(118, 118, 128, 0.2);
+  --success: #34c759;
+  --warning: #ff9500;
+  --error: #ff3b30;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #000000;
+  --bg-secondary: #1c1c1e;
+  --bg-tertiary: #2c2c2e;
+  --surface-primary: #000000;
+  --surface-elevated: #1c1c1e;
+  --surface-bubble: #2c2c2e;
+  --separator-subtle: rgba(84, 84, 88, 0.65);
+  --separator-strong: #38383a;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(235, 235, 245, 0.6);
+  --text-tertiary: rgba(235, 235, 245, 0.3);
+  --text-inverse: #000000;
+  --tint-cta: #ffffff;
+  --tint-primary: #30d98f;
+  --fill: rgba(118, 118, 128, 0.24);
+  --fill-strong: rgba(118, 118, 128, 0.36);
+  --success: #30d158;
+  --warning: #ff9f0a;
+  --error: #ff453a;
+}
+
+body {
+  @apply bg-bg-primary text-text-primary;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 220ms !important;
+    transition-timing-function: ease-in-out !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.shimmer-text {
+  background-image: linear-gradient(
+    90deg,
+    var(--text-tertiary) 0%,
+    var(--text-primary) 50%,
+    var(--text-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
