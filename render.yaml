@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: coop-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 3002
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_MESSAGING_SERVICE_SID
+        sync: false
+      - key: RCS_TEMPLATE_CARD_SID
+        sync: false
+      - key: RCS_TEMPLATE_CAROUSEL_SID
+        sync: false
+      - key: RCS_TEMPLATE_CHIPS_OPENING_SID
+        sync: false
+      - key: RCS_TEMPLATE_CHIPS_FOLLOWUP_SID
+        sync: false
