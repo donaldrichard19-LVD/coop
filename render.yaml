@@ -23,3 +23,11 @@ services:
         sync: false
       - key: RCS_TEMPLATE_CHIPS_FOLLOWUP_SID
         sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        value: "Coop <hello@getcoop.cash>"
+      - key: WAITLIST_SECRET
+        sync: false
+      - key: BACKEND_URL
+        value: https://coop-backend.onrender.com

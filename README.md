@@ -99,3 +99,7 @@ Lowercase `coop`, **Archivo Expanded**, weight 900, `letter-spacing: -0.05em`. T
 ### Not yet built
 
 - The three alternate logo routes from the original exploration (Smirk Code, Double-O Scan, Tear Here) — kept in the original handoff if direction ever changes.
+
+## Backlog
+
+See [BACKLOG.md](./BACKLOG.md).

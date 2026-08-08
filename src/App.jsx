@@ -1,43 +1,30 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Chat from './pages/Chat'
-import SavedDeals from './pages/SavedDeals'
 import DesktopLanding from './pages/DesktopLanding'
 import OnboardingFlow from './pages/onboarding/OnboardingFlow'
+import WaitlistConfirmed from './pages/onboarding/WaitlistConfirmed'
 import useIsMobile from './hooks/useIsMobile'
-import useOnboarded from './hooks/useOnboarded'
+import useWaitlisted from './hooks/useWaitlisted'
 
 // Signup only happens on mobile web — desktop only ever sees the static
-// value-prop page, regardless of onboarded state, per product requirement.
-function RequireMobileOnboarding({ children }) {
+// value-prop page. Once waitlisted, mobile shows the confirmation screen
+// (not the live Chat app): there's no real deal data behind it yet without
+// Plaid or screenshot upload (both backlogged — see BACKLOG.md), so there's
+// nothing genuine to hand them into. The next thing that happens for a
+// waitlisted user happens over SMS, not on this site.
+function Gate() {
   const isMobile = useIsMobile()
-  const [onboarded, setOnboarded] = useOnboarded()
-  const [justOnboarded, setJustOnboarded] = useState(false)
+  const [waitlisted, setWaitlisted] = useWaitlisted()
 
   if (!isMobile) return <DesktopLanding />
-
-  if (!onboarded) {
-    return (
-      <OnboardingFlow
-        onComplete={() => {
-          setOnboarded(true)
-          setJustOnboarded(true)
-        }}
-      />
-    )
-  }
-
-  return children(justOnboarded)
+  if (!waitlisted) return <OnboardingFlow onComplete={() => setWaitlisted(true)} />
+  return <WaitlistConfirmed />
 }
 
 export default function App() {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<RequireMobileOnboarding>{(justOnboarded) => <Chat startWithOffers={justOnboarded} />}</RequireMobileOnboarding>}
-      />
-      <Route path="/saved" element={<RequireMobileOnboarding>{() => <SavedDeals />}</RequireMobileOnboarding>} />
+      <Route path="/" element={<Gate />} />
+      <Route path="/saved" element={<Gate />} />
     </Routes>
   )
 }
