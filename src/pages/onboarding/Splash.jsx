@@ -35,14 +35,20 @@ export default function Splash({ onDone }) {
         className="h-[22vh] max-h-[160px] w-auto animate-splash-in motion-reduce:animate-none"
       />
       <div
-        className="text-subheadline font-semibold text-text-tertiary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
+        className="text-[40px] font-extrabold tracking-[-0.03em] text-text-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
         style={{ animationDelay: '400ms' }}
       >
         coop
       </div>
       <div
+        className="text-footnote font-semibold text-tint-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
+        style={{ animationDelay: '900ms' }}
+      >
+        text it. save it.
+      </div>
+      <div
         className="text-caption font-mono text-text-tertiary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-70"
-        style={{ animationDelay: '1400ms' }}
+        style={{ animationDelay: '1600ms' }}
       >
         tap to continue
       </div>

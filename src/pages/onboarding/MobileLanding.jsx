@@ -11,7 +11,6 @@ export default function MobileLanding({ onNext }) {
       </nav>
 
       <div className="flex-1 px-5 pt-7 pb-10">
-        <p className="text-[14px] font-bold text-tint-primary tracking-[-0.01em] mb-3">text it. save it.</p>
         <h1
           className="text-[38px] font-extrabold tracking-[-0.03em] leading-[1.1] text-text-primary mb-4"
           style={{ textWrap: 'balance' }}
