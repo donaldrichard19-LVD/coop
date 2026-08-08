@@ -12,12 +12,12 @@ export default function Splash({ onDone }) {
     firedRef.current = true
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     setLeaving(true)
-    setTimeout(onDone, reduceMotion ? 0 : 500)
+    setTimeout(onDone, reduceMotion ? 0 : 900)
   }
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const t = setTimeout(leave, reduceMotion ? 900 : 2400)
+    const t = setTimeout(leave, reduceMotion ? 900 : 3600)
     return () => clearTimeout(t)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -25,7 +25,7 @@ export default function Splash({ onDone }) {
   return (
     <button
       onClick={leave}
-      className={`min-h-svh w-full flex flex-col items-center justify-center gap-5 bg-bg-primary transition-opacity duration-500 motion-reduce:transition-none ${
+      className={`min-h-svh w-full flex flex-col items-center justify-center gap-5 bg-bg-primary transition-opacity duration-[900ms] motion-reduce:transition-none ${
         leaving ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -35,7 +35,7 @@ export default function Splash({ onDone }) {
         className="h-[22vh] max-h-[160px] w-auto animate-splash-in motion-reduce:animate-none"
       />
       <div
-        className="text-[40px] font-extrabold tracking-[-0.03em] text-text-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
+        className="text-[56px] font-extrabold tracking-[-0.03em] text-text-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
         style={{ animationDelay: '400ms' }}
       >
         coop
@@ -45,12 +45,6 @@ export default function Splash({ onDone }) {
         style={{ animationDelay: '900ms' }}
       >
         text it. save it.
-      </div>
-      <div
-        className="text-caption font-mono text-text-tertiary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-70"
-        style={{ animationDelay: '1600ms' }}
-      >
-        tap to continue
       </div>
     </button>
   )
