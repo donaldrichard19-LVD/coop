@@ -37,6 +37,19 @@ function approveUrl(phone, name) {
   return `${BASE_URL}/api/waitlist/approve?${params}`
 }
 
+// Temporary diagnostic route — remove once the Resend delivery issue is
+// resolved. Reports env var presence/shape without leaking full secrets.
+router.get('/_debug', (req, res) => {
+  const key = process.env.RESEND_API_KEY || ''
+  res.json({
+    hasResendKey: !!key,
+    resendKeyPreview: key ? `${key.slice(0, 6)}...${key.slice(-4)} (len ${key.length})` : null,
+    fromEmail: process.env.RESEND_FROM_EMAIL || null,
+    hasWaitlistSecret: !!process.env.WAITLIST_SECRET,
+    backendUrl: process.env.BACKEND_URL || null,
+  })
+})
+
 router.post('/', async (req, res) => {
   const { name, phone: rawPhone } = req.body
   const phone = normalizePhone(rawPhone)
@@ -55,7 +68,8 @@ router.post('/', async (req, res) => {
         </p>
         <p style="font-size:12px;color:#94a3b8">Sends one RCS/SMS message via the Twilio backend. Safe to click once you're ready to bring them in.</p>`
       : `<p style="font-size:12px;color:#94a3b8">Set WAITLIST_SECRET on the backend to enable a one-click "send welcome text" button here.</p>`
-    await resend.emails.send({
+    console.log('[waitlist] sending notification email via Resend...')
+    const result = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'Coop <hello@getcoop.cash>',
       to: 'donald.richard19@gmail.com',
       subject: `New Coop signup: ${name || phone}`,
@@ -65,8 +79,9 @@ router.post('/', async (req, res) => {
         ${cta}
       `,
     })
+    console.log('[waitlist] Resend response:', JSON.stringify(result))
   } catch (err) {
-    console.error('[waitlist] notification email failed:', err.message)
+    console.error('[waitlist] notification email failed:', err?.message, JSON.stringify(err))
   }
 
   res.json({ success: true })
