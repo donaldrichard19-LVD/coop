@@ -15,7 +15,7 @@ export default function MobileLanding({ onNext }) {
           className="text-[38px] font-extrabold tracking-[-0.03em] leading-[1.1] text-text-primary mb-4"
           style={{ textWrap: 'balance' }}
         >
-          Deals you&rsquo;ll love, text it to you
+          Deals you&rsquo;ll love, texted to you
         </h1>
         <p className="text-[17px] leading-[1.5] text-text-secondary mb-6">
           send Coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
@@ -34,7 +34,7 @@ export default function MobileLanding({ onNext }) {
           <Step n="02" title="Coop watches your spots">
             Coop keeps an eye on the places you already order from. no browsing, no clipping.
           </Step>
-          <Step n="03" title="deal is sent as a text">
+          <Step n="03" title="you get 🔥 deals, personalized to you">
             &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
           </Step>
         </div>

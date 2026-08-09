@@ -19,7 +19,7 @@ export default function DesktopLanding() {
             className="text-[68px] font-extrabold tracking-[-0.035em] leading-[1.06] text-text-primary mb-[30px]"
             style={{ textWrap: 'balance' }}
           >
-            Deals you&rsquo;ll love, text it to you
+            Deals you&rsquo;ll love, texted to you
           </h1>
           <p
             className="text-[22px] leading-[1.55] text-text-secondary max-w-[620px] mb-[34px]"
@@ -46,7 +46,7 @@ export default function DesktopLanding() {
             <Step n="02" title="Coop watches your spots">
               Coop keeps an eye on the places you already order from. no browsing, no clipping.
             </Step>
-            <Step n="03" title="deal is sent as a text">
+            <Step n="03" title="you get 🔥 deals, personalized to you">
               &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
             </Step>
           </div>
