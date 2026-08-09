@@ -7,7 +7,7 @@ import Button from '../components/Button'
 import ThinkingIndicator from '../components/ThinkingIndicator'
 import { UserBubble, AssistantProse } from '../components/Message'
 import DealCard from '../domain/DealCard'
-import { useDeals } from '../data/DealsContext'
+import { DealsProvider, useDeals } from '../data/DealsContext'
 import { quickReplies, matchDeals } from '../data/deals'
 
 function greetingForNow() {
@@ -19,7 +19,25 @@ function greetingForNow() {
 
 const FOLLOW_UPS = ['Only chain deals', 'Only local spots', 'Something cheaper', 'What else is close?']
 
-export default function Chat({ startWithOffers = false }) {
+// Wrapped in its own DealsProvider rather than one shared at the app root, so
+// the /api/deals fetch only fires when Chat (or SavedDeals, which does the
+// same) actually mounts — neither is on a live route yet, so this used to
+// mean fetching on every single page load, including the landing pages that
+// never touch deals data at all. Tradeoff: since each page now gets its own
+// provider instance, "saved" state won't carry over if a user's client-side
+// navigation goes Chat -> SavedDeals (it will refetch and reset saved state).
+// Not a concern today since neither page is reachable from real routes yet;
+// revisit with a shared nested-route provider if/when they're reconnected
+// and cross-page persistence actually matters.
+export default function Chat(props) {
+  return (
+    <DealsProvider>
+      <ChatInner {...props} />
+    </DealsProvider>
+  )
+}
+
+function ChatInner({ startWithOffers = false }) {
   const { toggleSave, isSaved, deals, loading } = useDeals()
   const [messages, setMessages] = useState([])
   const [thinking, setThinking] = useState(false)

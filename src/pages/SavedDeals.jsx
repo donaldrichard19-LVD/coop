@@ -5,7 +5,7 @@ import SegmentedControl from '../components/SegmentedControl'
 import Button from '../components/Button'
 import SavingsSummary from '../domain/SavingsSummary'
 import MerchantListRow from '../domain/MerchantListRow'
-import { useDeals } from '../data/DealsContext'
+import { DealsProvider, useDeals } from '../data/DealsContext'
 
 const TABS = [
   { value: 'saved', label: 'Saved' },
@@ -13,7 +13,17 @@ const TABS = [
   { value: 'used', label: 'Used' },
 ]
 
+// See the matching comment in Chat.jsx for why this wraps itself in its own
+// DealsProvider instead of relying on one shared at the app root.
 export default function SavedDeals() {
+  return (
+    <DealsProvider>
+      <SavedDealsInner />
+    </DealsProvider>
+  )
+}
+
+function SavedDealsInner() {
   const location = useLocation()
   const navigate = useNavigate()
   const [tab, setTab] = useState(location.state?.tab ?? 'saved')
