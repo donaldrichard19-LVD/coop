@@ -19,19 +19,14 @@ export default function DesktopLanding() {
             className="text-[68px] font-extrabold tracking-[-0.035em] leading-[1.06] text-text-primary mb-[30px]"
             style={{ textWrap: 'balance' }}
           >
-            your deal-finding
-            <br />
-            friend, right
-            <br />
-            in your texts.
+            Deals you&rsquo;ll love, text it to you
           </h1>
           <p
             className="text-[22px] leading-[1.55] text-text-secondary max-w-[620px] mb-[34px]"
             style={{ textWrap: 'pretty' }}
           >
-            send coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
-            learn where you actually eat, then text you when one of them has a deal. no bank to connect. no new
-            app.
+            send Coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
+            learn where you actually eat, then text you when one of them has a deal. no new app.
           </p>
 
           <div className="flex items-center gap-4 bg-surface-elevated rounded-[22px] px-[26px] py-[22px] max-w-[620px] mb-12">
@@ -40,18 +35,18 @@ export default function DesktopLanding() {
               <line x1="10.5" y1="18.5" x2="13.5" y2="18.5" />
             </svg>
             <p className="text-[19px] leading-[1.45] font-medium text-[rgba(245,242,234,.8)]">
-              coop&rsquo;s a texting thing &mdash; pull this up on your phone to get started.
+              Coop&rsquo;s a texting thing &mdash; pull this up on your phone to get started.
             </p>
           </div>
 
           <div className="grid grid-cols-1 min-[560px]:grid-cols-3 gap-10 max-w-[780px]">
-            <Step n="01" title="send a screenshot">
-              your last order from a local spot or a delivery app. that&rsquo;s the whole setup.
+            <Step n="01" title="send your screenshots">
+              a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole setup.
             </Step>
-            <Step n="02" title="we watch your spots">
-              coop keeps an eye on the places you already order from. no browsing, no clipping.
+            <Step n="02" title="Coop watches your spots">
+              Coop keeps an eye on the places you already order from. no browsing, no clipping.
             </Step>
-            <Step n="03" title="deals land as a text">
+            <Step n="03" title="deal is sent as a text">
               &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
             </Step>
           </div>

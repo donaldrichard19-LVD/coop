@@ -31,14 +31,14 @@ export default function Splash({ onDone }) {
     >
       <img
         src="/brand/coop-mark-animated.svg"
-        alt="coop"
+        alt="Coop"
         className="h-[22vh] max-h-[160px] w-auto animate-splash-in motion-reduce:animate-none"
       />
       <div
         className="text-[56px] font-extrabold tracking-[-0.03em] text-text-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"
         style={{ animationDelay: '400ms' }}
       >
-        coop
+        Coop
       </div>
       <div
         className="text-footnote font-semibold text-tint-primary animate-splash-fade motion-reduce:animate-none motion-reduce:opacity-100"

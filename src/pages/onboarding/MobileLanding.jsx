@@ -15,27 +15,26 @@ export default function MobileLanding({ onNext }) {
           className="text-[38px] font-extrabold tracking-[-0.03em] leading-[1.1] text-text-primary mb-4"
           style={{ textWrap: 'balance' }}
         >
-          your deal-finding friend, right in your texts.
+          Deals you&rsquo;ll love, text it to you
         </h1>
         <p className="text-[17px] leading-[1.5] text-text-secondary mb-6">
-          send coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
-          learn where you actually eat, then text you when one of them has a deal. no bank to connect. no new
-          app.
+          send Coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
+          learn where you actually eat, then text you when one of them has a deal. no new app.
         </p>
 
         <Button variant="primary" className="w-full justify-center py-4 text-[17px]" onClick={onNext}>
           let&rsquo;s go
         </Button>
-        <p className="text-[13px] text-text-tertiary text-center mt-2.5">about a minute. no bank, no card.</p>
+        <p className="text-[13px] text-text-tertiary text-center mt-2.5">about a minute.</p>
 
         <div className="mt-10 flex flex-col gap-6">
-          <Step n="01" title="send a screenshot">
-            your last order from a local spot or a delivery app. that&rsquo;s the whole setup.
+          <Step n="01" title="send your screenshots">
+            a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole setup.
           </Step>
-          <Step n="02" title="we watch your spots">
-            coop keeps an eye on the places you already order from. no browsing, no clipping.
+          <Step n="02" title="Coop watches your spots">
+            Coop keeps an eye on the places you already order from. no browsing, no clipping.
           </Step>
-          <Step n="03" title="deals land as a text">
+          <Step n="03" title="deal is sent as a text">
             &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
           </Step>
         </div>

@@ -94,7 +94,7 @@ router.get('/approve', async (req, res) => {
     await sendRcsTurn(
       phone,
       {
-        text: `hey ${firstName} — it's coop. you're in. we're lining up your first deals now and will text again soon.`,
+        text: `hey ${firstName} — it's Coop. you're in. we're lining up your first deals now and will text again soon.`,
         deals: [],
         quickReplies: [],
       },

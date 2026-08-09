@@ -26,16 +26,20 @@ export default function LandingDealDemo({ compact = false }) {
   return (
     <div className="flex flex-col gap-[22px]">
       <div className="bg-surface-elevated rounded-[26px] px-6 py-[22px] flex items-center gap-[18px]">
-        <div className="w-[54px] h-[68px] rounded-[10px] bg-gradient-to-b from-[#2E2E32] to-[#232326] border border-[rgba(245,242,234,.12)] shrink-0 flex flex-col gap-[5px] px-2 py-[9px] box-border">
-          <span className="h-[5px] rounded-full bg-[rgba(245,242,234,.34)] w-4/5" />
-          <span className="h-[5px] rounded-full bg-[rgba(245,242,234,.2)] w-3/5" />
-          <span className="h-[5px] rounded-full bg-[rgba(245,242,234,.2)] w-[70%]" />
-          <span className="mt-auto h-[6px] rounded-full bg-tint-primary w-1/2" />
+        <div className="relative w-[64px] h-[72px] shrink-0">
+          <div className="absolute top-[7px] left-[16px] w-[46px] h-[60px] rounded-[9px] bg-[#232326] border border-[rgba(245,242,234,.08)] rotate-[9deg]" />
+          <div className="absolute top-[4px] left-[8px] w-[46px] h-[60px] rounded-[9px] bg-[#282829] border border-[rgba(245,242,234,.1)] rotate-[-6deg]" />
+          <div className="absolute top-0 left-0 w-[48px] h-[62px] rounded-[9px] bg-gradient-to-b from-[#2E2E32] to-[#232326] border border-[rgba(245,242,234,.12)] flex flex-col gap-[4px] px-[7px] py-2 box-border">
+            <span className="h-[4px] rounded-full bg-[rgba(245,242,234,.34)] w-4/5" />
+            <span className="h-[4px] rounded-full bg-[rgba(245,242,234,.2)] w-3/5" />
+            <span className="h-[4px] rounded-full bg-[rgba(245,242,234,.2)] w-[70%]" />
+            <span className="mt-auto h-[5px] rounded-full bg-tint-primary w-1/2" />
+          </div>
         </div>
         <div className="min-w-0">
-          <div className="text-[17px] font-bold text-text-primary mb-1.5">screenshot received</div>
+          <div className="text-[17px] font-bold text-text-primary mb-1.5">screenshots received</div>
           <div className="text-[15px] leading-[1.45] text-text-secondary">
-            taqueria sol &middot; $23.40 &middot; tuesday. got it &mdash; i&rsquo;ll watch this one.
+            taqueria sol, blue bottle, chipotle &mdash; got it, i&rsquo;ll watch these.
           </div>
         </div>
       </div>
@@ -137,7 +141,7 @@ export default function LandingDealDemo({ compact = false }) {
 
       {!compact && (
         <p className="text-[15px] leading-[1.5] text-text-tertiary px-1.5">
-          no bank connection. no card linking. just the screenshots you send.
+          just the screenshots you send.
         </p>
       )}
     </div>
