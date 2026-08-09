@@ -25,7 +25,6 @@ export default function MobileLanding({ onNext }) {
         <Button variant="primary" className="w-full justify-center py-4 text-[17px]" onClick={onNext}>
           let&rsquo;s go
         </Button>
-        <p className="text-[13px] text-text-tertiary text-center mt-2.5">about a minute.</p>
 
         <div className="mt-10 flex flex-col gap-6">
           <Step n="01" title="send your screenshots">
