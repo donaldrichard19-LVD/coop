@@ -2,6 +2,7 @@ import express from 'express'
 import crypto from 'node:crypto'
 import { Resend } from 'resend'
 import { sendRcsTurn } from '../lib/twilioClient.js'
+import { supabase } from '../lib/supabase.js'
 
 const router = express.Router()
 
@@ -42,6 +43,17 @@ router.post('/', async (req, res) => {
   const phone = normalizePhone(rawPhone)
   if (!phone) {
     return res.status(400).json({ error: 'Valid 10-digit phone number required' })
+  }
+
+  // Mirrors Calvin's signups-table upsert (onConflict + ignoreDuplicates so a
+  // resubmit doesn't error or duplicate). Not wrapped together with the email
+  // send below — a DB hiccup shouldn't block the notification email, and vice
+  // versa, so the lead is captured somewhere even if one path fails.
+  const { error: dbError } = await supabase
+    .from('waitlist_signups')
+    .upsert({ phone, name: name || null }, { onConflict: 'phone', ignoreDuplicates: true })
+  if (dbError) {
+    console.error('[waitlist] failed to persist signup:', dbError.message)
   }
 
   try {

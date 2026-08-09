@@ -30,4 +30,8 @@ services:
       - key: WAITLIST_SECRET
         sync: false
       - key: BACKEND_URL
-        value: https://coop-backend.onrender.com
+        value: https://coop-backend-eobj.onrender.com
+      - key: SUPABASE_URL
+        value: https://dqfqigmbontpjppkvbys.supabase.co
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
