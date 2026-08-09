@@ -138,12 +138,6 @@ export default function LandingDealDemo({ compact = false }) {
           </div>
         )}
       </div>
-
-      {!compact && (
-        <p className="text-[15px] leading-[1.5] text-text-tertiary px-1.5">
-          just the screenshots you send.
-        </p>
-      )}
     </div>
   )
 }

@@ -14,3 +14,13 @@ export async function submitWaitlist({ name, phone }) {
   }
   return res.json()
 }
+
+export async function fetchDeals() {
+  const res = await fetch(`${API_URL}/api/deals`)
+  if (!res.ok) {
+    const body = await res.json().catch(() => ({}))
+    throw new Error(body.error || 'Failed to load deals')
+  }
+  const { deals } = await res.json()
+  return deals
+}

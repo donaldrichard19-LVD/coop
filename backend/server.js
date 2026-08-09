@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import rcsRouter from './routes/rcs.js'
 import waitlistRouter from './routes/waitlist.js'
+import dealsRouter from './routes/deals.js'
 
 const app = express()
 
@@ -11,6 +12,7 @@ app.use(express.json())
 
 app.use('/api/rcs', rcsRouter)
 app.use('/api/waitlist', waitlistRouter)
+app.use('/api/deals', dealsRouter)
 
 app.get('/health', (_req, res) => res.json({ ok: true }))
 

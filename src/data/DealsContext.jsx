@@ -1,10 +1,31 @@
-import { createContext, useContext, useMemo, useState } from 'react'
-import { deals, categoryBreakdown, savingsThisMonth } from './deals'
+import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { fetchDeals } from '../lib/api'
+import { categoryBreakdown, savingsThisMonth } from './deals'
 
 const DealsContext = createContext(null)
 
 export function DealsProvider({ children }) {
-  const [savedIds, setSavedIds] = useState(() => new Set(['d-lucky']))
+  const [deals, setDeals] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [savedIds, setSavedIds] = useState(() => new Set())
+
+  useEffect(() => {
+    let cancelled = false
+    fetchDeals()
+      .then((data) => {
+        if (!cancelled) setDeals(data)
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message)
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   function toggleSave(id) {
     setSavedIds((prev) => {
@@ -18,6 +39,8 @@ export function DealsProvider({ children }) {
   const value = useMemo(
     () => ({
       deals,
+      loading,
+      error,
       savedIds,
       toggleSave,
       isSaved: (id) => savedIds.has(id),
@@ -27,7 +50,7 @@ export function DealsProvider({ children }) {
       categoryBreakdown,
       savingsThisMonth,
     }),
-    [savedIds],
+    [deals, loading, error, savedIds],
   )
 
   return <DealsContext.Provider value={value}>{children}</DealsContext.Provider>

@@ -20,26 +20,8 @@ function greetingForNow() {
 const FOLLOW_UPS = ['Only chain deals', 'Only local spots', 'Something cheaper', 'What else is close?']
 
 export default function Chat({ startWithOffers = false }) {
-  const { toggleSave, isSaved, deals } = useDeals()
-  const [messages, setMessages] = useState(() => {
-    if (!startWithOffers) return []
-    // Proactive push right out of onboarding, per the spec's core loop
-    // ("push matches proactively") — not the generic empty-state greeting.
-    // Deliberately bypasses matchDeals() (excludes 'used' too, not just
-    // 'expired') for this one curated moment.
-    const eligible = deals.filter((d) => d.status !== 'expired' && d.status !== 'used')
-    const shown = eligible.slice(0, 2)
-    return [
-      {
-        id: 'a-proactive',
-        role: 'assistant',
-        text: `connected. found ${shown.length} deals already.`,
-        dealIds: shown.map((d) => d.id),
-        overflowCount: Math.max(0, eligible.length - shown.length),
-        overflowTotal: eligible.length,
-      },
-    ]
-  })
+  const { toggleSave, isSaved, deals, loading } = useDeals()
+  const [messages, setMessages] = useState([])
   const [thinking, setThinking] = useState(false)
   const navigate = useNavigate()
   const threadRef = useRef(null)
@@ -50,8 +32,30 @@ export default function Chat({ startWithOffers = false }) {
     }
   }, [messages, thinking])
 
+  // Proactive push right out of onboarding, per the spec's core loop ("push
+  // matches proactively") — not the generic empty-state greeting. Deliberately
+  // bypasses matchDeals() (excludes 'used' too, not just 'expired') for this
+  // one curated moment. Runs once deals actually finish loading, since they're
+  // now fetched async instead of available synchronously at mount.
+  useEffect(() => {
+    if (!startWithOffers || loading || deals.length === 0) return
+    const eligible = deals.filter((d) => d.status !== 'expired' && d.status !== 'used')
+    const shown = eligible.slice(0, 2)
+    setMessages([
+      {
+        id: 'a-proactive',
+        role: 'assistant',
+        text: `connected. found ${shown.length} deals already.`,
+        dealIds: shown.map((d) => d.id),
+        overflowCount: Math.max(0, eligible.length - shown.length),
+        overflowTotal: eligible.length,
+      },
+    ])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading])
+
   function respond(query) {
-    const matches = matchDeals(query)
+    const matches = matchDeals(query, deals)
     const shown = matches.slice(0, 2)
     const overflow = matches.length - shown.length
 
