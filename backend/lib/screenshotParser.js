@@ -2,12 +2,13 @@ import { anthropic } from './anthropic.js'
 import { extractText } from './ocr.js'
 import { matchMerchant } from './merchantDictionary.js'
 import { redactPII } from './redact.js'
+import { normalizeItems } from './itemNormalization.js'
 
 // Below this OCR text length or confidence (0-100), treat OCR as having
 // failed rather than trust garbled output — fall back to sending the image
-// directly. No regex line-item extractor or normalization cache exists yet
-// (later pipeline stages), so this is the full extent of the fallback
-// ladder for a dictionary miss: OCR text, or the raw image, never both.
+// directly. No regex line-item extractor exists yet (a later pipeline
+// stage), so this is the full extent of the fallback ladder for a
+// dictionary miss: OCR text, or the raw image, never both.
 const MIN_OCR_TEXT_LENGTH = 20
 const MIN_OCR_CONFIDENCE = 40
 
@@ -15,28 +16,32 @@ const TEXT_PROMPT_HEADER = `Below is OCR-extracted text from a screenshot of a f
 
 const IMAGE_PROMPT = `You are extracting structured data from a screenshot of a food/delivery order or receipt.`
 
+// "items" is raw name strings only, not {name, category} — categorizing an
+// item is itemNormalization.js's job now (stage 6+7), done once per unique
+// raw string and cached, instead of re-guessed by every single screenshot
+// that happens to mention the same item.
 const SHARED_RULES = `
 Return ONLY valid JSON in this exact shape — no markdown fences, no explanation, nothing else:
-{"merchant": string|null, "category": string, "items": [{"name": string, "category": string|null}]}
+{"merchant": string|null, "category": string, "items": [string]}
 
 Rules:
 - "merchant" is the specific business name (e.g. "Blue Bottle Coffee"). Only set it when you can identify the specific business with real confidence — otherwise null.
 - "category" is REQUIRED, always filled in even when merchant is null: a general type of place or cuisine (e.g. "mexican", "coffee", "dessert", "pizza", "sushi", "fast casual"). Never leave it blank — this is the fallback when the specific merchant isn't identifiable.
-- "items" lists individual food/drink items visible in the order, each with a best-guess category. Empty array if none are legible.
+- "items" lists the individual food/drink items visible in the order, as raw strings exactly as they appear. Empty array if none are legible.
 - If this doesn't look like a food/order screenshot at all, return {"merchant": null, "category": "unknown", "items": []}.`
 
 // Used only after a dictionary hit — merchant and category are already
 // known at zero tokens, so this prompt doesn't ask Claude to reason about
 // either, just items. No regex extractor exists yet (that fully-zero-token
-// version is the next pipeline stage), so this is still a model call, just
+// version is a later pipeline stage), so this is still a model call, just
 // a smaller one.
 function itemsOnlyPrompt(merchantName) {
   return `Below is OCR-extracted text from a screenshot of an order at ${merchantName}. OCR text can have misread characters, jumbled line order, or extra noise from app UI chrome — read past that.
 
 Return ONLY valid JSON in this exact shape — no markdown fences, no explanation, nothing else:
-{"items": [{"name": string, "category": string|null}]}
+{"items": [string]}
 
-List individual food/drink items visible in the order, each with a best-guess category. Empty array if none are legible.`
+List the individual food/drink items visible in the order, as raw strings exactly as they appear. Empty array if none are legible.`
 }
 
 function parseJsonResponse(text) {
@@ -124,24 +129,34 @@ export async function parseScreenshot(mediaUrl, contentType) {
   // non-PII content survived redaction.
   const text = redactPII(rawText)
 
+  let merchant, category, rawItems
+
   // Tried regardless of OCR confidence, before either fallback tier — see
   // merchantDictionary.js for why this can still hit on otherwise-weak OCR.
   const dictHit = text.length > 0 ? await matchMerchant(text) : null
   if (dictHit) {
     console.log(`[screenshotParser] dictionary hit: ${dictHit.name} — merchant+category cost 0 tokens`)
-    const items = await extractItemsOnly(text, dictHit.name)
-    return { merchant: dictHit.name, category: dictHit.category, items }
-  }
-
-  if (rawText.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
+    merchant = dictHit.name
+    category = dictHit.category
+    rawItems = await extractItemsOnly(text, dictHit.name)
+  } else if (rawText.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
     console.log(`[screenshotParser] OCR ok (confidence ${confidence.toFixed(0)}, ${text.length} chars) — text path`)
-    return await extractFromText(text)
+    const parsed = await extractFromText(text)
+    merchant = parsed.merchant
+    category = parsed.category
+    rawItems = parsed.items || []
+  } else {
+    // Image fallback: redaction above doesn't apply here — see redact.js's
+    // header comment for why that's a known, flagged gap, not an oversight.
+    console.log(
+      `[screenshotParser] OCR too weak (confidence ${confidence.toFixed(0)}, ${rawText.length} chars) — image fallback`,
+    )
+    const parsed = await extractFromImage(buffer, contentType)
+    merchant = parsed.merchant
+    category = parsed.category
+    rawItems = parsed.items || []
   }
 
-  // Image fallback: redaction above doesn't apply here — see redact.js's
-  // header comment for why that's a known, flagged gap, not an oversight.
-  console.log(
-    `[screenshotParser] OCR too weak (confidence ${confidence.toFixed(0)}, ${rawText.length} chars) — image fallback`,
-  )
-  return await extractFromImage(buffer, contentType)
+  const items = await normalizeItems(rawItems)
+  return { merchant, category, items }
 }
