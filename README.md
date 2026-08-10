@@ -57,7 +57,7 @@ All assets are in [`public/brand/`](./public/brand):
 The mark is two unioned shapes, both solid fills, no stroke:
 
 - **Bubble** — rounded rectangle, aspect ratio 176:152, corner radius 27% of width on all four corners.
-- **Tail** — a square 21.6% of the bubble's width, positioned 16% in from the left with its top flush against the bubble's bottom edge, bottom-left corner radius 73% of its own size, sheared `skewX(-14deg)`.
+- **Tail** — a square 21.6% of the bubble's width, positioned 16% in from the right, overlapping up into the bubble so only 8% of the bubble's width hangs below its bottom edge, bottom-right corner radius 73% of its own size, sheared `skewX(14deg)` so the point faces right.
 
 Inside the bubble: six vertical bars, centered as a set, fully rounded ends, one of them (the fourth) at 45% opacity so the rhythm doesn't read as a perfectly even grid — that's what keeps it looking like a barcode instead of an equalizer.
 
@@ -91,7 +91,7 @@ Lowercase `coop`, **Archivo Expanded**, weight 900, `letter-spacing: -0.05em`. T
 ### Rules
 
 - Clear space on all sides = one bar-width at that size.
-- The tail always sits bottom-left. Never mirror, rotate, or detach it.
+- The tail always sits bottom-right, point facing right. Never mirror, rotate, or detach it.
 - Never change the bar rhythm or make the bars evenly spaced.
 - Never outline the mark — it's always a solid fill.
 - Never place the wordmark inside the bubble.
