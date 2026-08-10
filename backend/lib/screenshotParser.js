@@ -1,11 +1,12 @@
 import { anthropic } from './anthropic.js'
 import { extractText } from './ocr.js'
+import { matchMerchant } from './merchantDictionary.js'
 
 // Below this OCR text length or confidence (0-100), treat OCR as having
 // failed rather than trust garbled output — fall back to sending the image
-// directly. No merchant dictionary, regex extractor, or normalization cache
-// exists yet (those are later pipeline stages), so this is the full extent
-// of the fallback ladder for now: OCR text, or the raw image, never both.
+// directly. No regex line-item extractor or normalization cache exists yet
+// (later pipeline stages), so this is the full extent of the fallback
+// ladder for a dictionary miss: OCR text, or the raw image, never both.
 const MIN_OCR_TEXT_LENGTH = 20
 const MIN_OCR_CONFIDENCE = 40
 
@@ -22,6 +23,20 @@ Rules:
 - "category" is REQUIRED, always filled in even when merchant is null: a general type of place or cuisine (e.g. "mexican", "coffee", "dessert", "pizza", "sushi", "fast casual"). Never leave it blank — this is the fallback when the specific merchant isn't identifiable.
 - "items" lists individual food/drink items visible in the order, each with a best-guess category. Empty array if none are legible.
 - If this doesn't look like a food/order screenshot at all, return {"merchant": null, "category": "unknown", "items": []}.`
+
+// Used only after a dictionary hit — merchant and category are already
+// known at zero tokens, so this prompt doesn't ask Claude to reason about
+// either, just items. No regex extractor exists yet (that fully-zero-token
+// version is the next pipeline stage), so this is still a model call, just
+// a smaller one.
+function itemsOnlyPrompt(merchantName) {
+  return `Below is OCR-extracted text from a screenshot of an order at ${merchantName}. OCR text can have misread characters, jumbled line order, or extra noise from app UI chrome — read past that.
+
+Return ONLY valid JSON in this exact shape — no markdown fences, no explanation, nothing else:
+{"items": [{"name": string, "category": string|null}]}
+
+List individual food/drink items visible in the order, each with a best-guess category. Empty array if none are legible.`
+}
 
 function parseJsonResponse(text) {
   const cleaned = text
@@ -50,6 +65,22 @@ async function extractFromText(text) {
   const textBlock = message.content.find((b) => b.type === 'text')
   if (!textBlock) throw new Error('No text response from Claude')
   return parseJsonResponse(textBlock.text)
+}
+
+// Dictionary-hit path: merchant + category already resolved at zero tokens,
+// so this call only has to do item extraction — shorter prompt, no
+// merchant/category reasoning, cheaper than extractFromText even though
+// it's still a real model call.
+async function extractItemsOnly(text, merchantName) {
+  const message = await anthropic.messages.create({
+    model: 'claude-sonnet-5',
+    max_tokens: 512,
+    messages: [{ role: 'user', content: `${itemsOnlyPrompt(merchantName)}\n\nOCR text:\n"""\n${text}\n"""` }],
+  })
+  const textBlock = message.content.find((b) => b.type === 'text')
+  if (!textBlock) throw new Error('No text response from Claude')
+  const parsed = parseJsonResponse(textBlock.text)
+  return parsed.items || []
 }
 
 // Fallback path only: OCR failed to produce usable text (low confidence or
@@ -85,6 +116,15 @@ async function extractFromImage(buffer, contentType) {
 export async function parseScreenshot(mediaUrl, contentType) {
   const buffer = await downloadMedia(mediaUrl)
   const { text, confidence } = await extractText(buffer)
+
+  // Tried regardless of OCR confidence, before either fallback tier — see
+  // merchantDictionary.js for why this can still hit on otherwise-weak OCR.
+  const dictHit = text.length > 0 ? await matchMerchant(text) : null
+  if (dictHit) {
+    console.log(`[screenshotParser] dictionary hit: ${dictHit.name} — merchant+category cost 0 tokens`)
+    const items = await extractItemsOnly(text, dictHit.name)
+    return { merchant: dictHit.name, category: dictHit.category, items }
+  }
 
   if (text.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
     console.log(`[screenshotParser] OCR ok (confidence ${confidence.toFixed(0)}, ${text.length} chars) — text path`)
