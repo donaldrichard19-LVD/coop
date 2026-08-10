@@ -6,29 +6,28 @@ Let users who don't want to connect a bank account upload screenshots of recent 
 **User story:** As a user, I want to upload screenshots of recent purchases from merchants so Coop can personalize deals from local merchants near me.
 
 **Acceptance criteria:**
-- User can upload screenshots from their phone to Coop.
-- Coop parses screenshots for merchant identification and individual items within the order.
-- Coop builds a preference profile from parsed data.
-- Coop surfaces offers from local merchants for similar or exact goods.
+- User can upload screenshots from their phone to Coop. ✅ (MMS/RCS media on the existing inbound webhook, `routes/rcs.js`)
+- Coop parses screenshots for merchant identification and individual items within the order. ✅
+- Coop builds a preference profile from parsed data. ✅
+- Coop surfaces offers from local merchants for similar or exact goods. ✅ (pushed once a profile crosses the minimum-upload threshold — see below)
 
-**Status:** This replaces the Plaid onboarding step (see "Plaid onboarding flow" below — now backlogged, not deleted). The waitlist flow (built 2026-08-07, live) is the interim front door; this is the feature that will eventually sit behind Donald's manual SMS trigger, giving waitlisted users something to do once they're texted.
+**Status: built, following the cost-routing pipeline design in project memory** (deterministic stages first, model calls only where a judgment call is unavoidable, cache/dictionary write-back everywhere). Reachable today via text: an approved account (`accounts` table, Donald's manual approval gate — see the phone-identity section below) MMS's a screenshot to the RCS number.
 
-**Prerequisites:** A vision-capable parsing step. Coop's backend has no LLM/vision dependency today (`backend/package.json` is just `cors`/`dotenv`/`express`/`twilio`) — the natural fit given the rest of this stack is the Anthropic SDK's multimodal input (Claude can take an image + a structured-extraction prompt and return JSON), matching how Calvin's backend already uses `lib/anthropic.js` for a similar job. Needs an `ANTHROPIC_API_KEY`.
+**Resolved decisions** (previously open questions, now answered and built):
+- **Timing**: after approval, over text — not during onboarding. The waitlist flow is still the front door; screenshot upload is what an approved number can do once they're in.
+- **Retention**: processed and discarded. The image is downloaded into memory, OCR'd, and never written to disk or Supabase — only the extracted structured data lands in `screenshot_uploads`.
+- **Low-confidence merchant handling**: one-tap RCS confirm chip ("is this ⟨merchant⟩? yes/no"), sent whenever the merchant came from a model guess rather than the deterministic dictionary. A "yes" writes the merchant into `merchant_dictionary`, so the same merchant resolves at zero tokens on every future screenshot — the dictionary grows from real confirmed answers instead of needing to be hand-seeded forever.
+- **Minimum viable profile**: 3 screenshots. The proactive "here's what we found" deal push fires once, on the upload that crosses this threshold — not on every upload after.
+- **Deal inventory scope**: restaurant/coffee/fast-casual only, matching Coop's existing deal supply — grocery/retail (Target, Walmart, etc.) is explicitly out of scope. `merchant_dictionary` is seeded accordingly (15 restaurant/coffee chains + Coop's 7 existing deal merchants).
+- **"Similar or exact goods" matching**: EXACT = a deal at a merchant the profile has an actual screenshot from; SIMILAR = a deal whose merchant category overlaps one of the profile's top (recency-weighted) categories. Exact always outranks similar. (`backend/lib/profileDealMatch.js`)
 
-**Scope (draft — needs a real planning pass before building, not sized yet):**
+**Pipeline stages built** (`backend/lib/`): ingest+approval gate (`accounts.js`) → OCR (`ocr.js`, Tesseract, local, zero tokens) → PII redaction (`redact.js`, regex, text-path only) → merchant dictionary + category (`merchantDictionary.js`, zero tokens on a hit) → item normalization cache (`itemNormalization.js`, batched model call on a cache miss only) → preference profile (`preferenceProfile.js`, pure aggregation, no model) → profile-scored deal retrieval (`profileDealMatch.js`, deterministic scoring, no model). Two model calls total, both gated behind a deterministic-first check, matching the pipeline's routing rule.
 
-- **Upload UI**: a step in the (now-simplified) onboarding chain, or a standalone flow reachable from the RCS thread — needs a product decision on *when* this happens (during signup vs. after Donald's SMS trigger, per "Status" above).
-- **Backend — `POST /api/screenshots/parse`**: accepts an image, sends to Claude with an extraction prompt, returns `{ merchant, items: [{ name, category, price? }] }`. No image storage requirement stated yet — decide whether screenshots are persisted (privacy/retention question, given these are receipts) or processed and discarded.
-- **Preference profile**: doesn't exist as a concept in `src/data/deals.js` today — that schema is deal-shaped, not user-shaped. Needs its own model: something like `{ merchants: [{name, itemCategories: [...], lastSeen}], preferredCategories: [...] }`, built up incrementally as more screenshots come in.
-- **"Similar or exact goods" matching**: also doesn't exist yet. Current `matchDeals()` matches on merchant/keyword against a fixed mock deal list — there's no item-level or category-level similarity matching anywhere in the codebase. This is probably the hardest open question: does "similar goods" mean category-matching (both are "coffee"), semantic matching (embeddings), or something cruder (keyword overlap) for v1?
-- **Storage**: Supabase is live now (`waitlist_signups`, `merchants`, `deals` tables — see project memory for details), so the "which database" decision is already made. What's still unbuilt is the preference-profile schema itself: there's no per-user table yet, and the merchants/deals tables added so far are global (not scoped to a user/account) — this feature is still the first one that needs real per-user persistence, just on an existing database instead of a from-scratch one.
-
-**Open questions (explicitly not resolved — flag before scoping further):**
-- Does this run during onboarding (before the person is "in") or after, as a way to make the waitlist SMS lead somewhere real?
-- What happens for a merchant screenshot Coop can't confidently identify — silent skip, or ask the user to confirm?
-- Retention: are uploaded screenshots kept, or processed-and-discarded? (They're effectively receipts — probably want to discard the image and keep only the extracted structured data, but that's a call to make explicitly, not default into.)
-
-**Effort:** not sized — the matching-logic and profile-schema questions above need answers before this can be estimated honestly.
+**Known gaps, not yet built:**
+- **Stage 5 (regex line-item extraction)** — items are still extracted via a model call (`screenshotParser.js`'s text/image paths), not a bounding-box-paired regex extractor. This is a cost optimization, not an AC blocker; worth building once real volume makes the token cost worth trimming further.
+- **Eval harness + cost/hit-rate instrumentation** — no fixed labeled screenshot set, no dictionary-hit-rate or cache-hit-rate tracking yet. Needed before tuning models/thresholds with confidence.
+- **PII redaction gap** — only covers the OCR-text path; the low-OCR-confidence image fallback sends the raw image (with whatever PII is on it) directly to Claude. Flagged in `redact.js`, not fixed.
+- **Ongoing proactive re-notification** — the current push is a one-time "you're in" moment at 3 uploads, not a recurring analysis job (unlike Calvin's cron). Revisit if/when Coop wants to keep surfacing new matches as more screenshots come in or new deals appear.
 
 ---
 

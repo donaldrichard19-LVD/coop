@@ -16,6 +16,7 @@ const templateSids = {
   carousel: process.env.RCS_TEMPLATE_CAROUSEL_SID,
   chipsOpening: process.env.RCS_TEMPLATE_CHIPS_OPENING_SID,
   chipsFollowup: process.env.RCS_TEMPLATE_CHIPS_FOLLOWUP_SID,
+  confirmMerchant: process.env.RCS_TEMPLATE_CONFIRM_MERCHANT_SID,
 }
 
 /**
@@ -54,4 +55,24 @@ export async function sendRcsTurn(to, turn, { isFirstTurn = false } = {}) {
   }
 
   return { sent: true, results }
+}
+
+/**
+ * Sends the confidence-gate confirm chip ("is this Chipotle?" / yes / no) — a single
+ * template message, not a full AssistantTurn, so it doesn't go through renderTurnAsRCS.
+ * Requires RCS_TEMPLATE_CONFIRM_MERCHANT_SID (from `npm run provision:rcs`); otherwise
+ * logs and returns without sending, same no-credentials-yet guard as sendRcsTurn.
+ */
+export async function sendConfirmPrompt(to, questionText) {
+  if (!client || !process.env.TWILIO_MESSAGING_SERVICE_SID || !templateSids.confirmMerchant) {
+    console.log('[rcs] no Twilio credentials/template configured — would have sent confirm prompt:', questionText)
+    return { sent: false }
+  }
+
+  return client.messages.create({
+    contentSid: templateSids.confirmMerchant,
+    contentVariables: JSON.stringify({ 1: questionText }),
+    messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
+    to,
+  })
 }

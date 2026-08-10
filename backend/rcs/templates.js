@@ -116,9 +116,33 @@ export const CHIPS_FOLLOWUP_TEMPLATE = {
   },
 }
 
+// The one place a per-turn variable feeds an action-adjacent field: unlike
+// the chip templates above, this one *needs* dynamic text ("is this
+// Chipotle?") since the merchant guess varies per screenshot — but the risk
+// flagged at the top of this file was variable substitution inside an
+// action *title*, not inside `body`. The two QUICK_REPLY titles here stay
+// static ("yes"/"no"), same guarantee as every other chip in this file.
+export const CONFIRM_MERCHANT_TEMPLATE = {
+  friendly_name: 'coop_rcs_confirm_merchant',
+  language: 'en',
+  variables: {
+    1: 'confirmation question body',
+  },
+  types: {
+    'twilio/card': {
+      body: '{{1}}',
+      actions: [
+        { type: 'QUICK_REPLY', title: 'yes', id: 'confirm_yes' },
+        { type: 'QUICK_REPLY', title: 'no', id: 'confirm_no' },
+      ],
+    },
+  },
+}
+
 export const ALL_TEMPLATES = {
   card: CARD_TEMPLATE,
   carousel: CAROUSEL_TEMPLATE,
   chipsOpening: CHIPS_OPENING_TEMPLATE,
   chipsFollowup: CHIPS_FOLLOWUP_TEMPLATE,
+  confirmMerchant: CONFIRM_MERCHANT_TEMPLATE,
 }

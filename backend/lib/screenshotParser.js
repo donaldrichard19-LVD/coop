@@ -130,6 +130,12 @@ export async function parseScreenshot(mediaUrl, contentType) {
   const text = redactPII(rawText)
 
   let merchant, category, rawItems
+  // 'dictionary' hits are already zero-token-certain (a deterministic string
+  // match), so they skip the confidence gate. 'model' means a model guessed
+  // the merchant name — per the guidance doc, that's exactly the case the
+  // one-tap confirm chip exists for, both to correct a possible miss and to
+  // grow the dictionary from a confirmed answer. See routes/rcs.js.
+  let merchantSource = null
 
   // Tried regardless of OCR confidence, before either fallback tier — see
   // merchantDictionary.js for why this can still hit on otherwise-weak OCR.
@@ -138,12 +144,14 @@ export async function parseScreenshot(mediaUrl, contentType) {
     console.log(`[screenshotParser] dictionary hit: ${dictHit.name} — merchant+category cost 0 tokens`)
     merchant = dictHit.name
     category = dictHit.category
+    merchantSource = 'dictionary'
     rawItems = await extractItemsOnly(text, dictHit.name)
   } else if (rawText.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
     console.log(`[screenshotParser] OCR ok (confidence ${confidence.toFixed(0)}, ${text.length} chars) — text path`)
     const parsed = await extractFromText(text)
     merchant = parsed.merchant
     category = parsed.category
+    if (merchant) merchantSource = 'model'
     rawItems = parsed.items || []
   } else {
     // Image fallback: redaction above doesn't apply here — see redact.js's
@@ -154,9 +162,10 @@ export async function parseScreenshot(mediaUrl, contentType) {
     const parsed = await extractFromImage(buffer, contentType)
     merchant = parsed.merchant
     category = parsed.category
+    if (merchant) merchantSource = 'model'
     rawItems = parsed.items || []
   }
 
   const items = await normalizeItems(rawItems)
-  return { merchant, category, items }
+  return { merchant, category, merchantSource, items }
 }

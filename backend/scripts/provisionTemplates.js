@@ -40,6 +40,7 @@ const envKeyByTemplate = {
   carousel: 'RCS_TEMPLATE_CAROUSEL_SID',
   chipsOpening: 'RCS_TEMPLATE_CHIPS_OPENING_SID',
   chipsFollowup: 'RCS_TEMPLATE_CHIPS_FOLLOWUP_SID',
+  confirmMerchant: 'RCS_TEMPLATE_CONFIRM_MERCHANT_SID',
 }
 
 const results = {}
