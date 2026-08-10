@@ -50,7 +50,7 @@ export async function fetchDeals() {
   const { data, error } = await supabase
     .from('deals')
     .select(
-      'id, offer, savings_amount, original_price, code, status, ends_at, merchants(name, initials, distance_label, first_visit_at, visit_count)',
+      'id, offer, savings_amount, original_price, code, status, ends_at, merchants(name, initials, category, distance_label, first_visit_at, visit_count)',
     )
     .order('created_at', { ascending: true })
 
@@ -65,6 +65,10 @@ export async function fetchDeals() {
       firstVisit: MONTHS[new Date(row.merchants.first_visit_at).getUTCMonth()],
       distance: row.merchants.distance_label,
     },
+    // Merchant category, not a deal-level column — surfaced here (not just
+    // internally) because profileDealMatch.js's stage-9 scoring needs it to
+    // compare against a preference profile's topCategories.
+    category: row.merchants.category,
     offer: row.offer,
     savingsAmount: Number(row.savings_amount),
     originalPrice: row.original_price != null ? Number(row.original_price) : null,
