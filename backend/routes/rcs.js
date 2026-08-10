@@ -2,6 +2,7 @@ import express from 'express'
 import { matchDeals, quickReplies } from '../../src/data/deals.js'
 import { sendRcsTurn } from '../lib/twilioClient.js'
 import { resolveQuickReplyId } from '../lib/session.js'
+import { normalizePhone, resolveOrCreateAccount } from '../lib/accounts.js'
 
 const router = express.Router()
 
@@ -16,6 +17,33 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
   const buttonPayload = req.body.ButtonPayload
 
   res.status(200).end() // ack immediately; Twilio expects a fast response
+
+  // Approval gate: only accounts Donald has approved get the real deals
+  // experience. Pending/unknown numbers get pointed at the web landing page
+  // instead — no buttonPayload handling, no matchDeals. The Twilio ack above
+  // already happened, so a failure here just means no reply gets sent, not a
+  // response-timing problem.
+  let phone
+  try {
+    phone = normalizePhone(from)
+    if (!phone) {
+      console.error('[rcs] failed to normalize inbound phone:', from)
+      return
+    }
+
+    const account = await resolveOrCreateAccount(phone)
+    if (account.status !== 'approved') {
+      await sendRcsTurn(from, {
+        text: "hey — you're not signed up for Coop yet. sign up here: https://getcoop.cash and we'll get you in.",
+        deals: [],
+        quickReplies: [],
+      })
+      return
+    }
+  } catch (err) {
+    console.error('[rcs] account resolution failed:', err.message)
+    return
+  }
 
   if (buttonPayload?.startsWith('save_')) {
     const deal = resolveQuickReplyId(from, buttonPayload)

@@ -3,16 +3,11 @@ import crypto from 'node:crypto'
 import { Resend } from 'resend'
 import { sendRcsTurn } from '../lib/twilioClient.js'
 import { supabase } from '../lib/supabase.js'
+import { normalizePhone } from '../lib/accounts.js'
 
 const router = express.Router()
 
 const BASE_URL = (process.env.BACKEND_URL || 'http://localhost:3002').replace(/\/$/, '')
-
-function normalizePhone(raw) {
-  const digits = String(raw || '').replace(/\D/g, '')
-  if (digits.length !== 10) return null
-  return `+1${digits}`
-}
 
 // Mirrors Calvin's routes/waitlist.js signToken/approveUrl pattern exactly,
 // just signed on phone instead of email since Coop's waitlist collects
@@ -50,8 +45,8 @@ router.post('/', async (req, res) => {
   // send below — a DB hiccup shouldn't block the notification email, and vice
   // versa, so the lead is captured somewhere even if one path fails.
   const { error: dbError } = await supabase
-    .from('waitlist_signups')
-    .upsert({ phone, name: name || null }, { onConflict: 'phone', ignoreDuplicates: true })
+    .from('accounts')
+    .upsert({ phone, name: name || null, status: 'pending' }, { onConflict: 'phone', ignoreDuplicates: true })
   if (dbError) {
     console.error('[waitlist] failed to persist signup:', dbError.message)
   }
@@ -99,6 +94,16 @@ router.get('/approve', async (req, res) => {
   const expectedBuf = Buffer.from(expected)
   if (tokenBuf.length !== expectedBuf.length || !crypto.timingSafeEqual(tokenBuf, expectedBuf)) {
     return res.status(403).send('Invalid token')
+  }
+
+  // Same resilience convention as the signup upsert above: a DB hiccup here
+  // shouldn't block the welcome text, which is the part Donald is actually
+  // watching for when he clicks this link. Re-clicking approve for an
+  // already-approved account is naturally idempotent (plain update, not
+  // insert) — no extra guard needed.
+  const { error: statusError } = await supabase.from('accounts').update({ status: 'approved' }).eq('phone', phone)
+  if (statusError) {
+    console.error('[waitlist] failed to mark account approved:', statusError.message)
   }
 
   try {
