@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Tesseract.js downloads its language model on first use into the cwd
+*.traineddata
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
