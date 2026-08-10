@@ -1,6 +1,7 @@
 import { anthropic } from './anthropic.js'
 import { extractText } from './ocr.js'
 import { matchMerchant } from './merchantDictionary.js'
+import { redactPII } from './redact.js'
 
 // Below this OCR text length or confidence (0-100), treat OCR as having
 // failed rather than trust garbled output — fall back to sending the image
@@ -115,7 +116,13 @@ async function extractFromImage(buffer, contentType) {
 // effectively receipts).
 export async function parseScreenshot(mediaUrl, contentType) {
   const buffer = await downloadMedia(mediaUrl)
-  const { text, confidence } = await extractText(buffer)
+  const { text: rawText, confidence } = await extractText(buffer)
+  // Redacted immediately, before anything downstream sees it — the
+  // dictionary lookup and both Claude calls all operate on this, never on
+  // rawText. The length/confidence gate below intentionally still checks
+  // rawText, since that's measuring OCR signal strength, not how much
+  // non-PII content survived redaction.
+  const text = redactPII(rawText)
 
   // Tried regardless of OCR confidence, before either fallback tier — see
   // merchantDictionary.js for why this can still hit on otherwise-weak OCR.
@@ -126,13 +133,15 @@ export async function parseScreenshot(mediaUrl, contentType) {
     return { merchant: dictHit.name, category: dictHit.category, items }
   }
 
-  if (text.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
+  if (rawText.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
     console.log(`[screenshotParser] OCR ok (confidence ${confidence.toFixed(0)}, ${text.length} chars) — text path`)
     return await extractFromText(text)
   }
 
+  // Image fallback: redaction above doesn't apply here — see redact.js's
+  // header comment for why that's a known, flagged gap, not an oversight.
   console.log(
-    `[screenshotParser] OCR too weak (confidence ${confidence.toFixed(0)}, ${text.length} chars) — image fallback`,
+    `[screenshotParser] OCR too weak (confidence ${confidence.toFixed(0)}, ${rawText.length} chars) — image fallback`,
   )
   return await extractFromImage(buffer, contentType)
 }
