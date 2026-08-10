@@ -35,3 +35,5 @@ services:
         value: https://dqfqigmbontpjppkvbys.supabase.co
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
