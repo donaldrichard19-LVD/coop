@@ -1,3 +1,5 @@
+import posthog from 'posthog-js'
+
 // Matches family-hq/frontend/src/lib/api.js's VITE_API_URL convention.
 // No auth token handling here — Coop has no login system yet.
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3002'
@@ -12,6 +14,10 @@ export async function submitWaitlist({ name, phone }) {
     const body = await res.json().catch(() => ({}))
     throw new Error(body.error || 'Something went wrong')
   }
+  // No name/phone in the event — PostHog already attaches channel, location,
+  // device, OS, and UTM params to every capture automatically, and the
+  // signup itself (with the name/phone) is already persisted in Supabase.
+  posthog.capture('waitlist_signup')
   return res.json()
 }
 
