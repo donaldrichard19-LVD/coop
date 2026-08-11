@@ -28,14 +28,14 @@ const SYSTEM_FONT = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI
 export default function ValuePropSteps() {
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-[clamp(32px,4vw,56px)] items-start">
-      <Step n="01" title="send your screenshots" illustration={<ScreenshotsThread />}>
+      <Step n="step 1" title="send your screenshots" illustration={<ScreenshotsThread />}>
         a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole
         setup.
       </Step>
-      <Step n="02" title="Coop watches your spots" illustration={<WatchingThread />}>
+      <Step n="step 2" title="Coop watches your spots" illustration={<WatchingThread />}>
         Coop keeps an eye on the places you already order from.
       </Step>
-      <Step n="03" title="you get 🔥 deals, personalized to you" illustration={<DealThread />}>
+      <Step n="step 3" title="you get 🔥 deals, personalized to you" illustration={<DealThread />}>
         &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
       </Step>
     </div>

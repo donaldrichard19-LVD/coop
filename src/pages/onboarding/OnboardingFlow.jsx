@@ -1,19 +1,17 @@
 import { useState } from 'react'
-import Splash from './Splash'
 import MobileLanding from './MobileLanding'
 import WaitlistStep from './WaitlistStep'
 
 // Simplified 2026-08-07: was splash -> landing -> phone -> location -> plaid
-// -> handoff -> live chat. Now splash -> landing -> waitlist. The dropped
-// steps (PhoneStep/LocationStep/PlaidStep/HandoffStep) aren't deleted, just
-// unreferenced — see BACKLOG.md "Plaid onboarding flow" for why and how to
-// bring them back.
+// -> handoff -> live chat. Then splash -> landing -> waitlist. Splash was
+// dropped 2026-08-10 (mobile now opens straight to landing). The dropped
+// steps (Splash/PhoneStep/LocationStep/PlaidStep/HandoffStep) aren't
+// deleted, just unreferenced — see BACKLOG.md "Plaid onboarding flow" for
+// why and how to bring the flow steps back.
 export default function OnboardingFlow({ onComplete }) {
-  const [step, setStep] = useState('splash')
+  const [step, setStep] = useState('landing')
 
   switch (step) {
-    case 'splash':
-      return <Splash onDone={() => setStep('landing')} />
     case 'landing':
       return <MobileLanding onNext={() => setStep('waitlist')} />
     case 'waitlist':
