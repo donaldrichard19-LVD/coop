@@ -1,33 +1,41 @@
 import { BrandMark } from './Header'
 
 // The three value-prop illustration panels + copy, from the landing-page design
-// handoff's "2. Value-prop section". Previously this section was copy-only (no
-// illustration) on both DesktopLanding.jsx and MobileLanding.jsx — this is the one
-// genuinely new/missing piece from that handoff (the rest of the landing page already
-// matched it). Single shared component using an auto-fit CSS grid (no JS device split,
-// no media query) so it reflows 3-column -> 1-column on its own, per the handoff's
-// "fluid, no breakpoints" spec — replaces the separate hand-duplicated Step markup that
-// used to live in each page.
+// handoff's "2. Value-prop section" — 2026-08-11 revision. Previous version (still in
+// git history) used generic Coop-branded chat bubbles; this revision restyles the
+// panels as literal iMessage thread simulations (system UI font, iOS bubble grouping,
+// a real chat header) so they read as an actual screenshot of texting Coop, not a
+// branded illustration. Single shared component using an auto-fit CSS grid (no JS
+// device split, no media query) so it reflows 3-column -> 1-column on its own, per the
+// handoff's "fluid, no breakpoints" spec.
+//
+// Deliberately NOT reverted despite this handoff's own copy: the hero H1, the "no new
+// app"/"no bank" phrasing, and "no browsing, no clipping" were all removed in earlier,
+// more specific content passes and stay removed here — confirmed with the user, who
+// flagged these three exceptions explicitly rather than have the whole page silently
+// regress to the handoff's copy.
 //
 // All three loops share one 7s cycle so the row breathes together; percentages in the
-// keyframes (src/index.css, prefixed c*) are of that 7s. Decorative only — aria-hidden,
-// the adjacent copy carries the meaning. Reduced motion is handled by the existing
-// global prefers-reduced-motion rule in index.css (no per-panel override needed).
+// keyframes (src/index.css, prefixed c*/p*) are of that 7s. Decorative only —
+// aria-hidden, the adjacent copy carries the meaning. Reduced motion is handled by the
+// existing global prefers-reduced-motion rule in index.css (no per-panel override
+// needed).
 
 const PANEL_CLASS =
-  'relative bg-[#0B0B0C] border border-[rgba(245,242,234,.08)] rounded-[26px] h-[clamp(300px,30vw,340px)] p-[22px] box-border overflow-hidden mb-[26px]'
+  'relative bg-black border border-[rgba(84,84,88,.65)] rounded-[24px] h-[clamp(340px,34vw,380px)] overflow-hidden mb-[26px] flex flex-col'
+const SYSTEM_FONT = "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif"
 
 export default function ValuePropSteps() {
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-[clamp(32px,4vw,56px)] items-start">
-      <Step n="01" title="send your screenshots" illustration={<ScreenshotsLoop />}>
+      <Step n="01" title="send your screenshots" illustration={<ScreenshotsThread />}>
         a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole
         setup.
       </Step>
-      <Step n="02" title="Coop watches your spots" illustration={<SpotsLoop />}>
+      <Step n="02" title="Coop watches your spots" illustration={<WatchingThread />}>
         Coop keeps an eye on the places you already order from.
       </Step>
-      <Step n="03" title="you get deals, personalized to you" illustration={<DealTextLoop />}>
+      <Step n="03" title="you get 🔥 deals, personalized to you" illustration={<DealThread />}>
         &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
       </Step>
     </div>
@@ -49,182 +57,205 @@ function Step({ n, title, illustration, children }) {
   )
 }
 
+function ChatHeader() {
+  return (
+    <div
+      className="shrink-0 bg-[#1c1c1e] border-b border-[rgba(84,84,88,.55)] px-3 pt-2 pb-2.5 flex items-center"
+      style={{ fontFamily: SYSTEM_FONT }}
+    >
+      <svg
+        className="w-[18px] h-[18px] shrink-0"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#0A84FF"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+      <div className="flex-1 flex flex-col items-center">
+        <div className="w-[34px] h-[34px] rounded-full bg-[#0E7C57] flex items-center justify-center">
+          <BrandMark size={19} />
+        </div>
+        <div className="flex items-center gap-[2px] mt-[3px]">
+          <span className="text-[11px] leading-[14px] text-[rgba(235,235,245,.6)]">coop</span>
+          <svg
+            width="9"
+            height="9"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgba(235,235,245,.4)"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+      </div>
+      <div className="w-[22px] shrink-0" />
+    </div>
+  )
+}
+
+function DateStamp({ children }) {
+  return (
+    <div
+      className="text-center text-[11px] leading-[14px] font-semibold text-[rgba(235,235,245,.35)] pt-2 pb-1"
+      style={{ fontFamily: SYSTEM_FONT }}
+    >
+      {children}
+    </div>
+  )
+}
+
+function Bubble({ mine, radius, animation, className = '', style, children }) {
+  return (
+    <div
+      className={`w-fit px-3.5 py-2.5 text-[17px] leading-[22px] ${
+        mine ? 'self-end bg-[#0A84FF] text-white max-w-[78%]' : 'self-start bg-[#3b3b3d] text-white max-w-[86%]'
+      } ${className}`}
+      style={{ fontFamily: SYSTEM_FONT, borderRadius: radius ?? '20px', animation, opacity: 0, ...style }}
+    >
+      {children}
+    </div>
+  )
+}
+
 function ReceiptTile({ delay, bars, fillLast }) {
   return (
     <div
-      className="w-[clamp(52px,16%,62px)] aspect-[62/82] rounded-[11px] bg-[#F5F2EA] p-[9px] box-border flex flex-col gap-[5px]"
+      className="w-[50px] aspect-[50/66] rounded-[8px] bg-[#f2f2f7] p-[7px] box-border flex flex-col gap-[4px]"
       style={{ animation: `cTile 7s ease-out ${delay} infinite` }}
     >
       {bars.map((w, i) => (
         <div
           key={i}
-          className="rounded-[3px]"
+          className="rounded-[2px]"
           style={{
             width: w,
-            height: i === 0 ? '6px' : '5px',
+            height: i === 0 ? '5px' : '4px',
             background: i === 0 ? 'rgba(17,17,18,.7)' : 'rgba(17,17,18,.18)',
           }}
         />
       ))}
-      {fillLast && <div className="mt-auto h-[8px] rounded-[3px] bg-[#0E7C57]" style={{ width: fillLast }} />}
+      {fillLast && <div className="mt-auto h-[6px] rounded-[2px] bg-[#0E7C57]" style={{ width: fillLast }} />}
     </div>
   )
 }
 
-function ReplyAvatar() {
+function TypingDots({ animation }) {
   return (
-    <div className="relative w-[34px] h-[29.4px] shrink-0">
-      <BrandMark size={29.4} />
-    </div>
-  )
-}
-
-function ScreenshotsLoop() {
-  return (
-    <div aria-hidden="true" className={`${PANEL_CLASS} flex flex-col justify-end gap-[14px]`}>
-      <div
-        className="self-end max-w-[92%] bg-[#0E7C57] rounded-[22px_22px_8px_22px] p-[13px]"
-        style={{ animation: 'cBubbleOut 7s ease-in-out infinite' }}
-      >
-        <div className="flex gap-2">
-          <ReceiptTile delay="0.1s" bars={['70%', '100%', '85%']} fillLast="52%" />
-          <ReceiptTile delay="0.35s" bars={['55%', '92%', '74%']} fillLast="60%" />
-          <ReceiptTile delay="0.6s" bars={['64%', '88%', '66%']} fillLast="44%" />
-        </div>
-        <div className="mt-[11px] text-[15px] leading-[1.4] font-medium text-[rgba(245,242,234,.92)]">
-          my last few orders
-        </div>
-      </div>
-      <div className="flex items-end gap-2.5" style={{ animation: 'cReply 7s ease-out infinite' }}>
-        <ReplyAvatar />
-        <div className="bg-[#2C2C2E] rounded-[22px_22px_22px_8px] px-4 py-3 text-[15px] leading-[1.4] font-medium text-text-primary">
-          got you. watching all 3.
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function SpotRow({ name, meta, lit, chipDelay, pulseDelay }) {
-  return (
-    <div
-      className="flex items-center gap-3.5 rounded-[18px] px-[15px] py-[13px]"
-      style={
-        lit
-          ? { border: '1px solid rgba(25,168,119,.55)', animation: 'cLit 7s ease-in-out infinite' }
-          : { background: '#141416', border: '1px solid rgba(245,242,234,.07)' }
-      }
-    >
-      <div className="relative w-2.5 h-2.5 shrink-0">
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{ background: lit ? '#19A877' : 'rgba(245,242,234,.3)' }}
-        />
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            border: `1.5px solid ${lit ? 'rgba(25,168,119,.7)' : 'rgba(245,242,234,.35)'}`,
-            animation: `cPulse 2.6s ease-out ${pulseDelay} infinite`,
-          }}
-        />
-      </div>
-      <div className="min-w-0 flex-1">
-        <div className="text-[15px] font-bold text-text-primary whitespace-nowrap overflow-hidden text-ellipsis">
-          {name}
-        </div>
-        <div className="text-[13px] text-[rgba(245,242,234,.42)]">{meta}</div>
-      </div>
-      {lit && (
-        <div
-          className="shrink-0 text-[11px] font-bold font-mono tracking-[0.08em] text-[#0B0B0C] bg-[#19A877] rounded-full px-2.5 py-[5px]"
-          style={{ animation: `cChip 7s ease-out ${chipDelay} infinite` }}
-        >
-          DEAL
-        </div>
-      )}
-    </div>
-  )
-}
-
-function SpotsLoop() {
-  return (
-    <div aria-hidden="true" className={PANEL_CLASS}>
-      <div className="absolute left-[22px] right-[22px] top-1/2 -translate-y-1/2 h-[196px] overflow-hidden">
-        <div
-          className="absolute left-0 right-0 top-0 h-[2px] z-[3]"
-          style={{
-            background: 'rgba(25,168,119,.9)',
-            boxShadow: '0 0 22px 4px rgba(25,168,119,.75)',
-            animation: 'cScan 7s cubic-bezier(.5,0,.3,1) infinite',
-          }}
-        />
-        <div className="flex flex-col gap-[11px]">
-          <SpotRow name="Blue Bottle" meta="6 orders · 0.2 mi" pulseDelay="0s" />
-          <SpotRow name="Taqueria Sol" meta="4 orders · 0.3 mi" lit pulseDelay="0.5s" chipDelay="0s" />
-          <SpotRow name="Nam Vietnamese" meta="3 orders · 1.1 mi" pulseDelay="1s" />
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function TypingBubble() {
-  return (
-    <div className="absolute top-0 left-0 flex items-end gap-2.5" style={{ animation: 'cTyping 7s steps(1,end) infinite' }}>
-      <ReplyAvatar />
-      <div className="bg-[#2C2C2E] rounded-[22px_22px_22px_8px] px-[19px] py-[17px] flex items-center gap-[7px]">
+    <Bubble mine={false} radius="20px 20px 20px 6px" animation={animation}>
+      <div className="flex items-center gap-[6px] py-[3px]">
         {[0, 0.15, 0.3].map((d) => (
           <div
             key={d}
-            className="w-2 h-2 rounded-full bg-[#A8A8AC]"
+            className="w-[7px] h-[7px] rounded-full bg-[#a8a8ac]"
             style={{ animation: `cDot 1.1s ease-in-out ${d}s infinite` }}
           />
         ))}
       </div>
+    </Bubble>
+  )
+}
+
+// 01 — screenshots land in an outgoing bubble, coop types then replies. The typing dots
+// and the reply share the same absolutely-positioned slot (per the handoff) so the swap
+// doesn't shift the layout above it.
+function ScreenshotsThread() {
+  return (
+    <div aria-hidden="true" className={PANEL_CLASS}>
+      <ChatHeader />
+      <div className="flex-1 flex flex-col justify-end gap-[7px] px-3 pb-3 pt-2 overflow-hidden">
+        <DateStamp>Text Message &middot; Today 6:41 PM</DateStamp>
+        <div
+          className="self-end max-w-[80%] bg-[#0A84FF] rounded-[20px] p-[11px]"
+          style={{ animation: 'cBubbleOut 7s ease-in-out infinite', opacity: 0 }}
+        >
+          <div className="flex gap-[6px]">
+            <ReceiptTile delay="0.1s" bars={['70%', '100%', '85%']} fillLast="52%" />
+            <ReceiptTile delay="0.3s" bars={['55%', '92%', '74%']} fillLast="60%" />
+            <ReceiptTile delay="0.5s" bars={['64%', '88%', '66%']} fillLast="44%" />
+          </div>
+          <div className="mt-[8px] text-[15px] leading-[20px] text-white" style={{ fontFamily: SYSTEM_FONT }}>
+            my last few orders
+          </div>
+        </div>
+        <div className="relative min-h-[38px]">
+          <div className="absolute inset-0">
+            <TypingDots animation="cTyping 7s steps(1,end) infinite" />
+          </div>
+          <div className="absolute inset-0">
+            <Bubble mine={false} radius="20px 20px 20px 6px" animation="pReply 7s ease-out infinite">
+              got you. watching all 3.
+            </Bubble>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-function DealTextLoop() {
+// 02 — coop confirms what it's watching. Four messages accumulate in the thread on a
+// shared cadence (pMsg1-4); the column is bottom-anchored (justify-content: flex-end)
+// so earlier, still-invisible messages occupy real layout space above the fold and get
+// clipped by overflow:hidden until their turn — matches the handoff's warning that this
+// panel is height-critical.
+function WatchingThread() {
   return (
     <div aria-hidden="true" className={PANEL_CLASS}>
-      <div className="absolute left-[22px] right-[22px] top-[46px] h-[240px]">
-        <TypingBubble />
+      <ChatHeader />
+      <div className="flex-1 flex flex-col justify-end gap-[7px] px-3 pb-3 pt-2 overflow-hidden">
+        <Bubble mine={false} radius="20px 20px 20px 6px" animation="pMsg1 7s ease-out infinite">
+          got your spots. i&rsquo;m watching 6.
+        </Bubble>
+        <Bubble mine={false} radius="6px 20px 20px 6px" animation="pMsg2 7s ease-out infinite" className="mt-[1px]">
+          Blue Bottle, Tony&rsquo;s Pizza, Chipotle + 3 more
+        </Bubble>
+        <Bubble mine={false} radius="6px 20px 20px 20px" animation="pMsg3 7s ease-out infinite" className="mt-[1px]">
+          no app to check. i&rsquo;ll text you when something&rsquo;s worth it.
+        </Bubble>
+        <Bubble mine radius="20px" animation="pMsg4 7s ease-out infinite" className="mt-[7px]">
+          perfect
+        </Bubble>
+      </div>
+    </div>
+  )
+}
+
+// 03 — the deal arrives as a text. Same accumulating-thread pattern as WatchingThread;
+// the third slot is a link-preview-style card rather than a plain bubble.
+function DealThread() {
+  return (
+    <div aria-hidden="true" className={PANEL_CLASS}>
+      <ChatHeader />
+      <div className="flex-1 flex flex-col justify-end gap-[7px] px-3 pb-3 pt-2 overflow-hidden">
+        <Bubble mine={false} radius="20px 20px 20px 6px" animation="pMsg1 7s ease-out infinite">
+          15% off at Taqueria Sol tonight 🌮
+        </Bubble>
+        <Bubble mine={false} radius="6px 20px 20px 20px" animation="pMsg2 7s ease-out infinite" className="mt-[1px]">
+          that&rsquo;s ~$6.50 back on your usual order. ends sunday.
+        </Bubble>
         <div
-          className="absolute top-0 left-0 right-0 flex items-end gap-2.5"
-          style={{ animation: 'cMsg 7s ease-out infinite' }}
-        >
-          <ReplyAvatar />
-          <div className="bg-[#2C2C2E] rounded-[22px_22px_22px_8px] px-[17px] py-[13px] text-[16px] leading-[1.35] font-medium max-w-[84%] text-text-primary">
-            there&rsquo;s a deal at Taqueria Sol.
-          </div>
-        </div>
-        <div
-          className="absolute top-[104px] left-[44px] flex items-center gap-[13px]"
-          style={{ animation: 'cPrice 7s ease-out infinite' }}
+          className="self-start max-w-[86%] bg-[#3b3b3d] rounded-[6px_20px_20px_20px] overflow-hidden"
+          style={{ animation: 'pMsg3 7s ease-out infinite', opacity: 0 }}
         >
           <div
-            className="relative font-bold text-[clamp(24px,2.6vw,28px)] tracking-[-0.02em]"
-            style={{ color: 'rgba(245,242,234,.4)' }}
+            className="h-[52px] flex items-center justify-center"
+            style={{ background: 'linear-gradient(140deg,#0E7C57,#0a5c41)' }}
           >
-            $23.40
-            <div
-              className="absolute left-[-2px] right-[-2px] top-1/2 h-[3px] rounded-[2px] origin-left"
-              style={{ background: 'rgba(245,242,234,.55)', animation: 'cStrike 7s cubic-bezier(.5,0,.3,1) infinite' }}
-            />
+            <span className="font-mono font-semibold text-[16px] tracking-[0.08em] text-white">SOL-QUESO</span>
           </div>
-          <div className="font-bold text-[clamp(27px,3vw,32px)] tracking-[-0.02em] text-tint-primary">$16.90</div>
+          <div className="px-3.5 py-2.5" style={{ fontFamily: SYSTEM_FONT }}>
+            <div className="text-[15px] leading-[19px] text-white">Tap to redeem &mdash; Taqueria Sol</div>
+            <div className="text-[13px] leading-[16px] text-[rgba(235,235,245,.5)] mt-[2px]">getcoop.cash</div>
+          </div>
         </div>
-        <div
-          className="absolute top-[168px] left-[44px] inline-flex items-center rounded-full px-[18px] py-[11px]"
-          style={{
-            background: 'rgba(25,168,119,.13)',
-            border: '1px solid rgba(25,168,119,.45)',
-            animation: 'cKeep 7s ease-out infinite',
-          }}
-        >
-          <div className="font-bold text-[17px] text-text-primary">keep the $6.50</div>
-        </div>
+        <Bubble mine radius="20px" animation="pMsg4 7s ease-out infinite" className="mt-[7px]">
+          on my way
+        </Bubble>
       </div>
     </div>
   )

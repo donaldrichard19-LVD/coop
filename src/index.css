@@ -314,6 +314,92 @@ body {
   }
 }
 
+/* iMessage-thread value-prop panels (ValuePropSteps.jsx, 2026-08-11 revision) — reuses
+   cTile/cBubbleOut/cDot/cTyping above for the parts that carried over unchanged; pReply
+   and pMsg1-4 below are new, timed per the revised handoff (pReply enters ~34%; pMsg1-4
+   are a generic 4-message cadence shared by both the "coop confirms" and "deal arrives"
+   threads, since the handoff didn't give loop 3 its own percentages). */
+@keyframes pReply {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  36%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pMsg1 {
+  0%,
+  2% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  8%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pMsg2 {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  26%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pMsg3 {
+  0%,
+  44% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pMsg4 {
+  0%,
+  64% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  70%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .shimmer-text {
   background-image: linear-gradient(
     90deg,
