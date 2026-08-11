@@ -1,5 +1,6 @@
 import { BrandMark } from '../components/Header'
 import LandingDealDemo from '../components/LandingDealDemo'
+import ValuePropSteps from '../components/ValuePropSteps'
 
 // Desktop never gets a signup CTA — per the design handoff there isn't one
 // here at all, only the "pull this up on your phone" note. That's what
@@ -38,32 +39,14 @@ export default function DesktopLanding() {
               Coop&rsquo;s a texting thing &mdash; pull this up on your phone to get started.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 min-[560px]:grid-cols-3 gap-10 max-w-[780px]">
-            <Step n="01" title="send your screenshots">
-              a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole setup.
-            </Step>
-            <Step n="02" title="Coop watches your spots">
-              Coop keeps an eye on the places you already order from. no browsing, no clipping.
-            </Step>
-            <Step n="03" title="you get 🔥 deals, personalized to you">
-              &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
-            </Step>
-          </div>
         </div>
 
         <LandingDealDemo />
       </div>
-    </div>
-  )
-}
 
-function Step({ n, title, children }) {
-  return (
-    <div>
-      <div className="text-[15px] font-bold font-mono text-tint-primary mb-3.5">{n}</div>
-      <div className="text-[20px] leading-[1.3] font-bold text-text-primary mb-2.5">{title}</div>
-      <div className="text-[16px] leading-[1.5] text-text-secondary">{children}</div>
+      <div className="max-w-[1560px] mt-[clamp(56px,9vw,104px)]">
+        <ValuePropSteps />
+      </div>
     </div>
   )
 }

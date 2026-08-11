@@ -1,6 +1,7 @@
 import { BrandMark } from '../../components/Header'
 import Button from '../../components/Button'
 import LandingDealDemo from '../../components/LandingDealDemo'
+import ValuePropSteps from '../../components/ValuePropSteps'
 
 export default function MobileLanding({ onNext }) {
   return (
@@ -26,33 +27,13 @@ export default function MobileLanding({ onNext }) {
           let&rsquo;s go
         </Button>
 
-        <div className="mt-10 flex flex-col gap-6">
-          <Step n="01" title="send your screenshots">
-            a few recent orders &mdash; local spots, delivery apps, whatever you&rsquo;ve got. that&rsquo;s the whole setup.
-          </Step>
-          <Step n="02" title="Coop watches your spots">
-            Coop keeps an eye on the places you already order from. no browsing, no clipping.
-          </Step>
-          <Step n="03" title="you get 🔥 deals, personalized to you">
-            &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
-          </Step>
+        <div className="mt-10">
+          <ValuePropSteps />
         </div>
 
         <div className="mt-9">
           <LandingDealDemo compact />
         </div>
-      </div>
-    </div>
-  )
-}
-
-function Step({ n, title, children }) {
-  return (
-    <div className="flex gap-4">
-      <div className="text-[14px] font-bold font-mono text-tint-primary shrink-0 pt-0.5">{n}</div>
-      <div>
-        <div className="text-[17px] leading-[1.3] font-bold text-text-primary mb-1">{title}</div>
-        <div className="text-[15px] leading-[1.5] text-text-secondary">{children}</div>
       </div>
     </div>
   )

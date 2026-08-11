@@ -112,6 +112,208 @@ body {
   }
 }
 
+/* Value-prop section illustration loops (ValuePropSteps.jsx) — all three run on a
+   shared 7s cycle so the row breathes together, per the landing-page design handoff.
+   The existing global prefers-reduced-motion rule above (animation-duration: 0.01ms)
+   already collapses every one of these to its final composed frame, so no separate
+   [data-loop] override is needed here. */
+@keyframes cTile {
+  0%,
+  6% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.94);
+  }
+  16%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes cBubbleOut {
+  0%,
+  2% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  12%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+@keyframes cReply {
+  0%,
+  48% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  58%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+@keyframes cScan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  52% {
+    transform: translateY(196px);
+    opacity: 1;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(196px);
+    opacity: 0;
+  }
+}
+@keyframes cLit {
+  0%,
+  44% {
+    background: #141416;
+    border-color: rgba(245, 242, 234, 0.07);
+  }
+  56%,
+  88% {
+    background: rgba(25, 168, 119, 0.13);
+    border-color: rgba(25, 168, 119, 0.55);
+  }
+  100% {
+    background: #141416;
+    border-color: rgba(245, 242, 234, 0.07);
+  }
+}
+@keyframes cChip {
+  0%,
+  50% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  60%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cPulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+@keyframes cDot {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+@keyframes cTyping {
+  0%,
+  24% {
+    opacity: 1;
+  }
+  32%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cMsg {
+  0%,
+  28% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  38%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes cPrice {
+  0%,
+  44% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  54%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cStrike {
+  0%,
+  56% {
+    transform: scaleX(0);
+  }
+  66%,
+  88% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes cKeep {
+  0%,
+  66% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.94);
+  }
+  76%,
+  88% {
+    opacity: 1;
+    transform: none;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .shimmer-text {
   background-image: linear-gradient(
     90deg,
