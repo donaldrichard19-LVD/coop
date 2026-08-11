@@ -6,8 +6,7 @@ import ValuePropSteps from '../../components/ValuePropSteps'
 
 // Reveals a fixed "sign up" pill once the user scrolls past the hero, so the CTA is
 // always reachable on this fairly long page without following the user everywhere.
-// Labeled distinctly from the hero's own "let's go" button — once you've scrolled away
-// from the hero's context, "sign up" is unambiguous in a way "let's go" no longer is.
+// Same label and action as the hero's own button below — just always in reach.
 // Per the handoff: writes directly to the DOM node via a ref instead of React state, so
 // scrolling never triggers a re-render — a passive listener registered once on mount,
 // which also runs immediately so a mid-page reload lands in the right state.
@@ -65,7 +64,7 @@ export default function MobileLanding({ onNext }) {
         </p>
 
         <Button variant="primary" className="w-full justify-center py-4 text-[17px]" onClick={onNext}>
-          let&rsquo;s go
+          sign up
         </Button>
 
         <div className="mt-10">
