@@ -6,6 +6,7 @@ import { normalizeItems } from './itemNormalization.js'
 import { extractLineItems } from './lineItemExtractor.js'
 import { redactImagePII } from './redactImage.js'
 import { recordMetric } from './pipelineMetrics.js'
+import { extractOrderTimestamp, normalizeTimestamp } from './orderTimestamp.js'
 
 // Below this OCR text length or confidence (0-100), treat OCR as having
 // failed rather than trust garbled output — fall back to sending the image
@@ -23,15 +24,20 @@ const IMAGE_PROMPT = `You are extracting structured data from a screenshot of a 
 // item is itemNormalization.js's job now (stage 6+7), done once per unique
 // raw string and cached, instead of re-guessed by every single screenshot
 // that happens to mention the same item.
+//
+// "order_timestamp" (Story P2-2 prerequisite) is only asked of the model as a fallback —
+// see parseScreenshot below, which tries lib/orderTimestamp.js's regex pass first and only
+// leaves this in the schema's output unused when that already succeeded.
 const SHARED_RULES = `
 Return ONLY valid JSON in this exact shape — no markdown fences, no explanation, nothing else:
-{"merchant": string|null, "category": string, "items": [string]}
+{"merchant": string|null, "category": string, "items": [string], "order_timestamp": string|null}
 
 Rules:
 - "merchant" is the specific business name (e.g. "Blue Bottle Coffee"). Only set it when you can identify the specific business with real confidence — otherwise null.
 - "category" is REQUIRED, always filled in even when merchant is null: a general type of place or cuisine (e.g. "mexican", "coffee", "dessert", "pizza", "sushi", "fast casual"). Never leave it blank — this is the fallback when the specific merchant isn't identifiable.
 - "items" lists the individual food/drink items visible in the order, as raw strings exactly as they appear. Empty array if none are legible.
-- If this doesn't look like a food/order screenshot at all, return {"merchant": null, "category": "unknown", "items": []}.`
+- "order_timestamp" is the order's date and/or time as printed, in ISO 8601 (e.g. "2026-08-11T15:45:00"). Only set it when a specific date and/or time is actually visible in the text/image — never estimate or guess one. null if not present or not legible.
+- If this doesn't look like a food/order screenshot at all, return {"merchant": null, "category": "unknown", "items": [], "order_timestamp": null}.`
 
 // Used only after a dictionary hit — merchant and category are already
 // known at zero tokens, so this prompt doesn't ask Claude to reason about
@@ -135,6 +141,16 @@ export async function parseScreenshot(mediaUrl, contentType) {
   // non-PII content survived redaction.
   const text = redactPII(rawText)
 
+  // Story P2-2 prerequisite — regex-first order-timestamp extraction, tried once up front
+  // against the raw (pre-redaction) OCR text regardless of which merchant/item path below
+  // is taken, same "tried regardless of confidence" posture as the dictionary lookup below
+  // (a printed date/time tends to be short, high-contrast text that often survives OCR
+  // noise even when the rest of a receipt doesn't). Runs against rawText rather than the
+  // redacted `text`: redact.js's patterns target emails/cards/phones/addresses/names, none
+  // of which overlap a date/time pattern, so redaction can only ever lose fidelity here,
+  // never help it.
+  let orderTimestamp = extractOrderTimestamp(rawText)
+
   let merchant, category, rawItems
   // 'dictionary' hits are already zero-token-certain (a deterministic string
   // match), so they skip the confidence gate. 'model' means a model guessed
@@ -161,6 +177,12 @@ export async function parseScreenshot(mediaUrl, contentType) {
     merchant = dictHit.name
     category = dictHit.category
     merchantSource = 'dictionary'
+    // order_timestamp gets no model-call fallback on this path — extractItemsOnly below is
+    // deliberately the cheapest call in the pipeline (Story B2's whole point), and the plan
+    // scopes the order_timestamp model fallback to "the merchant/item extraction call
+    // already running" (extractFromText/extractFromImage below), not this one. If the
+    // regex pass above found nothing, order_timestamp simply stays null here — a null
+    // profile signal is fine per this pipeline's established convention.
 
     // Story B2: try the regex/positional extractor first — on a dictionary hit,
     // extractItemsOnly below is an isolated items-only model call with nothing else
@@ -192,6 +214,7 @@ export async function parseScreenshot(mediaUrl, contentType) {
     category = parsed.category
     if (merchant) merchantSource = 'model'
     rawItems = parsed.items || []
+    if (!orderTimestamp) orderTimestamp = normalizeTimestamp(parsed.order_timestamp)
   } else {
     pipelinePath = 'image'
     console.log(
@@ -219,9 +242,10 @@ export async function parseScreenshot(mediaUrl, contentType) {
     category = parsed.category
     if (merchant) merchantSource = 'model'
     rawItems = parsed.items || []
+    if (!orderTimestamp) orderTimestamp = normalizeTimestamp(parsed.order_timestamp)
   }
 
   const items = await normalizeItems(rawItems)
-  recordMetric('screenshot_pipeline_run', { path: pipelinePath, modelCalls: modelCallCount, merchantSource })
-  return { merchant, category, merchantSource, items }
+  recordMetric('screenshot_pipeline_run', { path: pipelinePath, modelCalls: modelCallCount, merchantSource, hasOrderTimestamp: !!orderTimestamp })
+  return { merchant, category, merchantSource, items, orderTimestamp }
 }

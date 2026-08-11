@@ -1,5 +1,6 @@
 import { supabase } from './supabase.js'
 import { defaultEngagementPreferences, getEngagementPreferences } from './engagementSuppression.js'
+import { maybeFireOffRamp } from './offRamp.js'
 
 // Story A11 — cadence decay: 4 consecutive non-engaged scheduled sends steps the cadence
 // tier down, same direction as A10's manual "too many" reduction (reuses the same
@@ -64,9 +65,17 @@ export async function recordNonEngagedSend(accountId) {
  * earlier version of this function): last_engaged_at needs to reflect the actual most
  * recent engagement time even when the counter was already 0, since the sweep depends on
  * it being accurate, not just the counter.
+ *
+ * Also nulls off_ramp_sent_at (Story P2-1) — a fresh engagement resets the non-engagement
+ * streak entirely, so a later streak should be able to trigger the off-ramp offer again
+ * rather than staying permanently suppressed by a stamp from a long-past streak.
  */
 export async function recordEngagedSend(accountId) {
-  return upsertPreferences(accountId, { consecutive_non_engaged_sends: 0, last_engaged_at: new Date().toISOString() })
+  return upsertPreferences(accountId, {
+    consecutive_non_engaged_sends: 0,
+    last_engaged_at: new Date().toISOString(),
+    off_ramp_sent_at: null,
+  })
 }
 
 /**
@@ -149,6 +158,9 @@ export async function sweepNonEngagement(now = new Date()) {
 
       if (!engaged) {
         await recordNonEngagedSend(send.account_id)
+        // Story P2-1 — checked right after the streak counter is incremented, so it sees
+        // the freshly-updated consecutive_non_engaged_sends value.
+        await maybeFireOffRamp(send.account_id)
       }
       await markEvaluated(send.id)
     } catch (err) {

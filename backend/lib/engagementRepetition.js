@@ -11,6 +11,21 @@ import { supabase } from './supabase.js'
 const DEFAULT_REPETITION_WINDOW_DAYS = 14
 
 /**
+ * Story P2-4 — proportionally scales the repetition-lookback window down for accounts on a
+ * higher effective cadence (3x/week, once earned — see thirdSendEligibility.js) relative to
+ * the 2x/week baseline, so the window doesn't become relatively STRICTER purely because
+ * sends are more frequent (a fixed 14-day window spans ~4 sends at 2x/week but ~6 at
+ * 3x/week — the same day-count window covering more sends shrinks the effectively-available
+ * inventory for no reason related to actual deal supply). Formula: window scales with
+ * 2 / effectiveSendCount, rounded to the nearest whole day — e.g. 3x/week: 14 * 2/3 ≈ 9.3 ->
+ * 9 days. effectiveSendCount of 2 (the baseline) leaves the window unchanged at 14.
+ */
+export function repetitionWindowDaysFor(effectiveSendCount, baseWindowDays = DEFAULT_REPETITION_WINDOW_DAYS) {
+  if (!effectiveSendCount || effectiveSendCount <= 0) return baseWindowDays
+  return Math.round(baseWindowDays * (2 / effectiveSendCount))
+}
+
+/**
  * accountId: uuid. windowDays: how far back "recently sent" looks. Returns a Set of
  * deal_id strings sent to this account within the window, status='sent' only — a
  * suppressed/would_have_sent row never actually reached the user, so it shouldn't count

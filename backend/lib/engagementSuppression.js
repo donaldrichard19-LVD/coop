@@ -2,6 +2,7 @@ import { supabase } from './supabase.js'
 import { isHardOptedOut } from './optOut.js'
 import { isWithinRadius } from './engagementScoring.js'
 import { MIN_UPLOADS_FOR_PROFILE } from './preferenceProfile.js'
+import { isControlGroupAccount } from './controlGroup.js'
 
 // Story A2 — the gate every scheduled-engagement attempt must clear before anything is
 // rendered or sent. Split into a pure decision core (evaluateSuppression, isWithinQuietHours
@@ -34,6 +35,9 @@ export function defaultEngagementPreferences(accountId) {
     radius_override: null,
     consecutive_non_engaged_sends: 0,
     last_engaged_at: null,
+    off_ramp_sent_at: null, // Story P2-1
+    earned_third_send: false, // Story P2-3
+    is_control_group: null, // Story P2-5 — null = not yet assigned, see controlGroup.js
   }
 }
 
@@ -112,6 +116,28 @@ export async function getEngagementPreferences(accountId) {
   return data || defaultEngagementPreferences(accountId)
 }
 
+/**
+ * Story P2-5 — the single site "an account becomes send-eligible" is detected: right where
+ * profile-readiness is already known, inside checkSuppression below. If is_control_group is
+ * still null (never assigned), stamps it via the deterministic hash. Because the hash is
+ * pure and stable per account_id (see controlGroup.js), this is safe to call on every tick
+ * — after the first successful write it is a no-op forever (is_control_group is no longer
+ * null), and if the write itself fails, the next tick simply retries the same deterministic
+ * assignment rather than risking a different outcome.
+ */
+async function assignControlGroupIfNeeded(accountId, preferences) {
+  if (preferences.is_control_group != null) return preferences
+
+  const next = { ...defaultEngagementPreferences(accountId), ...preferences, is_control_group: isControlGroupAccount(accountId), updated_at: new Date().toISOString() }
+  const { error } = await supabase.from('engagement_preferences').upsert(next, { onConflict: 'account_id' })
+  if (error) {
+    console.error('[engagementSuppression] failed to persist control-group assignment — will retry next tick:', error.message)
+    return preferences
+  }
+  console.log(`[engagementSuppression] account ${accountId}: assigned is_control_group=${next.is_control_group}`)
+  return next
+}
+
 async function sentCountLast7Days(accountId) {
   const since = new Date(Date.now() - 7 * 86_400_000).toISOString()
   const { data, error } = await supabase
@@ -136,7 +162,10 @@ async function sentCountLast7Days(accountId) {
  */
 export async function checkSuppression({ account, profile, deals }) {
   const hardOptedOut = await isHardOptedOut(account.id)
-  const preferences = await getEngagementPreferences(account.id)
+  let preferences = await getEngagementPreferences(account.id)
+  if (profile?.isReady) {
+    preferences = await assignControlGroupIfNeeded(account.id, preferences)
+  }
   const sentThisWeekCount = await sentCountLast7Days(account.id)
   const eligibleDealCount = countEligibleDeals(deals, account, preferences)
 

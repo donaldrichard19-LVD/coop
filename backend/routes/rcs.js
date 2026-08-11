@@ -116,6 +116,7 @@ async function handleScreenshotUpload({ from, account, mediaUrl, mediaContentTyp
       merchant_name: parsed.merchant || null,
       category: parsed.category || 'unknown',
       items: parsed.items || [],
+      order_timestamp: parsed.orderTimestamp || null,
     })
     if (error) console.error('[rcs] failed to persist screenshot upload:', error.message)
 

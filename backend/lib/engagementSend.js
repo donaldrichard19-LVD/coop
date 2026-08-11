@@ -26,8 +26,14 @@ export async function logSuppressedSend({ accountId, slot, reason }) {
  * infrastructure concern logged by twilioClient.js itself, not something engagementSend.js
  * should encode as a different outcome status (that's what the reserved
  * 'would_have_sent' status is for instead — a future dry-run mode, not this).
+ *
+ * merchant_name (Story P2-4) and is_control_group (Story P2-5) are denormalized onto this
+ * row at send time — see engagement_sends' column comments for why (repetition-penalty
+ * lookups and later control/treatment comparison queries, respectively, both want to avoid
+ * re-joining against tables whose contents rotate or whose current value may differ from
+ * what was true at send time).
  */
-export async function sendAndLogEngagement({ account, slot, archetype, deal, templateId, turn }) {
+export async function sendAndLogEngagement({ account, slot, archetype, deal, templateId, turn, isControlGroup }) {
   await sendRcsTurn(account.phone, turn)
 
   const { error } = await supabase.from('engagement_sends').insert({
@@ -35,8 +41,10 @@ export async function sendAndLogEngagement({ account, slot, archetype, deal, tem
     slot,
     archetype,
     deal_id: deal?.id || null,
+    merchant_name: deal?.merchant?.name || null,
     template_id: templateId,
     status: 'sent',
+    is_control_group: !!isControlGroup,
   })
   if (error) console.error('[engagementSend] failed to log sent engagement:', error.message)
 }
@@ -61,6 +69,30 @@ export async function lastUsedTemplateId(accountId) {
     return null
   }
   return data?.template_id || null
+}
+
+/**
+ * Story P2-4 — the account's most-recently-sent deal's merchant name, read directly from
+ * engagement_sends' denormalized merchant_name column (see that column's comment) rather
+ * than re-resolving a past deal_id against the current, rotating deals inventory. Only
+ * looks at 'sent' rows, same reasoning as recentlySentDealIds/lastUsedTemplateId. Feeds
+ * lib/engagementScoring.js's soft merchant-repetition penalty.
+ */
+export async function lastSentMerchantName(accountId) {
+  const { data, error } = await supabase
+    .from('engagement_sends')
+    .select('merchant_name')
+    .eq('account_id', accountId)
+    .eq('status', 'sent')
+    .not('merchant_name', 'is', null)
+    .order('sent_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+  if (error) {
+    console.error('[engagementSend] last-merchant lookup failed:', error.message)
+    return null
+  }
+  return data?.merchant_name || null
 }
 
 /**
