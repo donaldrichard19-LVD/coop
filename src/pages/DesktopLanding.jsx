@@ -27,7 +27,7 @@ export default function DesktopLanding() {
             style={{ textWrap: 'pretty' }}
           >
             send Coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
-            learn where you actually eat, then text you when one of them has a deal. no new app.
+            learn where you actually eat, then text you when one of them has a deal.
           </p>
 
           <div className="flex items-center gap-4 bg-surface-elevated rounded-[22px] px-[26px] py-[22px] max-w-[620px] mb-12">

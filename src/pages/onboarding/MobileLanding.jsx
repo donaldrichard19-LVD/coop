@@ -20,7 +20,7 @@ export default function MobileLanding({ onNext }) {
         </h1>
         <p className="text-[17px] leading-[1.5] text-text-secondary mb-6">
           send Coop a screenshot of a recent order &mdash; the taco place, the coffee run, the delivery app. we
-          learn where you actually eat, then text you when one of them has a deal. no new app.
+          learn where you actually eat, then text you when one of them has a deal.
         </p>
 
         <Button variant="primary" className="w-full justify-center py-4 text-[17px]" onClick={onNext}>

@@ -25,7 +25,7 @@ export default function ValuePropSteps() {
         setup.
       </Step>
       <Step n="02" title="Coop watches your spots" illustration={<SpotsLoop />}>
-        Coop keeps an eye on the places you already order from. no browsing, no clipping.
+        Coop keeps an eye on the places you already order from.
       </Step>
       <Step n="03" title="you get deals, personalized to you" illustration={<DealTextLoop />}>
         &ldquo;there&rsquo;s a deal at your taco place.&rdquo; that&rsquo;s it. keep your money.
