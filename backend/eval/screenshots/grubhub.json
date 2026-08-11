@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "screenshot_004",
+    "platform": "grubhub",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Grubhub\nOrder Confirmed\nBlue Bottle Coffee\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_005",
+    "platform": "grubhub",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Grubhub\nOrder Confirmed\nBlue Bottle Coffee\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_014",
+    "platform": "grubhub",
+    "merchantName": "Chipotle",
+    "ocrText": "Grubhub\nOrder Confirmed\nChipotle\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_015",
+    "platform": "grubhub",
+    "merchantName": "Chipotle",
+    "ocrText": "Grubhub\nOrder Confirmed\nChipotle\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_024",
+    "platform": "grubhub",
+    "merchantName": "Panera Bread",
+    "ocrText": "Grubhub\nOrder Confirmed\nPanera Bread\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_025",
+    "platform": "grubhub",
+    "merchantName": "Panera Bread",
+    "ocrText": "Grubhub\nOrder Confirmed\nPanera Bread\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_034",
+    "platform": "grubhub",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Grubhub\nOrder Confirmed\nTony's Pizza Napoletana\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_035",
+    "platform": "grubhub",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Grubhub\nOrder Confirmed\nTony's Pizza Napoletana\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_044",
+    "platform": "grubhub",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Grubhub\nOrder Confirmed\nPete's Coffee\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_045",
+    "platform": "grubhub",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Grubhub\nOrder Confirmed\nPete's Coffee\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_054",
+    "platform": "grubhub",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Grubhub\nOrder Confirmed\nLucky Dumpling House\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_055",
+    "platform": "grubhub",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Grubhub\nOrder Confirmed\nLucky Dumpling House\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_064",
+    "platform": "grubhub",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Grubhub\nOrder Confirmed\nRitual Coffee Roasters\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_065",
+    "platform": "grubhub",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Grubhub\nOrder Confirmed\nRitual Coffee Roasters\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_074",
+    "platform": "grubhub",
+    "merchantName": "Starbucks",
+    "ocrText": "Grubhub\nOrder Confirmed\nStarbucks\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_075",
+    "platform": "grubhub",
+    "merchantName": "Starbucks",
+    "ocrText": "Grubhub\nOrder Confirmed\nStarbucks\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_084",
+    "platform": "grubhub",
+    "merchantName": "McDonald's",
+    "ocrText": "Grubhub\nOrder Confirmed\nMcDonald's\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_085",
+    "platform": "grubhub",
+    "merchantName": "McDonald's",
+    "ocrText": "Grubhub\nOrder Confirmed\nMcDonald's\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_094",
+    "platform": "grubhub",
+    "merchantName": "Subway",
+    "ocrText": "Grubhub\nOrder Confirmed\nSubway\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_095",
+    "platform": "grubhub",
+    "merchantName": "Subway",
+    "ocrText": "Grubhub\nOrder Confirmed\nSubway\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_104",
+    "platform": "grubhub",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Grubhub\nOrder Confirmed\nDomino's Pizza\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_105",
+    "platform": "grubhub",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Grubhub\nOrder Confirmed\nDomino's Pizza\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_114",
+    "platform": "grubhub",
+    "merchantName": "Taco Bell",
+    "ocrText": "Grubhub\nOrder Confirmed\nTaco Bell\nCrunchy Taco Supreme $3.50\nBurrito $6.00\nTotal $9.50",
+    "lines": [
+      {
+        "text": "Crunchy Taco Supreme $3.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Crunchy",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Taco",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Supreme",
+            "bbox": {
+              "x0": 20,
+              "y0": 0,
+              "x1": 28,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Crunchy Taco Supreme",
+        "Burrito"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_115",
+    "platform": "grubhub",
+    "merchantName": "Taco Bell",
+    "ocrText": "Grubhub\nOrder Confirmed\nTaco Bell\nBurrito $6.00\nNachos $4.50\nTotal $10.50",
+    "lines": [
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Nachos $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Nachos",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $10.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Burrito",
+        "Nachos"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_124",
+    "platform": "grubhub",
+    "merchantName": "Dunkin'",
+    "ocrText": "Grubhub\nOrder Confirmed\nDunkin'\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_125",
+    "platform": "grubhub",
+    "merchantName": "Dunkin'",
+    "ocrText": "Grubhub\nOrder Confirmed\nDunkin'\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_134",
+    "platform": "grubhub",
+    "merchantName": "Wendy's",
+    "ocrText": "Grubhub\nOrder Confirmed\nWendy's\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_135",
+    "platform": "grubhub",
+    "merchantName": "Wendy's",
+    "ocrText": "Grubhub\nOrder Confirmed\nWendy's\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_144",
+    "platform": "grubhub",
+    "merchantName": "Panda Express",
+    "ocrText": "Grubhub\nOrder Confirmed\nPanda Express\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_145",
+    "platform": "grubhub",
+    "merchantName": "Panda Express",
+    "ocrText": "Grubhub\nOrder Confirmed\nPanda Express\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_152",
+    "platform": "grubhub",
+    "merchantName": "Corner Bagel Co",
+    "ocrText": "Grubhub\nOrder Confirmed\nCorner Bagel Co\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_157",
+    "platform": "grubhub",
+    "merchantName": "Nonna's Kitchen",
+    "ocrText": "Grubhub\nOrder Confirmed\nNonna's Kitchen\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_162",
+    "platform": "grubhub",
+    "merchantName": "Union Square Deli",
+    "ocrText": "Grubhub\nOrder Confirmed\nUnion Square Deli\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_167",
+    "platform": "grubhub",
+    "merchantName": "Harbor Fish Shack",
+    "ocrText": "Grubhub\nOrder Confirmed\nHarbor Fish Shack\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_172",
+    "platform": "grubhub",
+    "merchantName": "Ember Wood-Fired",
+    "ocrText": "Grubhub\nOrder Confirmed\nEmber Wood-Fired\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_177",
+    "platform": "grubhub",
+    "merchantName": "Petal & Pour",
+    "ocrText": "Grubhub\nOrder Confirmed\nPetal & Pour\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_182",
+    "platform": "grubhub",
+    "merchantName": "Copper Kettle",
+    "ocrText": "Grubhub\nOrder Confirmed\nCopper Kettle\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_187",
+    "platform": "grubhub",
+    "merchantName": "Marina Noodle Bar",
+    "ocrText": "Grubhub\nOrder Confirmed\nMarina Noodle Bar\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  }
+]

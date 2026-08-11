@@ -1,0 +1,422 @@
+[
+  {
+    "id": "multi_000",
+    "message": "anything coffee under $10 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_001",
+    "message": "looking for pizza deals, nothing over $15, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_002",
+    "message": "cheap mexican tonight, under $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_003",
+    "message": "sushi spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_004",
+    "message": "anything fast casual under $30 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_005",
+    "message": "looking for dessert deals, nothing over $10, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_006",
+    "message": "cheap thai tonight, under $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_007",
+    "message": "coffee spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_008",
+    "message": "anything pizza under $25 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_009",
+    "message": "looking for mexican deals, nothing over $30, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_010",
+    "message": "cheap sushi tonight, under $10",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_011",
+    "message": "fast casual spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_012",
+    "message": "anything dessert under $20 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_013",
+    "message": "looking for thai deals, nothing over $25, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_014",
+    "message": "cheap coffee tonight, under $30",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_015",
+    "message": "pizza spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_016",
+    "message": "anything mexican under $15 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_017",
+    "message": "looking for sushi deals, nothing over $20, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_018",
+    "message": "cheap fast casual tonight, under $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_019",
+    "message": "dessert spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_020",
+    "message": "anything thai under $10 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_021",
+    "message": "looking for coffee deals, nothing over $15, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_022",
+    "message": "cheap pizza tonight, under $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_023",
+    "message": "mexican spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_024",
+    "message": "anything sushi under $30 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_025",
+    "message": "looking for fast casual deals, nothing over $10, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_026",
+    "message": "cheap dessert tonight, under $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": "tonight",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_027",
+    "message": "thai spot within 5 miles for this weekend",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": 5,
+      "merchant": null,
+      "timeWindow": "this weekend",
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_028",
+    "message": "anything coffee under $25 within 1 miles?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": 1,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "multi_029",
+    "message": "looking for pizza deals, nothing over $30, close by (2 mi)",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": 2,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  }
+]

@@ -3,6 +3,9 @@ import { extractText } from './ocr.js'
 import { matchMerchant } from './merchantDictionary.js'
 import { redactPII } from './redact.js'
 import { normalizeItems } from './itemNormalization.js'
+import { extractLineItems } from './lineItemExtractor.js'
+import { redactImagePII } from './redactImage.js'
+import { recordMetric } from './pipelineMetrics.js'
 
 // Below this OCR text length or confidence (0-100), treat OCR as having
 // failed rather than trust garbled output — fall back to sending the image
@@ -91,7 +94,10 @@ async function extractItemsOnly(text, merchantName) {
 
 // Fallback path only: OCR failed to produce usable text (low confidence or
 // too short), so this pays the full image-token cost as the price of still
-// getting a usable read rather than silently failing.
+// getting a usable read rather than silently failing. `buffer` here is
+// expected to already have passed through redactImagePII.js (Story B4) —
+// this function itself does no redaction, it just sends whatever buffer
+// it's given.
 async function extractFromImage(buffer, contentType) {
   const base64 = buffer.toString('base64')
   const message = await anthropic.messages.create({
@@ -121,7 +127,7 @@ async function extractFromImage(buffer, contentType) {
 // effectively receipts).
 export async function parseScreenshot(mediaUrl, contentType) {
   const buffer = await downloadMedia(mediaUrl)
-  const { text: rawText, confidence } = await extractText(buffer)
+  const { text: rawText, confidence, lines } = await extractText(buffer)
   // Redacted immediately, before anything downstream sees it — the
   // dictionary lookup and both Claude calls all operate on this, never on
   // rawText. The length/confidence gate below intentionally still checks
@@ -137,29 +143,78 @@ export async function parseScreenshot(mediaUrl, contentType) {
   // grow the dictionary from a confirmed answer. See routes/rcs.js.
   let merchantSource = null
 
+  // Story B3 instrumentation: model-call count is a cost proxy, tracked per screenshot
+  // regardless of which path below is taken. Counts only the merchant/item-extraction
+  // calls in this file — itemNormalization.js's own batched normalization call (at most
+  // one per screenshot, only on a cache miss) is tracked separately via its own
+  // 'item_normalization_cache' metric line (misses > 0 implies exactly one additional
+  // model call there), rather than threading an extra return value through normalizeItems
+  // just to fold it into this same counter.
+  let modelCallCount = 0
+  let pipelinePath
+
   // Tried regardless of OCR confidence, before either fallback tier — see
   // merchantDictionary.js for why this can still hit on otherwise-weak OCR.
   const dictHit = text.length > 0 ? await matchMerchant(text) : null
   if (dictHit) {
-    console.log(`[screenshotParser] dictionary hit: ${dictHit.name} — merchant+category cost 0 tokens`)
+    pipelinePath = 'dictionary'
     merchant = dictHit.name
     category = dictHit.category
     merchantSource = 'dictionary'
-    rawItems = await extractItemsOnly(text, dictHit.name)
+
+    // Story B2: try the regex/positional extractor first — on a dictionary hit,
+    // extractItemsOnly below is an isolated items-only model call with nothing else
+    // riding on it, so a successful regex resolution skips it entirely (real cost
+    // savings, not just instrumentation).
+    const regexResult = extractLineItems(lines)
+    recordMetric('line_item_extraction', { path: 'dictionary', resolvedByRegex: !!regexResult })
+    if (regexResult) {
+      console.log(`[screenshotParser] regex line-item extraction resolved ${regexResult.items.length} item(s) — skipped items-only model call`)
+      rawItems = regexResult.items
+    } else {
+      rawItems = await extractItemsOnly(text, dictHit.name)
+      modelCallCount++
+    }
   } else if (rawText.length >= MIN_OCR_TEXT_LENGTH && confidence >= MIN_OCR_CONFIDENCE) {
+    pipelinePath = 'text'
     console.log(`[screenshotParser] OCR ok (confidence ${confidence.toFixed(0)}, ${text.length} chars) — text path`)
+
+    // Story B2 instrumentation only here, not a skip: merchant identification (stage 4)
+    // still needs this model call regardless of whether regex could resolve items on its
+    // own, and B2 is explicitly scoped to stage 5 only — logged for B3's regex-vs-model
+    // resolution tracking, not acted on.
+    const regexResult = extractLineItems(lines)
+    recordMetric('line_item_extraction', { path: 'text', resolvedByRegex: !!regexResult })
+
     const parsed = await extractFromText(text)
+    modelCallCount++
     merchant = parsed.merchant
     category = parsed.category
     if (merchant) merchantSource = 'model'
     rawItems = parsed.items || []
   } else {
-    // Image fallback: redaction above doesn't apply here — see redact.js's
-    // header comment for why that's a known, flagged gap, not an oversight.
+    pipelinePath = 'image'
     console.log(
       `[screenshotParser] OCR too weak (confidence ${confidence.toFixed(0)}, ${rawText.length} chars) — image fallback`,
     )
-    const parsed = await extractFromImage(buffer, contentType)
+    // Story B4: redact whatever PII the low-confidence OCR pass still managed to read
+    // before this buffer reaches Claude — see redactImage.js for exactly what is and isn't
+    // covered. redactPII (text-path redaction) does not apply on this branch at all; this
+    // is the dedicated image-path mitigation for the gap redact.js's own header comment
+    // flags.
+    let imageBuffer = buffer
+    try {
+      imageBuffer = await redactImagePII(buffer, lines, contentType)
+    } catch (err) {
+      // Fail closed: if redaction itself throws (compositing failure) on an image we
+      // already know contains PII-shaped text, do not fall back to sending the raw
+      // buffer — surface the failure and let the caller's existing catch block send the
+      // user its "couldn't quite read that one" retry prompt instead.
+      console.error('[screenshotParser] image redaction failed — aborting image-fallback parse rather than sending unredacted PII:', err.message)
+      throw err
+    }
+    const parsed = await extractFromImage(imageBuffer, contentType)
+    modelCallCount++
     merchant = parsed.merchant
     category = parsed.category
     if (merchant) merchantSource = 'model'
@@ -167,5 +222,6 @@ export async function parseScreenshot(mediaUrl, contentType) {
   }
 
   const items = await normalizeItems(rawItems)
+  recordMetric('screenshot_pipeline_run', { path: pipelinePath, modelCalls: modelCallCount, merchantSource })
   return { merchant, category, merchantSource, items }
 }

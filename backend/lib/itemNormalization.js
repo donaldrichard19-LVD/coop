@@ -1,5 +1,6 @@
 import { anthropic } from './anthropic.js'
 import { supabase } from './supabase.js'
+import { recordMetric } from './pipelineMetrics.js'
 
 function normalizeKey(raw) {
   return raw.trim().toLowerCase().replace(/\s+/g, ' ')
@@ -73,6 +74,7 @@ export async function normalizeItems(rawNames) {
 
   const cacheByKey = new Map((cachedRows || []).map((row) => [row.raw_text, row]))
   const misses = [...new Set(keys.filter((k) => !cacheByKey.has(k)))]
+  recordMetric('item_normalization_cache', { hits: keys.length - misses.length, misses: misses.length })
 
   if (misses.length > 0) {
     console.log(`[itemNormalization] ${misses.length} cache miss(es), ${keys.length - misses.length} hit(s)`)

@@ -10,13 +10,38 @@ import { createWorker } from 'tesseract.js'
 // worker — simplest correct thing at Coop's current (near-zero) volume;
 // revisit if/when real throughput makes worker reuse worth the added
 // complexity of lifecycle management.
+
+// Story B2 prerequisite: by default, tesseract.js v7's recognize() does NOT return
+// per-word bounding boxes — `data.blocks` is null unless the `blocks: true` output option
+// is explicitly requested (confirmed against node_modules/tesseract.js/src/index.d.ts:
+// `blocks: Block[] | null`, and OutputFormats.blocks defaults falsy). lib/lineItemExtractor.js
+// (B2) and lib/redactImage.js (B4) both need real word/line positions, not just flat text,
+// so this now requests blocks output and flattens it into a `lines` array alongside the
+// plain `text`/`confidence` every existing caller already relies on — a strictly additive
+// change, nothing existing that only destructures {text, confidence} is affected.
+function flattenLines(blocks) {
+  const lines = []
+  for (const block of blocks || []) {
+    for (const paragraph of block.paragraphs || []) {
+      for (const line of paragraph.lines || []) {
+        lines.push({
+          text: line.text,
+          bbox: line.bbox,
+          words: (line.words || []).map((w) => ({ text: w.text, confidence: w.confidence, bbox: w.bbox })),
+        })
+      }
+    }
+  }
+  return lines
+}
+
 export async function extractText(buffer) {
   const worker = await createWorker('eng')
   try {
     const {
-      data: { text, confidence },
-    } = await worker.recognize(buffer)
-    return { text: text.trim(), confidence }
+      data: { text, confidence, blocks },
+    } = await worker.recognize(buffer, {}, { blocks: true })
+    return { text: text.trim(), confidence, lines: flattenLines(blocks) }
   } finally {
     await worker.terminate()
   }

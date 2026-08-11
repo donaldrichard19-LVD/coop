@@ -30,8 +30,10 @@ export async function sendRcsTurn(to, turn, { isFirstTurn = false } = {}) {
   const messages = renderTurnAsRCS(turn, { templateSids, isFirstTurn })
 
   // Recorded regardless of whether a real send happens below, so the save-tap round trip
-  // (routes/rcs.js -> resolveQuickReplyId) is exercisable in local/no-credentials testing too.
-  if (turn.deals?.length) recordTurn(to, turn.deals)
+  // (routes/rcs.js -> resolveQuickReplyId) is exercisable in local/no-credentials testing
+  // too. Text is recorded even on a zero-deal turn (Story A13 needs it for anaphoric
+  // on-demand replies); deals default to [] rather than skipping the call entirely.
+  if (turn.deals?.length || turn.text) recordTurn(to, turn.deals || [], turn.text || null)
 
   if (!client || !process.env.TWILIO_MESSAGING_SERVICE_SID) {
     console.log('[rcs] no Twilio credentials configured — would have sent:', JSON.stringify(messages, null, 2))

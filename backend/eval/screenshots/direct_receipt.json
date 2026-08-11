@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "screenshot_008",
+    "platform": "direct_receipt",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Blue Bottle Coffee\nReceipt\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_009",
+    "platform": "direct_receipt",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "B1ue B0tt1e C0ffee\nReceipt\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_018",
+    "platform": "direct_receipt",
+    "merchantName": "Chipotle",
+    "ocrText": "Chipotle\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_019",
+    "platform": "direct_receipt",
+    "merchantName": "Chipotle",
+    "ocrText": "Chip0t1e\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_028",
+    "platform": "direct_receipt",
+    "merchantName": "Panera Bread",
+    "ocrText": "Panera Bread\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_029",
+    "platform": "direct_receipt",
+    "merchantName": "Panera Bread",
+    "ocrText": "Panera Bread\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_038",
+    "platform": "direct_receipt",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Tony's Pizza Napoletana\nReceipt\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_039",
+    "platform": "direct_receipt",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "T0ny's Pizza Nap01etana\nReceipt\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_048",
+    "platform": "direct_receipt",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Pete's Coffee\nReceipt\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_049",
+    "platform": "direct_receipt",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Pete's C0ffee\nReceipt\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_058",
+    "platform": "direct_receipt",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Lucky Dumpling House\nReceipt\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_059",
+    "platform": "direct_receipt",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Lucky Dump1ing H0use\nReceipt\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_068",
+    "platform": "direct_receipt",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Ritual Coffee Roasters\nReceipt\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_069",
+    "platform": "direct_receipt",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Ritua1 C0ffee R0asters\nReceipt\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_078",
+    "platform": "direct_receipt",
+    "merchantName": "Starbucks",
+    "ocrText": "Starbucks\nReceipt\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_079",
+    "platform": "direct_receipt",
+    "merchantName": "Starbucks",
+    "ocrText": "Starbucks\nReceipt\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_088",
+    "platform": "direct_receipt",
+    "merchantName": "McDonald's",
+    "ocrText": "McDonald's\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_089",
+    "platform": "direct_receipt",
+    "merchantName": "McDonald's",
+    "ocrText": "McD0na1d's\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_098",
+    "platform": "direct_receipt",
+    "merchantName": "Subway",
+    "ocrText": "Subway\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_099",
+    "platform": "direct_receipt",
+    "merchantName": "Subway",
+    "ocrText": "Subway\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_108",
+    "platform": "direct_receipt",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Domino's Pizza\nReceipt\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_109",
+    "platform": "direct_receipt",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "D0min0's Pizza\nReceipt\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_118",
+    "platform": "direct_receipt",
+    "merchantName": "Taco Bell",
+    "ocrText": "Taco Bell\nReceipt\nCrunchy Taco Supreme $3.50\nBurrito $6.00\nTotal $9.50",
+    "lines": [
+      {
+        "text": "Crunchy Taco Supreme $3.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Crunchy",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Taco",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Supreme",
+            "bbox": {
+              "x0": 20,
+              "y0": 0,
+              "x1": 28,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Crunchy Taco Supreme",
+        "Burrito"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_119",
+    "platform": "direct_receipt",
+    "merchantName": "Taco Bell",
+    "ocrText": "Tac0 Be11\nReceipt\nBurrito $6.00\nNachos $4.50\nTotal $10.50",
+    "lines": [
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Nachos $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Nachos",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $10.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Burrito",
+        "Nachos"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_128",
+    "platform": "direct_receipt",
+    "merchantName": "Dunkin'",
+    "ocrText": "Dunkin'\nReceipt\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_129",
+    "platform": "direct_receipt",
+    "merchantName": "Dunkin'",
+    "ocrText": "Dunkin'\nReceipt\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_138",
+    "platform": "direct_receipt",
+    "merchantName": "Wendy's",
+    "ocrText": "Wendy's\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_139",
+    "platform": "direct_receipt",
+    "merchantName": "Wendy's",
+    "ocrText": "Wendy's\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_148",
+    "platform": "direct_receipt",
+    "merchantName": "Panda Express",
+    "ocrText": "Panda Express\nReceipt\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_149",
+    "platform": "direct_receipt",
+    "merchantName": "Panda Express",
+    "ocrText": "Panda Express\nReceipt\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_154",
+    "platform": "direct_receipt",
+    "merchantName": "The Daily Grind",
+    "ocrText": "The Daily Grind\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_159",
+    "platform": "direct_receipt",
+    "merchantName": "Green Leaf Salads",
+    "ocrText": "Green Leaf Salads\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_164",
+    "platform": "direct_receipt",
+    "merchantName": "Maple & Co Bakery",
+    "ocrText": "Maple & Co Bakery\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_169",
+    "platform": "direct_receipt",
+    "merchantName": "Cedar Street Grill",
+    "ocrText": "Cedar Street Grill\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_174",
+    "platform": "direct_receipt",
+    "merchantName": "Golden Hour Diner",
+    "ocrText": "Golden Hour Diner\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_179",
+    "platform": "direct_receipt",
+    "merchantName": "Third Wave Roasters",
+    "ocrText": "Third Wave Roasters\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_184",
+    "platform": "direct_receipt",
+    "merchantName": "The Hungry Fox",
+    "ocrText": "The Hungry Fox\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_189",
+    "platform": "direct_receipt",
+    "merchantName": "Foggy Bottom Bakery",
+    "ocrText": "Foggy Bottom Bakery\nReceipt\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  }
+]

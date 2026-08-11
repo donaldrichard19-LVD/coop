@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "screenshot_000",
+    "platform": "doordash",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "D00rDash\nOrder fr0m B1ue B0tt1e C0ffee\nDe1ivered\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_001",
+    "platform": "doordash",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "DoorDash\nOrder from Blue Bottle Coffee\nDelivered\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_010",
+    "platform": "doordash",
+    "merchantName": "Chipotle",
+    "ocrText": "D00rDash\nOrder fr0m Chip0t1e\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_011",
+    "platform": "doordash",
+    "merchantName": "Chipotle",
+    "ocrText": "DoorDash\nOrder from Chipotle\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_020",
+    "platform": "doordash",
+    "merchantName": "Panera Bread",
+    "ocrText": "D00rDash\nOrder fr0m Panera Bread\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_021",
+    "platform": "doordash",
+    "merchantName": "Panera Bread",
+    "ocrText": "DoorDash\nOrder from Panera Bread\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_030",
+    "platform": "doordash",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "D00rDash\nOrder fr0m T0ny's Pizza Nap01etana\nDe1ivered\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_031",
+    "platform": "doordash",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "DoorDash\nOrder from Tony's Pizza Napoletana\nDelivered\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_040",
+    "platform": "doordash",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "D00rDash\nOrder fr0m Pete's C0ffee\nDe1ivered\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_041",
+    "platform": "doordash",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "DoorDash\nOrder from Pete's Coffee\nDelivered\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_050",
+    "platform": "doordash",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "D00rDash\nOrder fr0m Lucky Dump1ing H0use\nDe1ivered\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_051",
+    "platform": "doordash",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "DoorDash\nOrder from Lucky Dumpling House\nDelivered\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_060",
+    "platform": "doordash",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "D00rDash\nOrder fr0m Ritua1 C0ffee R0asters\nDe1ivered\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_061",
+    "platform": "doordash",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "DoorDash\nOrder from Ritual Coffee Roasters\nDelivered\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_070",
+    "platform": "doordash",
+    "merchantName": "Starbucks",
+    "ocrText": "D00rDash\nOrder fr0m Starbucks\nDe1ivered\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_071",
+    "platform": "doordash",
+    "merchantName": "Starbucks",
+    "ocrText": "DoorDash\nOrder from Starbucks\nDelivered\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_080",
+    "platform": "doordash",
+    "merchantName": "McDonald's",
+    "ocrText": "D00rDash\nOrder fr0m McD0na1d's\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_081",
+    "platform": "doordash",
+    "merchantName": "McDonald's",
+    "ocrText": "DoorDash\nOrder from McDonald's\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_090",
+    "platform": "doordash",
+    "merchantName": "Subway",
+    "ocrText": "D00rDash\nOrder fr0m Subway\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_091",
+    "platform": "doordash",
+    "merchantName": "Subway",
+    "ocrText": "DoorDash\nOrder from Subway\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_100",
+    "platform": "doordash",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "D00rDash\nOrder fr0m D0min0's Pizza\nDe1ivered\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_101",
+    "platform": "doordash",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "DoorDash\nOrder from Domino's Pizza\nDelivered\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_110",
+    "platform": "doordash",
+    "merchantName": "Taco Bell",
+    "ocrText": "D00rDash\nOrder fr0m Tac0 Be11\nDe1ivered\nCrunchy Taco Supreme $3.50\nBurrito $6.00\nTotal $9.50",
+    "lines": [
+      {
+        "text": "Crunchy Taco Supreme $3.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Crunchy",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Taco",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Supreme",
+            "bbox": {
+              "x0": 20,
+              "y0": 0,
+              "x1": 28,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Crunchy Taco Supreme",
+        "Burrito"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_111",
+    "platform": "doordash",
+    "merchantName": "Taco Bell",
+    "ocrText": "DoorDash\nOrder from Taco Bell\nDelivered\nBurrito $6.00\nNachos $4.50\nTotal $10.50",
+    "lines": [
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Nachos $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Nachos",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $10.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Burrito",
+        "Nachos"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_120",
+    "platform": "doordash",
+    "merchantName": "Dunkin'",
+    "ocrText": "D00rDash\nOrder fr0m Dunkin'\nDe1ivered\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_121",
+    "platform": "doordash",
+    "merchantName": "Dunkin'",
+    "ocrText": "DoorDash\nOrder from Dunkin'\nDelivered\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_130",
+    "platform": "doordash",
+    "merchantName": "Wendy's",
+    "ocrText": "D00rDash\nOrder fr0m Wendy's\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_131",
+    "platform": "doordash",
+    "merchantName": "Wendy's",
+    "ocrText": "DoorDash\nOrder from Wendy's\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_140",
+    "platform": "doordash",
+    "merchantName": "Panda Express",
+    "ocrText": "D00rDash\nOrder fr0m Panda Express\nDe1ivered\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_141",
+    "platform": "doordash",
+    "merchantName": "Panda Express",
+    "ocrText": "DoorDash\nOrder from Panda Express\nDelivered\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_150",
+    "platform": "doordash",
+    "merchantName": "Sunset Ramen House",
+    "ocrText": "DoorDash\nOrder from Sunset Ramen House\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_155",
+    "platform": "doordash",
+    "merchantName": "The Daily Grind",
+    "ocrText": "DoorDash\nOrder from The Daily Grind\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_160",
+    "platform": "doordash",
+    "merchantName": "Riverside Tacos",
+    "ocrText": "DoorDash\nOrder from Riverside Tacos\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_165",
+    "platform": "doordash",
+    "merchantName": "Maple & Co Bakery",
+    "ocrText": "DoorDash\nOrder from Maple & Co Bakery\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_170",
+    "platform": "doordash",
+    "merchantName": "Willow Creek Cafe",
+    "ocrText": "DoorDash\nOrder from Willow Creek Cafe\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_175",
+    "platform": "doordash",
+    "merchantName": "Golden Hour Diner",
+    "ocrText": "DoorDash\nOrder from Golden Hour Diner\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_180",
+    "platform": "doordash",
+    "merchantName": "Basil & Vine",
+    "ocrText": "DoorDash\nOrder from Basil & Vine\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_185",
+    "platform": "doordash",
+    "merchantName": "The Hungry Fox",
+    "ocrText": "DoorDash\nOrder from The Hungry Fox\nDelivered\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  }
+]

@@ -1,8 +1,8 @@
 import express from 'express'
-import { matchDeals, quickReplies } from '../../src/data/deals.js'
+import { quickReplies } from '../../src/data/deals.js'
 import { fetchDeals } from '../lib/deals.js'
 import { sendRcsTurn, sendConfirmPrompt } from '../lib/twilioClient.js'
-import { resolveQuickReplyId } from '../lib/session.js'
+import { resolveQuickReplyId, getLastTurnDeals, getLastTurnText } from '../lib/session.js'
 import { setPendingConfirmation, resolvePendingConfirmation } from '../lib/pendingConfirmations.js'
 import { normalizePhone, resolveOrCreateAccount } from '../lib/accounts.js'
 import { parseScreenshot } from '../lib/screenshotParser.js'
@@ -10,8 +10,19 @@ import { confirmMerchant } from '../lib/merchantDictionary.js'
 import { getPreferenceProfile, MIN_UPLOADS_FOR_PROFILE } from '../lib/preferenceProfile.js'
 import { matchDealsToProfile } from '../lib/profileDealMatch.js'
 import { supabase } from '../lib/supabase.js'
+import { handleComplianceMessage, isHardOptedOut } from '../lib/optOut.js'
+import { classifyInbound, cannedMetaAnswer } from '../lib/inboundClassifier.js'
+import { classifySoftOptOut, applySoftOptOut, mightBeNegativeFeedback, applyAmbiguousNegativeFeedback } from '../lib/softOptOut.js'
+import { handleOnDemandRequest } from '../lib/onDemandRetrieval.js'
+import { recordEngagedSend } from '../lib/cadenceDecay.js'
 
 const router = express.Router()
+
+// A message plausibly refers back anaphorically to the last thing we sent ("anything
+// cheaper than THAT", "is THIS one still around") — used to decide whether
+// lib/intentExtraction.js (A13) should be given the last outbound text at all, per its own
+// explicit scoping ("last outbound message only if referenced anaphorically").
+const ANAPHORIC_REFERENCE_RE = /\b(that|it|this one|those|these)\b/i
 
 // Twilio's inbound webhook for both freeform replies and button/chip taps. Button taps
 // arrive with a ButtonPayload (the `id` we set in rcs/templates.js, e.g. "save_0") in
@@ -19,14 +30,15 @@ const router = express.Router()
 // payload in Twilio's console before this goes further; this is the shape documented for
 // WhatsApp/RCS quick replies and is treated as provisional here.
 
-// Fires once, exactly on the upload that crosses MIN_UPLOADS_FOR_PROFILE —
-// not on every upload after — since this is meant to be the "you're in, and
-// here's what we found" moment, not a repeated push. Ongoing proactive
-// notification (the ongoing-analysis-job version of this, à la Calvin's
-// cron) isn't in scope here; this is specifically the screenshot-upload
-// feature's own acceptance criterion ("surfaces offers... for similar or
-// exact goods"), satisfied at the moment a profile first becomes viable.
+// Story B5 — was originally a one-time push, firing exactly on the upload that crossed
+// MIN_UPLOADS_FOR_PROFILE. Now runs on every upload past that threshold (not just the one
+// that first crosses it), tracking what's already been shown via surfaced_deals so a
+// repeat upload doesn't re-push a deal the account has already seen, and — since Story A8
+// exists in this same build pass — checks isHardOptedOut first, same opt-out state both
+// proactive-send paths (this one and A1's scheduler) must honor.
 async function maybePushProfileMatches(from, account) {
+  if (await isHardOptedOut(account.id)) return
+
   let profile
   try {
     profile = await getPreferenceProfile(account.id)
@@ -34,7 +46,7 @@ async function maybePushProfileMatches(from, account) {
     console.error('[rcs] failed to load preference profile:', err.message)
     return
   }
-  if (profile.uploadCount !== MIN_UPLOADS_FOR_PROFILE) return
+  if (!profile.isReady) return // below MIN_UPLOADS_FOR_PROFILE — nothing to push on any upload yet
 
   let deals
   try {
@@ -47,11 +59,34 @@ async function maybePushProfileMatches(from, account) {
   const matches = matchDealsToProfile(deals, profile)
   if (matches.length === 0) return
 
+  const { data: surfacedRows, error: surfacedError } = await supabase
+    .from('surfaced_deals')
+    .select('deal_id')
+    .eq('account_id', account.id)
+  if (surfacedError) console.error('[rcs] failed to load surfaced_deals:', surfacedError.message)
+  const alreadySurfaced = new Set((surfacedRows || []).map((r) => r.deal_id))
+
+  const newMatches = matches.filter((d) => !alreadySurfaced.has(d.id))
+  if (newMatches.length === 0) return
+
+  // "you're all set" framing only makes sense the first time this ever fires for an
+  // account; every push after that uses a plainer "found something new" framing.
+  const isFirstPush = profile.uploadCount === MIN_UPLOADS_FOR_PROFILE
   await sendRcsTurn(from, {
-    text: `you're all set — found ${matches.length === 1 ? 'one' : matches.length} based on what you've been ordering.`,
-    deals: matches,
+    text: isFirstPush
+      ? `you're all set — found ${newMatches.length === 1 ? 'one' : newMatches.length} based on what you've been ordering.`
+      : `found ${newMatches.length === 1 ? 'another one' : `${newMatches.length} more`} based on what you've been ordering.`,
+    deals: newMatches,
     quickReplies: quickReplies.slice(0, 4),
   })
+
+  const { error: insertError } = await supabase
+    .from('surfaced_deals')
+    .upsert(
+      newMatches.map((d) => ({ account_id: account.id, deal_id: d.id })),
+      { onConflict: 'account_id,deal_id', ignoreDuplicates: true },
+    )
+  if (insertError) console.error('[rcs] failed to record surfaced_deals:', insertError.message)
 }
 
 // Low-confidence gate: a dictionary hit is already zero-token-certain and
@@ -113,6 +148,103 @@ async function handleConfirmReply({ from, confirmed }) {
   }
 }
 
+// Story A9's fallback bucket ("search request or unclassifiable") is where A10's soft
+// opt-out ladder and A14's on-demand retrieval both live — A10 first (an explicit soft
+// opt-out signal takes priority over treating the message as a new search), then A14.
+// classifySoftOptOut only checked here, not earlier in the A9 dispatch chain, because it's
+// specifically about messages that don't cleanly classify as anything else (an
+// acknowledgment or a meta-question wouldn't also be a "too many texts" complaint in the
+// same breath in practice).
+async function handleSearchOrUnclassifiable({ from, account, body }) {
+  const lastDeals = getLastTurnDeals(from) || []
+  const lastDeal = lastDeals[0] || null
+
+  const ladderMatch = classifySoftOptOut(body)
+  if (ladderMatch) {
+    const { message } = await applySoftOptOut({ account, action: ladderMatch.action, keyword: ladderMatch.keyword, body, lastSentDeal: lastDeal })
+    if (message) {
+      await sendRcsTurn(from, { text: message, deals: [], quickReplies: [] })
+      return
+    }
+    // acknowledged: false (e.g. exclude_category/exclude_merchant with no lastSentDeal to
+    // attach the exclusion to) — fall through to on-demand retrieval instead of going silent.
+  } else if (mightBeNegativeFeedback(body)) {
+    const { message } = await applyAmbiguousNegativeFeedback({ account, body })
+    if (message) {
+      await sendRcsTurn(from, { text: message, deals: [], quickReplies: [] })
+      return
+    }
+    // classified as not-actually-negative — fall through to on-demand retrieval.
+  }
+
+  let profile
+  try {
+    profile = await getPreferenceProfile(account.id)
+  } catch (err) {
+    console.error('[rcs] failed to load preference profile for on-demand retrieval:', err.message)
+    profile = null
+  }
+
+  const lastOutboundText = getLastTurnText(from)
+  const isAnaphoric = lastOutboundText && ANAPHORIC_REFERENCE_RE.test(body)
+
+  try {
+    const turn = await handleOnDemandRequest({
+      message: body,
+      profile,
+      timezone: account.timezone,
+      lastOutboundText: isAnaphoric ? lastOutboundText : null,
+      account,
+    })
+    await sendRcsTurn(from, turn)
+  } catch (err) {
+    console.error('[rcs] on-demand retrieval failed:', err.message)
+    await sendRcsTurn(from, { text: "having trouble finding that right now — try again in a bit?", deals: [], quickReplies: [] })
+  }
+}
+
+// Story A9 dispatch: routes a freeform inbound message (already past A8's compliance
+// check and the account-approval gate) to the right handler based on classifyInbound's
+// bucket. This is the replacement for the old unconditional matchDeals(body) fallback —
+// every inbound text now goes through this classifier first.
+async function handleFreeformMessage({ from, account, body }) {
+  const hasPendingTurn = (getLastTurnDeals(from) || []).length > 0
+  const classification = classifyInbound(body, { hasPendingTurn })
+
+  switch (classification.type) {
+    case 'compliance':
+      // Defensive safety net only — lib/optOut.js's handleComplianceMessage already ran
+      // (and would have returned) before this function is ever reached. Nothing to do.
+      return
+    case 'acknowledgment':
+      // "canned/no reply" per the plan — deliberately no reply at all, avoids an
+      // awkward bot-to-bot "you're welcome" loop.
+      return
+    case 'offer_reply': {
+      const deals = getLastTurnDeals(from) || []
+      const deal = deals[classification.ordinal]
+      if (deal) {
+        // TODO: persist the save once there's a backing store (Supabase, per Calvin's
+        // convention) — this only proves the round trip today, same as the button-tap path.
+        console.log(`[rcs] ${from} saved ${deal.id} (${deal.offer}) via freeform offer reply`)
+        await sendRcsTurn(from, { text: `saved — ${deal.offer}.`, deals: [], quickReplies: [] })
+        return
+      }
+      // hasPendingTurn was true but the specific ordinal was out of range — fall through
+      // to on-demand retrieval rather than going silent.
+      await handleSearchOrUnclassifiable({ from, account, body })
+      return
+    }
+    case 'meta_question':
+      await sendRcsTurn(from, { text: cannedMetaAnswer(classification.question), deals: [], quickReplies: [] })
+      return
+    case 'search_or_unclassifiable':
+    default:
+      await handleSearchOrUnclassifiable({ from, account, body })
+      return
+  }
+}
+
 router.post('/webhook', express.urlencoded({ extended: false }), async (req, res) => {
   const from = req.body.From
   const body = (req.body.Body || '').trim()
@@ -127,11 +259,11 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
 
   res.status(200).end() // ack immediately; Twilio expects a fast response
 
-  // Approval gate: only accounts Donald has approved get the real deals
-  // experience. Pending/unknown numbers get pointed at the web landing page
-  // instead — no buttonPayload handling, no matchDeals, no screenshot
-  // parsing. The Twilio ack above already happened, so a failure here just
-  // means no reply gets sent, not a response-timing problem.
+  // Account resolution (phone -> accounts row, creating a pending one if needed) is the
+  // minimal lookup Story A8's compliance check needs an account_id for — it is
+  // deliberately NOT gated behind approval status or wrapped in any other inbound logic,
+  // since the very next thing that runs on the resolved account must be the compliance
+  // check, before anything else.
   let phone
   let account
   try {
@@ -140,19 +272,48 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
       console.error('[rcs] failed to normalize inbound phone:', from)
       return
     }
-
     account = await resolveOrCreateAccount(phone)
-    if (account.status !== 'approved') {
-      await sendRcsTurn(from, {
-        text: "hey — you're not signed up for Coop yet. sign up here: https://getcoop.cash and we'll get you in.",
-        deals: [],
-        quickReplies: [],
-      })
-      return
-    }
   } catch (err) {
     console.error('[rcs] account resolution failed:', err.message)
     return
+  }
+
+  // Story A8 — the P0 hard compliance blocker. Must run before any model call, before any
+  // other inbound logic, and before the account-approval gate below. Fully handles
+  // STOP/START/HELP itself (including sending the one required confirmation) when it
+  // matches; returns true in that case, and nothing else in this handler runs.
+  try {
+    const handledAsCompliance = await handleComplianceMessage({ phone: from, account, body })
+    if (handledAsCompliance) return
+  } catch (err) {
+    console.error('[rcs] compliance handling failed:', err.message)
+    return
+  }
+
+  // Approval gate: only accounts Donald has approved get the real deals
+  // experience. Pending/unknown numbers get pointed at the web landing page
+  // instead — no buttonPayload handling, no matchDeals, no screenshot
+  // parsing. The Twilio ack above already happened, so a failure here just
+  // means no reply gets sent, not a response-timing problem.
+  if (account.status !== 'approved') {
+    await sendRcsTurn(from, {
+      text: "hey — you're not signed up for Coop yet. sign up here: https://getcoop.cash and we'll get you in.",
+      deals: [],
+      quickReplies: [],
+    })
+    return
+  }
+
+  // Story A11 — any non-compliance inbound message counts as engagement (bare
+  // acknowledgments included, per the confirmed rule reconciling A9's classifier with
+  // A11's own accounting — both now agree an acknowledgment is a positive signal).
+  // Compliance messages (STOP/HELP/etc.) already returned above and never reach this line.
+  // Single call site, right after the approval gate, covers every dispatch branch below
+  // (screenshot upload, button taps, and handleFreeformMessage's classifier dispatch).
+  try {
+    await recordEngagedSend(account.id)
+  } catch (err) {
+    console.error('[rcs] failed to record engaged send:', err.message)
   }
 
   if (mediaUrl) {
@@ -176,26 +337,13 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
     return
   }
 
-  let deals
-  try {
-    deals = await fetchDeals()
-  } catch (err) {
-    console.error('[rcs] failed to fetch deals:', err.message)
-    return
-  }
-
-  const matches = matchDeals(body || 'nearby', deals)
-  const shown = matches.slice(0, 2)
-  const turn = {
-    text:
-      shown.length > 0
-        ? `found ${matches.length === 1 ? 'one' : matches.length} you haven't used yet.`
-        : "not seeing that one in your regulars yet.",
-    deals: shown,
-    overflowCount: Math.max(0, matches.length - shown.length),
-    quickReplies: quickReplies.slice(0, 4),
-  }
-  await sendRcsTurn(from, turn, { isFirstTurn: false })
+  // Story A9 — every remaining freeform text message is classified first (compliance /
+  // acknowledgment / offer_reply / meta_question / search_or_unclassifiable), replacing
+  // the old unconditional matchDeals(body) call with a proper dispatch. See
+  // handleFreeformMessage above for the full routing table, including A10's soft opt-out
+  // ladder and A14's on-demand retrieval, both reached via the search_or_unclassifiable
+  // bucket.
+  await handleFreeformMessage({ from, account, body })
 })
 
 export default router

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "ana_000",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Blue Bottle Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "coffee",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_001",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Chipotle just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_002",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Panera Bread just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_003",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Tony's Pizza Napoletana just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Tony's Pizza Napoletana",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_004",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Pete's Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_005",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Starbucks just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_006",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Taco Bell just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_007",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Blue Bottle Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Blue Bottle Coffee",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_008",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Chipotle just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "pizza",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_009",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Panera Bread just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_010",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Tony's Pizza Napoletana just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_011",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Pete's Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Pete's Coffee",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_012",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Starbucks just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "dessert",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_013",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Taco Bell just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_014",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Blue Bottle Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_015",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Chipotle just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Chipotle",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_016",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Panera Bread just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "mexican",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_017",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Tony's Pizza Napoletana just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_018",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Pete's Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_019",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Starbucks just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Starbucks",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_020",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Taco Bell just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "thai",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_021",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Blue Bottle Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_022",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Chipotle just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_023",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Panera Bread just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Panera Bread",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_024",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Tony's Pizza Napoletana just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "sushi",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_025",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Pete's Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_026",
+    "message": "something similar but closer",
+    "lastOutboundText": "your usual at Starbucks just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_027",
+    "message": "is that one still available",
+    "lastOutboundText": "your usual at Taco Bell just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": "Taco Bell",
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_028",
+    "message": "is there anything else like that one",
+    "lastOutboundText": "your usual at Blue Bottle Coffee just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": "coffee",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "ana_029",
+    "message": "anything cheaper than that",
+    "lastOutboundText": "your usual at Chipotle just got a discount: 20% off, ends Sunday.",
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  }
+]

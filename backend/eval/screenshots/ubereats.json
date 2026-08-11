@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "screenshot_002",
+    "platform": "ubereats",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Uber Eats\nBlue Bottle Coffee\nYour order is on its way\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_003",
+    "platform": "ubereats",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Uber Eats\nBlue Bottle Coffee\nYour order is on its way\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_012",
+    "platform": "ubereats",
+    "merchantName": "Chipotle",
+    "ocrText": "Uber Eats\nChipotle\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_013",
+    "platform": "ubereats",
+    "merchantName": "Chipotle",
+    "ocrText": "Uber Eats\nChipotle\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_022",
+    "platform": "ubereats",
+    "merchantName": "Panera Bread",
+    "ocrText": "Uber Eats\nPanera Bread\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_023",
+    "platform": "ubereats",
+    "merchantName": "Panera Bread",
+    "ocrText": "Uber Eats\nPanera Bread\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_032",
+    "platform": "ubereats",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Uber Eats\nTony's Pizza Napoletana\nYour order is on its way\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_033",
+    "platform": "ubereats",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Uber Eats\nTony's Pizza Napoletana\nYour order is on its way\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_042",
+    "platform": "ubereats",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Uber Eats\nPete's Coffee\nYour order is on its way\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_043",
+    "platform": "ubereats",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Uber Eats\nPete's Coffee\nYour order is on its way\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_052",
+    "platform": "ubereats",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Uber Eats\nLucky Dumpling House\nYour order is on its way\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_053",
+    "platform": "ubereats",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Uber Eats\nLucky Dumpling House\nYour order is on its way\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_062",
+    "platform": "ubereats",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Uber Eats\nRitual Coffee Roasters\nYour order is on its way\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_063",
+    "platform": "ubereats",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Uber Eats\nRitual Coffee Roasters\nYour order is on its way\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_072",
+    "platform": "ubereats",
+    "merchantName": "Starbucks",
+    "ocrText": "Uber Eats\nStarbucks\nYour order is on its way\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_073",
+    "platform": "ubereats",
+    "merchantName": "Starbucks",
+    "ocrText": "Uber Eats\nStarbucks\nYour order is on its way\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_082",
+    "platform": "ubereats",
+    "merchantName": "McDonald's",
+    "ocrText": "Uber Eats\nMcDonald's\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_083",
+    "platform": "ubereats",
+    "merchantName": "McDonald's",
+    "ocrText": "Uber Eats\nMcDonald's\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_092",
+    "platform": "ubereats",
+    "merchantName": "Subway",
+    "ocrText": "Uber Eats\nSubway\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_093",
+    "platform": "ubereats",
+    "merchantName": "Subway",
+    "ocrText": "Uber Eats\nSubway\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_102",
+    "platform": "ubereats",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Uber Eats\nDomino's Pizza\nYour order is on its way\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_103",
+    "platform": "ubereats",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Uber Eats\nDomino's Pizza\nYour order is on its way\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_112",
+    "platform": "ubereats",
+    "merchantName": "Taco Bell",
+    "ocrText": "Uber Eats\nTaco Bell\nYour order is on its way\nCrunchy Taco Supreme $3.50\nBurrito $6.00\nTotal $9.50",
+    "lines": [
+      {
+        "text": "Crunchy Taco Supreme $3.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Crunchy",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Taco",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Supreme",
+            "bbox": {
+              "x0": 20,
+              "y0": 0,
+              "x1": 28,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Crunchy Taco Supreme",
+        "Burrito"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_113",
+    "platform": "ubereats",
+    "merchantName": "Taco Bell",
+    "ocrText": "Uber Eats\nTaco Bell\nYour order is on its way\nBurrito $6.00\nNachos $4.50\nTotal $10.50",
+    "lines": [
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Nachos $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Nachos",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $10.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Burrito",
+        "Nachos"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_122",
+    "platform": "ubereats",
+    "merchantName": "Dunkin'",
+    "ocrText": "Uber Eats\nDunkin'\nYour order is on its way\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_123",
+    "platform": "ubereats",
+    "merchantName": "Dunkin'",
+    "ocrText": "Uber Eats\nDunkin'\nYour order is on its way\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_132",
+    "platform": "ubereats",
+    "merchantName": "Wendy's",
+    "ocrText": "Uber Eats\nWendy's\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_133",
+    "platform": "ubereats",
+    "merchantName": "Wendy's",
+    "ocrText": "Uber Eats\nWendy's\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_142",
+    "platform": "ubereats",
+    "merchantName": "Panda Express",
+    "ocrText": "Uber Eats\nPanda Express\nYour order is on its way\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_143",
+    "platform": "ubereats",
+    "merchantName": "Panda Express",
+    "ocrText": "Uber Eats\nPanda Express\nYour order is on its way\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_151",
+    "platform": "ubereats",
+    "merchantName": "Sunset Ramen House",
+    "ocrText": "Uber Eats\nSunset Ramen House\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_156",
+    "platform": "ubereats",
+    "merchantName": "Nonna's Kitchen",
+    "ocrText": "Uber Eats\nNonna's Kitchen\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_161",
+    "platform": "ubereats",
+    "merchantName": "Riverside Tacos",
+    "ocrText": "Uber Eats\nRiverside Tacos\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_166",
+    "platform": "ubereats",
+    "merchantName": "Harbor Fish Shack",
+    "ocrText": "Uber Eats\nHarbor Fish Shack\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_171",
+    "platform": "ubereats",
+    "merchantName": "Willow Creek Cafe",
+    "ocrText": "Uber Eats\nWillow Creek Cafe\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_176",
+    "platform": "ubereats",
+    "merchantName": "Petal & Pour",
+    "ocrText": "Uber Eats\nPetal & Pour\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_181",
+    "platform": "ubereats",
+    "merchantName": "Basil & Vine",
+    "ocrText": "Uber Eats\nBasil & Vine\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_186",
+    "platform": "ubereats",
+    "merchantName": "Marina Noodle Bar",
+    "ocrText": "Uber Eats\nMarina Noodle Bar\nYour order is on its way\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  }
+]

@@ -1,0 +1,3698 @@
+[
+  {
+    "id": "screenshot_006",
+    "platform": "postmates",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Postmates\nBlue Bottle Coffee\nPickup order\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_007",
+    "platform": "postmates",
+    "merchantName": "Blue Bottle Coffee",
+    "ocrText": "Postmates\nBlue Bottle Coffee\nPickup order\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Blue Bottle Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_016",
+    "platform": "postmates",
+    "merchantName": "Chipotle",
+    "ocrText": "Postmates\nChipotle\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_017",
+    "platform": "postmates",
+    "merchantName": "Chipotle",
+    "ocrText": "Postmates\nChipotle\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Chipotle",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_026",
+    "platform": "postmates",
+    "merchantName": "Panera Bread",
+    "ocrText": "Postmates\nPanera Bread\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_027",
+    "platform": "postmates",
+    "merchantName": "Panera Bread",
+    "ocrText": "Postmates\nPanera Bread\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panera Bread",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_036",
+    "platform": "postmates",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Postmates\nTony's Pizza Napoletana\nPickup order\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_037",
+    "platform": "postmates",
+    "merchantName": "Tony's Pizza Napoletana",
+    "ocrText": "Postmates\nTony's Pizza Napoletana\nPickup order\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Tony's Pizza Napoletana",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_046",
+    "platform": "postmates",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Postmates\nPete's Coffee\nPickup order\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_047",
+    "platform": "postmates",
+    "merchantName": "Pete's Coffee",
+    "ocrText": "Postmates\nPete's Coffee\nPickup order\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Pete's Coffee",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_056",
+    "platform": "postmates",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Postmates\nLucky Dumpling House\nPickup order\nMargherita Pizza $16.00\nSoup Dumplings $11.50\nTotal $27.50",
+    "lines": [
+      {
+        "text": "Margherita Pizza $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Margherita",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pizza",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$16.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $27.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Margherita Pizza",
+        "Soup Dumplings"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_057",
+    "platform": "postmates",
+    "merchantName": "Lucky Dumpling House",
+    "ocrText": "Postmates\nLucky Dumpling House\nPickup order\nSoup Dumplings $11.50\nPasta $14.00\nTotal $25.50",
+    "lines": [
+      {
+        "text": "Soup Dumplings $11.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Soup",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Dumplings",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$11.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Pasta $14.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Pasta",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$14.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $25.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Lucky Dumpling House",
+      "category": "restaurant",
+      "itemNames": [
+        "Soup Dumplings",
+        "Pasta"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_066",
+    "platform": "postmates",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Postmates\nRitual Coffee Roasters\nPickup order\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_067",
+    "platform": "postmates",
+    "merchantName": "Ritual Coffee Roasters",
+    "ocrText": "Postmates\nRitual Coffee Roasters\nPickup order\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Ritual Coffee Roasters",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_076",
+    "platform": "postmates",
+    "merchantName": "Starbucks",
+    "ocrText": "Postmates\nStarbucks\nPickup order\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_077",
+    "platform": "postmates",
+    "merchantName": "Starbucks",
+    "ocrText": "Postmates\nStarbucks\nPickup order\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Starbucks",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_086",
+    "platform": "postmates",
+    "merchantName": "McDonald's",
+    "ocrText": "Postmates\nMcDonald's\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_087",
+    "platform": "postmates",
+    "merchantName": "McDonald's",
+    "ocrText": "Postmates\nMcDonald's\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "McDonald's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_096",
+    "platform": "postmates",
+    "merchantName": "Subway",
+    "ocrText": "Postmates\nSubway\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_097",
+    "platform": "postmates",
+    "merchantName": "Subway",
+    "ocrText": "Postmates\nSubway\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Subway",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_106",
+    "platform": "postmates",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Postmates\nDomino's Pizza\nPickup order\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_107",
+    "platform": "postmates",
+    "merchantName": "Domino's Pizza",
+    "ocrText": "Postmates\nDomino's Pizza\nPickup order\nLarge Pepperoni $15.50\nGarlic Knots $5.00\nTotal $20.50",
+    "lines": [
+      {
+        "text": "Large Pepperoni $15.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Large",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Pepperoni",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$15.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Garlic Knots $5.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Garlic",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Knots",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$5.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $20.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Domino's Pizza",
+      "category": "pizza",
+      "itemNames": [
+        "Large Pepperoni",
+        "Garlic Knots"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_116",
+    "platform": "postmates",
+    "merchantName": "Taco Bell",
+    "ocrText": "Postmates\nTaco Bell\nPickup order\nCrunchy Taco Supreme $3.50\nBurrito $6.00\nTotal $9.50",
+    "lines": [
+      {
+        "text": "Crunchy Taco Supreme $3.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Crunchy",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Taco",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Supreme",
+            "bbox": {
+              "x0": 20,
+              "y0": 0,
+              "x1": 28,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Crunchy Taco Supreme",
+        "Burrito"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_117",
+    "platform": "postmates",
+    "merchantName": "Taco Bell",
+    "ocrText": "Postmates\nTaco Bell\nPickup order\nBurrito $6.00\nNachos $4.50\nTotal $10.50",
+    "lines": [
+      {
+        "text": "Burrito $6.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Nachos $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Nachos",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $10.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Taco Bell",
+      "category": "mexican",
+      "itemNames": [
+        "Burrito",
+        "Nachos"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_126",
+    "platform": "postmates",
+    "merchantName": "Dunkin'",
+    "ocrText": "Postmates\nDunkin'\nPickup order\nLatte $4.50\nCold Brew $4.00\nTotal $8.50",
+    "lines": [
+      {
+        "text": "Latte $4.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Latte",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $8.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Latte",
+        "Cold Brew"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_127",
+    "platform": "postmates",
+    "merchantName": "Dunkin'",
+    "ocrText": "Postmates\nDunkin'\nPickup order\nCold Brew $4.00\nCroissant $3.25\nTotal $7.25",
+    "lines": [
+      {
+        "text": "Cold Brew $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Cold",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Brew",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Croissant $3.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Croissant",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$3.25",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $7.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Dunkin'",
+      "category": "coffee",
+      "itemNames": [
+        "Cold Brew",
+        "Croissant"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_136",
+    "platform": "postmates",
+    "merchantName": "Wendy's",
+    "ocrText": "Postmates\nWendy's\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_137",
+    "platform": "postmates",
+    "merchantName": "Wendy's",
+    "ocrText": "Postmates\nWendy's\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Wendy's",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_146",
+    "platform": "postmates",
+    "merchantName": "Panda Express",
+    "ocrText": "Postmates\nPanda Express\nPickup order\nBurrito Bowl $9.50\nChicken Sandwich $6.50\nTotal $16.00",
+    "lines": [
+      {
+        "text": "Burrito Bowl $9.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Burrito",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Bowl",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$9.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Burrito Bowl",
+        "Chicken Sandwich"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_147",
+    "platform": "postmates",
+    "merchantName": "Panda Express",
+    "ocrText": "Postmates\nPanda Express\nPickup order\nChicken Sandwich $6.50\nFries $2.75\nTotal $9.25",
+    "lines": [
+      {
+        "text": "Chicken Sandwich $6.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Chicken",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Sandwich",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$6.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Fries $2.75",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Fries",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$2.75",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $9.25",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": "Panda Express",
+      "category": "fast casual",
+      "itemNames": [
+        "Chicken Sandwich",
+        "Fries"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_153",
+    "platform": "postmates",
+    "merchantName": "Corner Bagel Co",
+    "ocrText": "Postmates\nCorner Bagel Co\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_158",
+    "platform": "postmates",
+    "merchantName": "Green Leaf Salads",
+    "ocrText": "Postmates\nGreen Leaf Salads\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_163",
+    "platform": "postmates",
+    "merchantName": "Union Square Deli",
+    "ocrText": "Postmates\nUnion Square Deli\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_168",
+    "platform": "postmates",
+    "merchantName": "Cedar Street Grill",
+    "ocrText": "Postmates\nCedar Street Grill\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_173",
+    "platform": "postmates",
+    "merchantName": "Ember Wood-Fired",
+    "ocrText": "Postmates\nEmber Wood-Fired\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_178",
+    "platform": "postmates",
+    "merchantName": "Third Wave Roasters",
+    "ocrText": "Postmates\nThird Wave Roasters\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_183",
+    "platform": "postmates",
+    "merchantName": "Copper Kettle",
+    "ocrText": "Postmates\nCopper Kettle\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  },
+  {
+    "id": "screenshot_188",
+    "platform": "postmates",
+    "merchantName": "Foggy Bottom Bakery",
+    "ocrText": "Postmates\nFoggy Bottom Bakery\nPickup order\nHouse Special $12.50\nSide Salad $4.00\nTotal $16.50",
+    "lines": [
+      {
+        "text": "House Special $12.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "House",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Special",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$12.50",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Side Salad $4.00",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": [
+          {
+            "text": "Side",
+            "bbox": {
+              "x0": 0,
+              "y0": 0,
+              "x1": 8,
+              "y1": 10
+            }
+          },
+          {
+            "text": "Salad",
+            "bbox": {
+              "x0": 10,
+              "y0": 0,
+              "x1": 18,
+              "y1": 10
+            }
+          },
+          {
+            "text": "$4.00",
+            "bbox": {
+              "x0": 9999,
+              "y0": 0,
+              "x1": 10050,
+              "y1": 10
+            }
+          }
+        ]
+      },
+      {
+        "text": "Total $16.50",
+        "bbox": {
+          "x0": 0,
+          "y0": 0,
+          "x1": 200,
+          "y1": 10
+        },
+        "words": []
+      }
+    ],
+    "expected": {
+      "merchant": null,
+      "category": null,
+      "itemNames": [
+        "House Special",
+        "Side Salad"
+      ]
+    }
+  }
+]

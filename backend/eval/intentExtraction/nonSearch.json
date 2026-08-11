@@ -1,0 +1,436 @@
+[
+  {
+    "id": "nonsearch_000",
+    "message": "thanks so much!",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_001",
+    "message": "lol ok",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_002",
+    "message": "who is this",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_003",
+    "message": "can you call me instead",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_004",
+    "message": "my card got declined",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_005",
+    "message": "this is not what I ordered",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_006",
+    "message": "I love this app",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_007",
+    "message": "stop spamming me constantly please just leave me alone forever",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_008",
+    "message": "what time is it",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_009",
+    "message": "tell me a joke",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_010",
+    "message": "how is the weather",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_011",
+    "message": "I don't understand what you're offering",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_012",
+    "message": "can I get a refund",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_013",
+    "message": "is donald there",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_014",
+    "message": "this text made my day",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_015",
+    "message": "what",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_016",
+    "message": "???",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_017",
+    "message": "k thanks bye",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_018",
+    "message": "please remove my number",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_019",
+    "message": "this is a wrong number",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_020",
+    "message": "huh",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_021",
+    "message": "nvm",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_022",
+    "message": "idk maybe later",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_023",
+    "message": "not sure what im looking for tbh",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_024",
+    "message": "surprise me i guess",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_025",
+    "message": "anything really",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_026",
+    "message": "you there?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_027",
+    "message": "hello?",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_028",
+    "message": "is this a bot",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_029",
+    "message": "can a human help me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  },
+  {
+    "id": "nonsearch_030",
+    "message": "im just testing this out",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": true
+    }
+  }
+]

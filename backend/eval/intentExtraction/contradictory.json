@@ -1,0 +1,422 @@
+[
+  {
+    "id": "contra_000",
+    "message": "cheap but fancy coffee, has to feel expensive but under $10",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_001",
+    "message": "something under $15 but also over $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 15,
+      "minPrice": 25,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_002",
+    "message": "mexican but not mexican, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_003",
+    "message": "close by but far enough to feel like a trip, sushi under $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_004",
+    "message": "cheap but fancy fast casual, has to feel expensive but under $30",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_005",
+    "message": "something under $10 but also over $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 10,
+      "minPrice": 20,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_006",
+    "message": "thai but not thai, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_007",
+    "message": "close by but far enough to feel like a trip, coffee under $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_008",
+    "message": "cheap but fancy pizza, has to feel expensive but under $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_009",
+    "message": "something under $30 but also over $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 30,
+      "minPrice": 15,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_010",
+    "message": "sushi but not sushi, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_011",
+    "message": "close by but far enough to feel like a trip, fast casual under $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_012",
+    "message": "cheap but fancy dessert, has to feel expensive but under $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_013",
+    "message": "something under $25 but also over $10",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 25,
+      "minPrice": 10,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_014",
+    "message": "coffee but not coffee, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_015",
+    "message": "close by but far enough to feel like a trip, pizza under $10",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_016",
+    "message": "cheap but fancy mexican, has to feel expensive but under $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": 15,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_017",
+    "message": "something under $20 but also over $30",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 20,
+      "minPrice": 30,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_018",
+    "message": "fast casual but not fast casual, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "fast casual",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_019",
+    "message": "close by but far enough to feel like a trip, dessert under $30",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_020",
+    "message": "cheap but fancy thai, has to feel expensive but under $10",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": 10,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_021",
+    "message": "something under $15 but also over $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 15,
+      "minPrice": 25,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_022",
+    "message": "pizza but not pizza, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "pizza",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_023",
+    "message": "close by but far enough to feel like a trip, mexican under $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "mexican",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_024",
+    "message": "cheap but fancy sushi, has to feel expensive but under $30",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "sushi",
+      "maxPrice": 30,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_025",
+    "message": "something under $10 but also over $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 10,
+      "minPrice": 20,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_026",
+    "message": "dessert but not dessert, surprise me",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "dessert",
+      "maxPrice": null,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_027",
+    "message": "close by but far enough to feel like a trip, thai under $20",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "thai",
+      "maxPrice": 20,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_028",
+    "message": "cheap but fancy coffee, has to feel expensive but under $25",
+    "lastOutboundText": null,
+    "expected": {
+      "category": "coffee",
+      "maxPrice": 25,
+      "minPrice": null,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  },
+  {
+    "id": "contra_029",
+    "message": "something under $30 but also over $15",
+    "lastOutboundText": null,
+    "expected": {
+      "category": null,
+      "maxPrice": 30,
+      "minPrice": 15,
+      "maxDistanceMiles": null,
+      "merchant": null,
+      "timeWindow": null,
+      "needsClarification": false
+    }
+  }
+]

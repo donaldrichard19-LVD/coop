@@ -1,4 +1,5 @@
 import { supabase } from './supabase.js'
+import { recordMetric } from './pipelineMetrics.js'
 
 function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -14,15 +15,15 @@ function escapeRegExp(s) {
 // name/header text is usually large, bold, and high-contrast, so it tends
 // to survive OCR noise even when the rest of a receipt doesn't. Worth
 // checking before ever paying for the expensive image-based fallback.
-export async function matchMerchant(ocrText) {
-  const { data, error } = await supabase.from('merchant_dictionary').select('name, category, match_strings')
-  if (error) {
-    console.error('[merchantDictionary] lookup failed:', error.message)
-    return null
-  }
-
-  const haystack = ocrText.toLowerCase()
-  for (const row of data) {
+//
+// Pure matching core, split out from the Supabase fetch below (matchMerchant) so Story
+// B3's eval harness (evalScreenshotPipeline.js) can exercise the actual matching logic
+// against a fixture dictionary without a live database connection — same "pure decision
+// core + thin I/O wrapper" split used elsewhere in this build (engagementSuppression.js,
+// lib/optOut.js).
+export function matchMerchantAgainstDictionary(ocrText, dictionaryRows) {
+  const haystack = (ocrText || '').toLowerCase()
+  for (const row of dictionaryRows) {
     for (const needle of row.match_strings) {
       const pattern = new RegExp(`\\b${escapeRegExp(needle.toLowerCase())}\\b`)
       if (pattern.test(haystack)) {
@@ -31,6 +32,18 @@ export async function matchMerchant(ocrText) {
     }
   }
   return null
+}
+
+export async function matchMerchant(ocrText) {
+  const { data, error } = await supabase.from('merchant_dictionary').select('name, category, match_strings')
+  if (error) {
+    console.error('[merchantDictionary] lookup failed:', error.message)
+    return null
+  }
+
+  const result = matchMerchantAgainstDictionary(ocrText, data)
+  recordMetric('merchant_dictionary_lookup', { hit: !!result, merchant: result?.name })
+  return result
 }
 
 // The confidence gate's payoff, per the guidance doc: a confirmed

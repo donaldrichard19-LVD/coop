@@ -3,7 +3,7 @@ import crypto from 'node:crypto'
 import { Resend } from 'resend'
 import { sendRcsTurn } from '../lib/twilioClient.js'
 import { supabase } from '../lib/supabase.js'
-import { normalizePhone } from '../lib/accounts.js'
+import { normalizePhone, approveAccount } from '../lib/accounts.js'
 
 const router = express.Router()
 
@@ -79,9 +79,12 @@ router.post('/', async (req, res) => {
   res.json({ success: true })
 })
 
-// Admin-only: fires when Donald clicks the button in the notification email.
+// Admin-only: fires when Donald clicks the button in the notification email. Accepts an
+// optional ?zip=94103 — there's no UI for it, but Donald can append it by hand to the
+// approve link when he happens to know the person's zip, which is enough to unlock real
+// quiet-hours enforcement (Story A2) for that account. See lib/accounts.js#approveAccount.
 router.get('/approve', async (req, res) => {
-  const { phone, token, name } = req.query
+  const { phone, token, name, zip } = req.query
   if (!phone || !token) return res.status(400).send('Missing phone or token')
 
   let expected
@@ -101,9 +104,10 @@ router.get('/approve', async (req, res) => {
   // watching for when he clicks this link. Re-clicking approve for an
   // already-approved account is naturally idempotent (plain update, not
   // insert) — no extra guard needed.
-  const { error: statusError } = await supabase.from('accounts').update({ status: 'approved' }).eq('phone', phone)
-  if (statusError) {
-    console.error('[waitlist] failed to mark account approved:', statusError.message)
+  try {
+    await approveAccount(phone, { zipCode: zip })
+  } catch (err) {
+    console.error('[waitlist] failed to mark account approved:', err.message)
   }
 
   try {
