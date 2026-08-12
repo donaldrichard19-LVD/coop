@@ -34,7 +34,7 @@ export default function LegalLayout({ title, updated, children }) {
         </div>
 
         <p className="text-[14px] text-text-tertiary mt-12 pb-10">
-          Questions? Reach us at <a href="mailto:hello@getcoop.cash" className="text-tint-primary underline">hello@getcoop.cash</a>.
+          Questions? Reach us at <a href="mailto:support@getcoop.cash" className="text-tint-primary underline">support@getcoop.cash</a>.
         </p>
       </div>
     </div>
