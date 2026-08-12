@@ -2,14 +2,18 @@ import { Link } from 'react-router-dom'
 import { BrandMark } from '../components/Header'
 import Button from '../components/Button'
 import LandingDealDemo from '../components/LandingDealDemo'
+import StickyCTA from '../components/StickyCTA'
 import ValuePropSteps from '../components/ValuePropSteps'
 
 // Desktop now shares the same signup entry point as mobile (onNext -> WaitlistStep,
 // wired up in OnboardingFlow) — this used to be a static, CTA-less page per an earlier
-// design handoff, but that constraint's gone. See App.jsx's Gate.
+// design handoff, but that constraint's gone. See App.jsx's Gate. Also mirrors mobile's
+// sticky top-right "sign up" pill once the user scrolls past the hero's own CTA.
 export default function DesktopLanding({ onNext }) {
   return (
     <div data-theme="dark" className="landing-dark min-h-svh bg-bg-primary px-14 pt-10 pb-[72px]">
+      <StickyCTA onNext={onNext} />
+
       <nav className="flex items-center gap-3 mb-24">
         <BrandMark size={28} />
         <span className="text-[26px] font-extrabold tracking-[-0.03em] text-text-primary">coop</span>
@@ -34,7 +38,7 @@ export default function DesktopLanding({ onNext }) {
 
           <div className="flex items-center gap-5 mb-12">
             <Button variant="primary" className="px-9 py-4 text-[18px]" onClick={onNext}>
-              sign up
+              get started
             </Button>
           </div>
         </div>
