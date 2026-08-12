@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { BrandMark } from '../components/Header'
+import Button from '../components/Button'
 import LandingDealDemo from '../components/LandingDealDemo'
 import ValuePropSteps from '../components/ValuePropSteps'
 
-// Desktop never gets a signup CTA — per the design handoff there isn't one
-// here at all, only the "pull this up on your phone" note. That's what
-// keeps the signup flow (WaitlistStep) mobile-only; see App.jsx's Gate.
-export default function DesktopLanding() {
+// Desktop now shares the same signup entry point as mobile (onNext -> WaitlistStep,
+// wired up in OnboardingFlow) — this used to be a static, CTA-less page per an earlier
+// design handoff, but that constraint's gone. See App.jsx's Gate.
+export default function DesktopLanding({ onNext }) {
   return (
     <div data-theme="dark" className="landing-dark min-h-svh bg-bg-primary px-14 pt-10 pb-[72px]">
       <nav className="flex items-center gap-3 mb-24">
@@ -31,14 +32,11 @@ export default function DesktopLanding() {
             learn where you actually eat, then text you when one of them has a deal.
           </p>
 
-          <div className="flex items-center gap-4 bg-surface-elevated rounded-[22px] px-[26px] py-[22px] max-w-[620px] mb-12">
-            <svg viewBox="0 0 24 24" width="22" height="22" className="shrink-0" fill="none" stroke="#19A877" strokeWidth="1.7">
-              <rect x="6" y="2" width="12" height="20" rx="3" />
-              <line x1="10.5" y1="18.5" x2="13.5" y2="18.5" />
-            </svg>
-            <p className="text-[19px] leading-[1.45] font-medium text-[rgba(245,242,234,.8)]">
-              Coop&rsquo;s a texting thing &mdash; pull this up on your phone to get started.
-            </p>
+          <div className="flex items-center gap-5 mb-12">
+            <Button variant="primary" className="px-9 py-4 text-[18px]" onClick={onNext}>
+              sign up
+            </Button>
+            <p className="text-[15px] text-text-tertiary">takes 10 seconds &mdash; we just need a number to text.</p>
           </div>
         </div>
 

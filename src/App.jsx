@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-import DesktopLanding from './pages/DesktopLanding'
 import OnboardingFlow from './pages/onboarding/OnboardingFlow'
 import WaitlistConfirmed from './pages/onboarding/WaitlistConfirmed'
 import Privacy from './pages/legal/Privacy'
@@ -7,18 +6,17 @@ import Terms from './pages/legal/Terms'
 import useIsMobile from './hooks/useIsMobile'
 import useWaitlisted from './hooks/useWaitlisted'
 
-// Signup only happens on mobile web — desktop only ever sees the static
-// value-prop page. Once waitlisted, mobile shows the confirmation screen
-// (not the live Chat app): there's no real deal data behind it yet without
-// Plaid or screenshot upload (both backlogged — see BACKLOG.md), so there's
-// nothing genuine to hand them into. The next thing that happens for a
-// waitlisted user happens over SMS, not on this site.
+// Desktop and mobile both get the signup flow (landing -> waitlist), just with
+// different landing screens — see OnboardingFlow. Once waitlisted, both show the
+// confirmation screen (not the live Chat app): there's no real deal data behind
+// it yet without Plaid or screenshot upload (both backlogged — see BACKLOG.md),
+// so there's nothing genuine to hand them into. The next thing that happens for
+// a waitlisted user happens over SMS, not on this site.
 function Gate() {
   const isMobile = useIsMobile()
   const [waitlisted, setWaitlisted] = useWaitlisted()
 
-  if (!isMobile) return <DesktopLanding />
-  if (!waitlisted) return <OnboardingFlow onComplete={() => setWaitlisted(true)} />
+  if (!waitlisted) return <OnboardingFlow isMobile={isMobile} onComplete={() => setWaitlisted(true)} />
   return <WaitlistConfirmed />
 }
 
