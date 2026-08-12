@@ -36,7 +36,6 @@ export default function DesktopLanding({ onNext }) {
             <Button variant="primary" className="px-9 py-4 text-[18px]" onClick={onNext}>
               sign up
             </Button>
-            <p className="text-[15px] text-text-tertiary">takes 10 seconds &mdash; we just need a number to text.</p>
           </div>
         </div>
 
