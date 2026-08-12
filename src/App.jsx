@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import DesktopLanding from './pages/DesktopLanding'
 import OnboardingFlow from './pages/onboarding/OnboardingFlow'
 import WaitlistConfirmed from './pages/onboarding/WaitlistConfirmed'
+import Privacy from './pages/legal/Privacy'
+import Terms from './pages/legal/Terms'
 import useIsMobile from './hooks/useIsMobile'
 import useWaitlisted from './hooks/useWaitlisted'
 
@@ -25,6 +27,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Gate />} />
       <Route path="/saved" element={<Gate />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
     </Routes>
   )
 }

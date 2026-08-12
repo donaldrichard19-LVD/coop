@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BrandMark } from '../components/Header'
 import LandingDealDemo from '../components/LandingDealDemo'
 import ValuePropSteps from '../components/ValuePropSteps'
@@ -47,6 +48,12 @@ export default function DesktopLanding() {
       <div className="max-w-[1560px] mt-[clamp(56px,9vw,104px)]">
         <ValuePropSteps />
       </div>
+
+      <footer className="max-w-[1560px] flex items-center gap-5 mt-16 pt-6 border-t border-separator-subtle text-[14px] text-text-tertiary">
+        <span>&copy; {new Date().getFullYear()} Coop</span>
+        <Link to="/privacy" className="hover:text-text-secondary transition-colors">Privacy</Link>
+        <Link to="/terms" className="hover:text-text-secondary transition-colors">Terms</Link>
+      </footer>
     </div>
   )
 }

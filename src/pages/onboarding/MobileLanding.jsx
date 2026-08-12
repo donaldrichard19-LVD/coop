@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { BrandMark } from '../../components/Header'
 import Button from '../../components/Button'
 import LandingDealDemo from '../../components/LandingDealDemo'
@@ -74,6 +75,12 @@ export default function MobileLanding({ onNext }) {
         <div className="mt-9">
           <LandingDealDemo compact />
         </div>
+
+        <footer className="flex items-center gap-4 mt-10 pt-5 border-t border-separator-subtle text-[13px] text-text-tertiary">
+          <span>&copy; {new Date().getFullYear()} Coop</span>
+          <Link to="/privacy" className="hover:text-text-secondary transition-colors">Privacy</Link>
+          <Link to="/terms" className="hover:text-text-secondary transition-colors">Terms</Link>
+        </footer>
       </div>
     </div>
   )
