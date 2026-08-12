@@ -14,6 +14,7 @@ import { handleComplianceMessage, isHardOptedOut } from '../lib/optOut.js'
 import { classifyInbound, cannedMetaAnswer } from '../lib/inboundClassifier.js'
 import { classifySoftOptOut, applySoftOptOut, mightBeNegativeFeedback, applyAmbiguousNegativeFeedback } from '../lib/softOptOut.js'
 import { handleOnDemandRequest } from '../lib/onDemandRetrieval.js'
+import { parseDeliveryStatusPayload, recordDeliveryStatus } from '../lib/deliveryStatus.js'
 import { recordEngagedSend } from '../lib/cadenceDecay.js'
 
 const router = express.Router()
@@ -345,6 +346,23 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
   // ladder and A14's on-demand retrieval, both reached via the search_or_unclassifiable
   // bucket.
   await handleFreeformMessage({ from, account, body })
+})
+
+// Twilio's status-callback webhook — separate from the inbound-message webhook above.
+// Fires asynchronously as a sent message progresses through delivery states, once the
+// status-callback URL is configured on the Messaging Service in the Twilio console (this
+// route existing does nothing on its own until that's set). No account resolution or
+// approval gate here: a status callback is about a message Twilio already has, not a new
+// inbound message from a phone number, so there's nothing to gate.
+router.post('/status', express.urlencoded({ extended: false }), async (req, res) => {
+  res.status(200).end() // ack immediately, same convention as /webhook
+
+  const parsed = parseDeliveryStatusPayload(req.body)
+  if (!parsed) {
+    console.error('[rcs] status callback missing MessageSid/MessageStatus:', JSON.stringify(req.body))
+    return
+  }
+  await recordDeliveryStatus(parsed)
 })
 
 export default router

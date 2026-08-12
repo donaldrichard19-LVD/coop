@@ -34,7 +34,12 @@ export async function logSuppressedSend({ accountId, slot, reason }) {
  * what was true at send time).
  */
 export async function sendAndLogEngagement({ account, slot, archetype, deal, templateId, turn, isControlGroup }) {
-  await sendRcsTurn(account.phone, turn)
+  const result = await sendRcsTurn(account.phone, turn)
+  // Only populated on a real send (result.sent === true) — the credential-less no-op
+  // returns { sent: false, messages } with no Twilio Message resources to pull a sid from.
+  // Feeds message_delivery_status joins once the status-callback webhook is receiving
+  // anything real — see engagement_sends.message_sids' column comment.
+  const messageSids = result.sent ? result.results.map((r) => r.sid).filter(Boolean) : []
 
   const { error } = await supabase.from('engagement_sends').insert({
     account_id: account.id,
@@ -45,6 +50,7 @@ export async function sendAndLogEngagement({ account, slot, archetype, deal, tem
     template_id: templateId,
     status: 'sent',
     is_control_group: !!isControlGroup,
+    message_sids: messageSids,
   })
   if (error) console.error('[engagementSend] failed to log sent engagement:', error.message)
 }

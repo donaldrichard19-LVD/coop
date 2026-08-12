@@ -9,6 +9,7 @@
     "dev": "nodemon server.js",
     "test": "node --test",
     "provision:rcs": "node scripts/provisionTemplates.js",
+    "provision:rcs:confirm-merchant": "node scripts/provisionConfirmMerchantTemplate.js",
     "eval:intent": "node scripts/evalIntentExtraction.js",
     "eval:screenshots": "node scripts/evalScreenshotPipeline.js"
   },
