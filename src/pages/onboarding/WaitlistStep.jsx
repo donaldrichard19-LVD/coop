@@ -32,7 +32,7 @@ export default function WaitlistStep({ onDone, onBack }) {
   }
 
   return (
-    <div className="min-h-svh bg-bg-primary flex items-center justify-center px-5">
+    <div data-theme="dark" className="landing-dark min-h-svh bg-bg-primary flex items-center justify-center px-5">
       <div className="w-full max-w-[380px] bg-surface-elevated border border-separator-subtle rounded-large p-7">
         <h2 className="text-title2 text-text-primary mb-1.5">What number should Coop text you at?</h2>
         <p className="text-subheadline text-text-secondary mb-6">
