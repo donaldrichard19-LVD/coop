@@ -4,6 +4,7 @@ import { Resend } from 'resend'
 import { sendRcsTurn } from '../lib/twilioClient.js'
 import { supabase } from '../lib/supabase.js'
 import { normalizePhone, approveAccount } from '../lib/accounts.js'
+import { captureAccountEvent } from '../lib/posthog.js'
 
 const router = express.Router()
 
@@ -49,6 +50,8 @@ router.post('/', async (req, res) => {
     .upsert({ phone, name: name || null, status: 'pending' }, { onConflict: 'phone', ignoreDuplicates: true })
   if (dbError) {
     console.error('[waitlist] failed to persist signup:', dbError.message)
+  } else {
+    await captureAccountEvent('account_pending', phone, { name })
   }
 
   try {
@@ -105,7 +108,10 @@ router.get('/approve', async (req, res) => {
   // already-approved account is naturally idempotent (plain update, not
   // insert) — no extra guard needed.
   try {
-    await approveAccount(phone, { zipCode: zip })
+    const approved = await approveAccount(phone, { zipCode: zip })
+    if (approved) {
+      await captureAccountEvent('account_approved', phone, { name, zip_code: approved.zip_code, timezone: approved.timezone })
+    }
   } catch (err) {
     console.error('[waitlist] failed to mark account approved:', err.message)
   }
@@ -115,7 +121,7 @@ router.get('/approve', async (req, res) => {
     await sendRcsTurn(
       phone,
       {
-        text: `hey ${firstName} — it's Coop. you're in. we're lining up your first deals now and will text again soon.`,
+        text: `hey ${firstName}, it's Coop. you're in. we're lining up your first deals now and will text again soon.`,
         deals: [],
         quickReplies: [],
       },
