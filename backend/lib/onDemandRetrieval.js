@@ -44,10 +44,10 @@ export function describeConstraints(filters) {
 // then templates are tried first for the common empty-result reasons (no results in
 // radius/price band/hours)".
 const EMPTY_RESULT_TEMPLATES = {
-  radius: (c) => `nothing within range for ${c} right now — want me to widen the search?`,
-  price: (c) => `nothing that cheap for ${c} right now — want to see what's close instead?`,
-  hours: (c) => `nothing open for ${c} right now — try again a bit later?`,
-  generic: (c) => `nothing matching ${c} right now — try a different spot or category?`,
+  radius: (c) => `nothing within range for ${c} right now, want me to widen the search?`,
+  price: (c) => `nothing that cheap for ${c} right now, want to see what's close instead?`,
+  hours: (c) => `nothing open for ${c} right now, try again a bit later?`,
+  generic: (c) => `nothing matching ${c} right now, try a different spot or category?`,
 }
 
 /**
@@ -61,12 +61,12 @@ async function composeUnusualEmptyResultReply(message) {
     messages: [
       {
         role: 'user',
-        content: `A user texted a deals-finder bot: ${JSON.stringify(message)}. We found zero matching deals, and it's not a simple radius/price/hours miss. Write ONE short, casual, lowercase text reply (under 25 words) explaining we didn't find anything and inviting them to try something else. No emoji, no markdown fences — just the reply text.`,
+        content: `A user texted a deals-finder bot: ${JSON.stringify(message)}. We found zero matching deals, and it's not a simple radius/price/hours miss. Write ONE short, casual, lowercase text reply (under 25 words) explaining we didn't find anything and inviting them to try something else. No emoji, no markdown fences, no em dashes, just the reply text.`,
       },
     ],
   })
   const textBlock = result.content.find((b) => b.type === 'text')
-  return textBlock?.text?.trim() || 'nothing matching that right now — try a different spot or category?'
+  return textBlock?.text?.trim() || 'nothing matching that right now, try a different spot or category?'
 }
 
 function emptyResultReply(filters, constraints) {
@@ -119,7 +119,7 @@ export async function handleOnDemandRequest({ message, profile, timezone, lastOu
       seed: `${account.id}:${Date.now()}`,
       lastTemplateId: null,
     })
-    return { text: constraints ? `for ${constraints} — ${turn.text}` : turn.text, deals: top, quickReplies: [] }
+    return { text: constraints ? `for ${constraints}, ${turn.text}` : turn.text, deals: top, quickReplies: [] }
   }
 
   // Two results: A6's templates are written for a single-deal turn (they name one

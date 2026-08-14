@@ -75,7 +75,7 @@ async function maybePushProfileMatches(from, account) {
   const isFirstPush = profile.uploadCount === MIN_UPLOADS_FOR_PROFILE
   await sendRcsTurn(from, {
     text: isFirstPush
-      ? `you're all set — found ${newMatches.length === 1 ? 'one' : newMatches.length} based on what you've been ordering.`
+      ? `you're all set, found ${newMatches.length === 1 ? 'one' : newMatches.length} based on what you've been ordering.`
       : `found ${newMatches.length === 1 ? 'another one' : `${newMatches.length} more`} based on what you've been ordering.`,
     deals: newMatches,
     quickReplies: quickReplies.slice(0, 4),
@@ -122,7 +122,7 @@ async function handleScreenshotUpload({ from, account, mediaUrl, mediaContentTyp
     if (error) console.error('[rcs] failed to persist screenshot upload:', error.message)
 
     const label = parsed.merchant || `a ${parsed.category} spot`
-    await sendRcsTurn(from, { text: `got it — ${label}. i'll watch this one.`, deals: [], quickReplies: [] })
+    await sendRcsTurn(from, { text: `got it, ${label}. i'll watch this one.`, deals: [], quickReplies: [] })
 
     // Order matters: confirm prompt first (about *this* screenshot), then
     // the profile push (which may reference deals from earlier screenshots
@@ -133,7 +133,7 @@ async function handleScreenshotUpload({ from, account, mediaUrl, mediaContentTyp
     console.error('[rcs] screenshot parsing failed:', err.message)
     await sendRcsTurn(
       from,
-      { text: "couldn't quite read that one — mind trying again with a clearer screenshot?", deals: [], quickReplies: [] },
+      { text: "couldn't quite read that one, mind trying again with a clearer screenshot?", deals: [], quickReplies: [] },
     )
   }
 }
@@ -144,9 +144,9 @@ async function handleConfirmReply({ from, confirmed }) {
 
   if (confirmed) {
     await confirmMerchant(pending.merchantName, pending.category)
-    await sendRcsTurn(from, { text: 'got it, thanks — that helps.', deals: [], quickReplies: [] })
+    await sendRcsTurn(from, { text: 'got it, thanks. that helps.', deals: [], quickReplies: [] })
   } else {
-    await sendRcsTurn(from, { text: 'ok, noted — thanks for the correction.', deals: [], quickReplies: [] })
+    await sendRcsTurn(from, { text: 'ok, noted. thanks for the correction.', deals: [], quickReplies: [] })
   }
 }
 
@@ -201,7 +201,7 @@ async function handleSearchOrUnclassifiable({ from, account, body }) {
     await sendRcsTurn(from, turn)
   } catch (err) {
     console.error('[rcs] on-demand retrieval failed:', err.message)
-    await sendRcsTurn(from, { text: "having trouble finding that right now — try again in a bit?", deals: [], quickReplies: [] })
+    await sendRcsTurn(from, { text: "having trouble finding that right now, try again in a bit?", deals: [], quickReplies: [] })
   }
 }
 
@@ -229,7 +229,7 @@ async function handleFreeformMessage({ from, account, body }) {
         // TODO: persist the save once there's a backing store (Supabase, per Calvin's
         // convention) — this only proves the round trip today, same as the button-tap path.
         console.log(`[rcs] ${from} saved ${deal.id} (${deal.offer}) via freeform offer reply`)
-        await sendRcsTurn(from, { text: `saved — ${deal.offer}.`, deals: [], quickReplies: [] })
+        await sendRcsTurn(from, { text: `saved, ${deal.offer}.`, deals: [], quickReplies: [] })
         return
       }
       // hasPendingTurn was true but the specific ordinal was out of range — fall through
@@ -299,7 +299,7 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
   // means no reply gets sent, not a response-timing problem.
   if (account.status !== 'approved') {
     await sendRcsTurn(from, {
-      text: "hey — you're not signed up for Coop yet. sign up here: https://getcoop.cash and we'll get you in.",
+      text: "hey, you're not signed up for Coop yet. sign up here: https://getcoop.cash and we'll get you in.",
       deals: [],
       quickReplies: [],
     })
@@ -334,7 +334,7 @@ router.post('/webhook', express.urlencoded({ extended: false }), async (req, res
       // TODO: persist the save once there's a backing store (Supabase, per Calvin's
       // convention) — this only proves the round trip today.
       console.log(`[rcs] ${from} saved ${deal.id} (${deal.offer})`)
-      await sendRcsTurn(from, { text: `saved — ${deal.offer}.`, deals: [], quickReplies: [] })
+      await sendRcsTurn(from, { text: `saved, ${deal.offer}.`, deals: [], quickReplies: [] })
     }
     return
   }

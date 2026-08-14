@@ -98,7 +98,7 @@ async function handleResume({ phone, account }) {
     .is('resumed_at', null)
   if (error) console.error('[optOut] failed to resume account:', error.message)
 
-  await sendRcsTurn(phone, { text: "you're back in — we'll start texting deals again.", deals: [], quickReplies: [] })
+  await sendRcsTurn(phone, { text: "you're back in, we'll start texting deals again.", deals: [], quickReplies: [] })
 }
 
 async function handleHelp(phone) {

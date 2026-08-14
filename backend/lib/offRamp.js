@@ -22,7 +22,7 @@ import { defaultEngagementPreferences, getEngagementPreferences } from './engage
 export const OFF_RAMP_THRESHOLD = 2
 
 const OFF_RAMP_MESSAGE =
-  "haven't heard back in a bit — want fewer texts, different kinds of deals, or should we stop texting you altogether? just reply and we'll sort it out."
+  "haven't heard back in a bit. want fewer texts, different kinds of deals, or should we stop texting you altogether? just reply and we'll sort it out."
 
 /**
  * Pure. Given the account's current non-engaged streak length and whether the off-ramp has

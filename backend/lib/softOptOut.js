@@ -111,7 +111,7 @@ export async function applySoftOptOut({ account, action, keyword, body, lastSent
       const categories = new Set(current.excluded_categories || [])
       categories.add(lastSentDeal.category)
       await upsertPreferences(account.id, { excluded_categories: [...categories] })
-      return { acknowledged: true, message: `noted — we'll skip ${lastSentDeal.category} deals.` }
+      return { acknowledged: true, message: `noted, we'll skip ${lastSentDeal.category} deals.` }
     }
     case 'exclude_merchant': {
       if (!lastSentDeal?.merchant?.name) return { acknowledged: false, message: null }
@@ -119,7 +119,7 @@ export async function applySoftOptOut({ account, action, keyword, body, lastSent
       const merchants = new Set(current.excluded_merchants || [])
       merchants.add(lastSentDeal.merchant.name)
       await upsertPreferences(account.id, { excluded_merchants: [...merchants] })
-      return { acknowledged: true, message: `noted — we'll leave ${lastSentDeal.merchant.name} out.` }
+      return { acknowledged: true, message: `noted, we'll leave ${lastSentDeal.merchant.name} out.` }
     }
     case 'reduce_radius': {
       const current = await getEngagementPreferences(account.id)
@@ -133,7 +133,7 @@ export async function applySoftOptOut({ account, action, keyword, body, lastSent
     case 'snooze': {
       const snoozedUntil = new Date(Date.now() + SNOOZE_DAYS * 86_400_000).toISOString()
       await upsertPreferences(account.id, { snoozed_until: snoozedUntil })
-      return { acknowledged: true, message: "no worries — we'll hold off for a bit and check back in a few weeks." }
+      return { acknowledged: true, message: "no worries, we'll hold off for a bit and check back in a few weeks." }
     }
     default:
       return { acknowledged: false, message: null }

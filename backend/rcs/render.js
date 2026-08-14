@@ -43,7 +43,7 @@ export function renderTurnAsRCS(turn, { templateSids, isFirstTurn = false } = {}
   if (turn.text) {
     const overflowNote =
       turn.overflowCount > 0
-        ? ` (+${turn.overflowCount} more — just ask)`
+        ? ` (+${turn.overflowCount} more, just ask)`
         : ''
     messages.push({ kind: 'text', body: turn.text + overflowNote })
   }

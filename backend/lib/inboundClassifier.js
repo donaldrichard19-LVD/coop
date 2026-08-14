@@ -60,18 +60,18 @@ export function classifyInbound(body, { hasPendingTurn = false } = {}) {
 }
 
 const META_ANSWERS = [
-  { match: /how does (this|coop) work/i, answer: "we watch the spots you already order from and text you deals for them — no app, just texts." },
+  { match: /how does (this|coop) work/i, answer: "we watch the spots you already order from and text you deals for them, no app, just texts." },
   { match: /what is coop/i, answer: 'coop finds deals at places you already order from and texts them to you.' },
-  { match: /who are you/i, answer: "i'm coop — i find deals at your regular spots and text them over." },
+  { match: /who are you/i, answer: "i'm coop, i find deals at your regular spots and text them over." },
   { match: /is (this|coop) free/i, answer: 'yep, free to use. standard msg & data rates may apply.' },
-  { match: /is this (real|legit)/i, answer: 'real deal — literally. we partner with local spots and chains to get you real offers.' },
+  { match: /is this (real|legit)/i, answer: 'real deal, literally. we partner with local spots and chains to get you real offers.' },
   { match: /are you (a )?(bot|human)/i, answer: "mostly automated, with a human keeping an eye on things." },
   { match: /what do you do/i, answer: 'we text you deals at places you already order from.' },
-  { match: /how do you know (this|my orders?)/i, answer: "you told us, via screenshots you've sent in — nothing pulled without you sharing it." },
+  { match: /how do you know (this|my orders?)/i, answer: "you told us, via screenshots you've sent in, nothing pulled without you sharing it." },
 ]
 
 /** Deterministic canned reply for a classified meta_question — no model call. */
 export function cannedMetaAnswer(question) {
   const hit = META_ANSWERS.find((m) => m.match.test(question))
-  return hit ? hit.answer : 'good question — we find deals at spots you already order from and text them over.'
+  return hit ? hit.answer : 'good question, we find deals at spots you already order from and text them over.'
 }
